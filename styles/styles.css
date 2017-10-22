@@ -711,7 +711,7 @@ textarea {
   height: 100vh;
 }
 .main-nav__check:checked ~ .main-nav__inner::before {
-  bottom: 0;
+  bottom: -20vh;
 }
 .main-nav__check:checked ~ .main-nav__inner .main-nav__user-block,
 .main-nav__check:checked ~ .main-nav__inner .main-nav__items {
@@ -757,12 +757,15 @@ textarea {
   content: "";
   display: block;
   position: fixed;
-  top: 0;
+  top: -20vh;
   left: 0;
   width: 87.5%;
   max-width: 635px;
   background-color: #ffffff;
   z-index: 1;
+  -webkit-transform: scaleY(1.4);
+      -ms-transform: scaleY(1.4);
+          transform: scaleY(1.4);
 }
 .main-nav__toggle {
   position: relative;

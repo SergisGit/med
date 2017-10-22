@@ -1373,8 +1373,12 @@ input::-ms-reveal {
   right: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 70px 0;
 }
 .popup {
+  margin: auto;
   position: relative;
   display: none;
   -webkit-transform: translate3D(0, -100vh, 0);

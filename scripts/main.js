@@ -370,7 +370,7 @@
       lastSearch.style.display = "none";
     }
 
-    searchInput.addEventListener('keypress', changeSearchBox);
+    searchInput.addEventListener('textInput', changeSearchBox);
 
     function pushValue(event) {
       var clickedElement = event.target;

@@ -5,730 +5,861 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Title</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/style.min.css?ver=1">
-  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico">
-  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=1">
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="assets/icons/favicon-16x16.png" sizes="16x16">
   <script type="text/javascript">
     if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
-        document.write('<script src="js/svg4everybody.min.js"><\/script>');
+        document.write('<script src="scripts/svg4everybody.min.js"><\/script>');
   </script>
 </head>
 
-<body>
-  <div class="body__inner">
-    <header class="page-header">
-      <nav class="main-nav">
-        <input type="checkbox" class="main-nav__check" id="main-nav__check">
-        <div class="main-nav__inner">
-          <label for="main-nav__check" class="main-nav__toggle">Открыть меню</label>
-          <a href="index.html" class="main-nav__main-link">Для пациента
-            <svg class="main-nav__main-link-svg">
-              <use xlink:href="img/symbols.svg#logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="main-nav__location-link" href="#">
-            <svg class="main-nav__location-svg" width="15" height="17">
-              <use xlink:href="img/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-            <span class="user-city">Нижний Новгород</span>
-          </a>
-          <div class="main-nav__user-block">
-            <svg class="main-nav__user-block-svg" width="26" height="26">
-              <use xlink:href="img/symbols.svg#user-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-            <ul class="main-nav__regitems">
-              <li class="main-nav__regitem  main-nav__regitem_user  main-nav__regitem_avt">
-                <svg class="main-nav__user-svg" width="26" height="26">
-                  <use xlink:href="img/symbols.svg#user-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                </svg>
-                <span class="user-name">Alex Petrov</span>
-              </li>
-              <li class="main-nav__regitem  main-nav__regitem_noavt  main-nav__regitem_caption">
-                <b>Главная</b>
-              </li>
-              <li class="main-nav__regitem  main-nav__regitem_avt  main-nav__regitem_caption">
-                <b>Моя учетная запись</b>
-              </li>
-              <li class="main-nav__regitem  main-nav__regitem_location">
-                <a class="main-nav__link  main-nav__link_bigfont" href="#">
-                  <svg class="main-nav__location-svg" width="14" height="17">
-                    <use xlink:href="img/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+<body class="body body-index">
+  <div class="body__wrapper">
+    <div class="body__inner">
+
+      <header class="page-header">
+        <nav class="main-nav">
+          <input type="checkbox" class="main-nav__check" id="main-nav__check">
+          <div class="main-nav__inner">
+            <label for="main-nav__check" class="main-nav__toggle">Открыть меню</label>
+            <a href="index.html" class="main-nav__main-link">Для пациента
+              <svg class="main-nav__main-link-svg">
+                <use xlink:href="assets/icons/symbols.svg#logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="main-nav__location-link" href="#">
+              <svg class="main-nav__location-svg" width="15" height="17">
+                <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+              <span class="user-city">Нижний Новгород</span>
+            </a>
+            <div class="main-nav__user-block">
+              <svg class="main-nav__user-block-svg" width="26" height="26">
+                <use xlink:href="assets/icons/symbols.svg#user-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+              <ul class="main-nav__regitems">
+                <li class="main-nav__regitem  main-nav__regitem_user  main-nav__regitem_avt">
+                  <svg class="main-nav__user-svg" width="26" height="26">
+                    <use xlink:href="assets/icons/symbols.svg#user-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                   </svg>
-                  <span class="user-city">Нижний Новгород</span>
-                </a>
+                  <span class="user-name">Alex Petrov</span>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_noavt  main-nav__regitem_caption">
+                  <b>Главная</b>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_avt  main-nav__regitem_caption">
+                  <b>Моя учетная запись</b>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_location">
+                  <a class="main-nav__link  main-nav__link_bigfont  main-nav__location-link2" href="#">
+                    <svg class="main-nav__location-svg" width="14" height="17">
+                      <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    <span class="user-city">Нижний Новгород</span>
+                  </a>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_avt">
+                  <a class="main-nav__link" href="#">Личный кабинет</a>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_avt">
+                  <a class="main-nav__link" href="#">Отзывы</a>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_avt">
+                  <a class="main-nav__link" href="#">Избранное</a>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_avt">
+                  <a class="main-nav__link  main-nav__link_exit" href="#">Выйти</a>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_noavt">
+                  <a class="main-nav__link  main-nav__link_reg" href="#">Регистрация</a>
+                </li>
+                <li class="main-nav__regitem  main-nav__regitem_noavt">
+                  <a class="main-nav__link  main-nav__link_enter" href="#">Вход</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="main-nav__items">
+              <li class="main-nav__regitem  main-nav__item_caption">
+                <b>Обзор</b>
               </li>
-              <li class="main-nav__regitem  main-nav__regitem_avt">
-                <a class="main-nav__link" href="#">Личный кабинет</a>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Клиники</a>
               </li>
-              <li class="main-nav__regitem  main-nav__regitem_avt">
-                <a class="main-nav__link" href="#">Отзывы</a>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Врачи</a>
               </li>
-              <li class="main-nav__regitem  main-nav__regitem_avt">
-                <a class="main-nav__link" href="#">Избранное</a>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Услуги</a>
               </li>
-              <li class="main-nav__regitem  main-nav__regitem_avt">
-                <a class="main-nav__link  main-nav__link_exit" href="#">Выйти</a>
-              </li>
-              <li class="main-nav__regitem  main-nav__regitem_noavt">
-                <a class="main-nav__link  main-nav__link_reg" href="#">Регистрация</a>
-              </li>
-              <li class="main-nav__regitem  main-nav__regitem_noavt">
-                <a class="main-nav__link  main-nav__link_enter" href="#">Вход</a>
+              <li class="main-nav__item">
+                <a class="main-nav__link  main-nav__link_feedback" href="#">Свяжитесь с нами</a>
               </li>
             </ul>
+            <a href="#" class="main-nav__search-link">Поиск
+              <svg class="main-nav__search-svg" width="21" height="20">
+                <use xlink:href="assets/icons/symbols.svg#search-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
           </div>
-          <ul class="main-nav__items">
-            <li class="main-nav__regitem  main-nav__item_caption">
-              <b>Обзор</b>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link  main-nav__link_bigfont" href="#">Клиники</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Врачи</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Услуги</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link  main-nav__link_feedback" href="#">Свяжитесь с нами</a>
-            </li>
-          </ul>
-          <a href="#" class="main-nav__search-link">Поиск
-            <svg class="main-nav__search-svg" width="20" height="20">
-              <use xlink:href="img/symbols.svg#search-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </nav>
+        <h1 class="page-header__title">Медицинский навигатор</h1>
+      </header>
+
+      <main class="main  main-index">
+        <form action="/echo" method="get" class="main-index__search-form">
+          <div class="main-index__search-wrapper">
+            <input type="text" class="main-index__search-input  main-index__search-input_trick" readonly placeholder="Клиники, Врачи, Города">
+            <div class="main-index__input-wrapper">
+              <label class="main-index__search-label">Поиск
+                <input type="text" class="main-index__search-input  main-index__search-input_services" name="search-input-services" placeholder="Клиники, Врачи, Услуги">
+                <svg class="clear-svg  main-index__search-clear-svg" width="22" height="22" stroke="#97a4b1">
+                  <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </label>
+              <div class="search-context search-context_services-and-history  main-index__search-context  main-index__search-context_services-and-history">
+
+                <div class="main-index__search-context-last  search-context__last">
+                  <b class="search-context__partition-title">История поиска</b>
+                  <div class="search-context__partition  search-context__partition_history">
+                    <div class="search-context__item  search-context__history">ОГАУЗ «Областной перинатальный центр»</div>
+                  </div>
+                  <b class="search-context__partition-title">Топ Запросов</b>
+                  <div class="search-context__partition  search-context__partition_top">
+                    <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+                    <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+                    <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+                    <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+                    <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+                  </div>
+                </div>
+
+                <div class="main-index__search-context-services  search-context__services  search-context__search">
+                  <b class="search-context__partition-title">Врачи (
+                    <span class="search-context__doctors-count">78</span>)
+                  </b>
+                  <div class="search-context__partition  search-context__partition_doctors">
+                    <div class="search-context__item  search-context__item_doctor">
+                      <img class="search-context__doctor-photo" src="assets/images/doctors/photo1.png" alt="doctor-photo">
+                      <div class="search-context__doctor-name">Стариков Сергей Анатольевич</div>
+                      <div class="search-context__doctor-kind">Стоматолог</div>
+                    </div>
+                    <div class="search-context__item  search-context__item_doctor">
+                      <img class="search-context__doctor-photo" src="assets/images/doctors/photo2.png" alt="doctor-photo">
+                      <div class="search-context__doctor-name">Семкин Антон Сергеевич</div>
+                      <div class="search-context__doctor-kind">Стоматолог</div>
+                    </div>
+                    <div class="search-context__item  search-context__item_doctor">
+                      <img class="search-context__doctor-photo" src="assets/images/doctors/photo3.png" alt="doctor-photo">
+                      <div class="search-context__doctor-name">Семенович Ольга Владимировна</div>
+                      <div class="search-context__doctor-kind">Стоматолог</div>
+                    </div>
+                    <div class="search-context__item  search-context__item_doctor">
+                      <img class="search-context__doctor-photo" src="assets/images/doctors/photo4.png" alt="doctor-photo">
+                      <div class="search-context__doctor-name">Серый Вадим Александрович</div>
+                      <div class="search-context__doctor-kind">Стоматолог</div>
+                    </div>
+                  </div>
+                  <b class="search-context__partition-title">Клиники (
+                    <span class="search-context__clinics-count">58</span>)
+                  </b>
+                  <div class="search-context__partition  search-context__partition_clinics">
+                    <div class="search-context__item  search-context__clinic">Клиника «Сибирская»</div>
+                    <div class="search-context__item  search-context__clinic">Центр Семейной Медицины &quot;ЦСМ &quot;</div>
+                    <div class="search-context__item  search-context__clinic">Группа компаний &quot;Клиника Сибирская&quot;</div>
+                  </div>
+                  <b class="search-context__partition-title">Услуги (
+                    <span class="search-context__services-count">14</span>)
+                  </b>
+                  <div class="search-context__partition  search-context__partition_services">
+                    <div class="search-context__item  search-context__service">Стоматология</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="main-index__input-wrapper">
+              <label class="main-index__search-label">Город
+                <input type="text" class="main-index__search-input  main-index__search-input_city" name="search-input-city" placeholder="Регион или по всей стране">
+                <svg class="clear-svg  main-index__search-clear-svg" width="22" height="22" stroke="#97a4b1">
+                  <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </label>
+              <div class="search-context  search-context_location-and-history  main-index__search-context  main-index__search-context_location-and-history">
+
+                <div class="main-index__search-context-location  search-context__location  search-context__last">
+                  <b class="search-context__pin  search-context__pin_locale">
+                    <svg class="search-context__location-svg" width="15" height="17" color="#1ed48b">
+                      <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    Определить местонахождение</b>
+                  <b class="search-context__pin  search-context__pin_All">
+                    <svg class="search-context__location-svg" width="15" height="17" stroke="#1ed48b">
+                      <use xlink:href="assets/icons/symbols.svg#globus" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    По всей России</b>
+                  <b class="search-context__partition-title  search-context__partition-title_history">История поиска</b>
+                  <div class="search-context__partition  search-context__partition_cities">
+                    <div class="search-context__item  search-context__city">Тюмень Тюменская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Тольятти Самарская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Тула Тульская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Томск, Томская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Тверь, Тверская область, Россия</div>
+                  </div>
+                </div>
+
+                <div class="main-index__search-context-cities  search-context__search  search-context__cities">
+                  <div class="search-context__partition  search-context__partition_cities">
+                    <div class="search-context__item  search-context__city">Тюмень Тюменская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Тольятти Самарская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Тула Тульская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Томск, Томская область, Россия</div>
+                    <div class="search-context__item  search-context__city">Тверь, Тверская область, Россия</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <button type="submit" class="btn main-index__search-submit">Отправить
+              <svg class="main-nav__search-svg" width="21" height="20">
+                <use xlink:href="assets/icons/symbols.svg#search-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </button>
+          </div>
+
+        </form>
+
+        <div class="links-block  main-index__links-block">
+          <div class="links-block__svg-wrapper  links-block__svg-wrapper_hospital">
+            <svg class="links-block__svg">
+              <use xlink:href="assets/icons/symbols.svg#ls-hospital" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
-          </a>
+          </div>
+          <div class="links-block__items">
+            <h3 class="links-block__title">Клиники</h3>
+            <a href="#" class="links-block__link">Взрослые поликлиники</a>
+            <a href="#" class="links-block__link">Акушер-гинеколог</a>
+            <a href="#" class="links-block__link">Госпитали</a>
+            <a href="#" class="links-block__link">Аптеки</a>
+            <a href="#" class="links-block__link">Детские поликлиники</a>
+            <a href="#" class="links-block__link">Диспансеры</a>
+            <a href="#" class="links-block__link">Оптики</a>
+            <a href="#" class="links-block__link">Медицинские центры</a>
+            <a href="#" class="links-block__link">Ортопедические салоны</a>
+            <a href="#" class="links-block__link">Реабилитационные центры</a>
+            <a href="#" class="links-block__link">Родильные дома</a>
+            <a href="#" class="links-block__link">Санатории/профилактории</a>
+            <a href="#" class="links-block__link">Мануальный терапевт</a>
+            <a href="#" class="links-block__link">Станции переливания крови</a>
+            <a href="#" class="links-block__link">Стоматологии</a>
+            <a href="#" class="links-block__link">Посмотреть все</a>
+          </div>
         </div>
-      </nav>
-      <h1 class="page-header__title">Медицинский навигатор</h1>
-    </header>
 
-    <main class="main  main-index">
-      <form action="/echo" method="get" class="main-index__search-form">
-        <div class="main-index__search-wrapper">
-          <input type="search" class="main-index__search-input  main-index__search-input_all" name="search-input-all" placeholder="Клиники, Врачи, Города">
-          <label class="main-index__search-label">Поиск
-            <input type="search" class="main-index__search-input  main-index__search-input_services" name="search-input-services" placeholder="Клиники, Врачи, Услуги">
-          </label>
-          <label class="main-index__search-label">Город
-            <input type="search" class="main-index__search-input  main-index__search-input_city" name="search-input-city" placeholder="Регион или по всей стране">
-          </label>
-          <button type="submit" class="btn main-index__search-submit">Отправить
-            <svg class="main-nav__search-svg" width="20" height="20">
-              <use xlink:href="img/symbols.svg#search-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        <div class="banner  main-index__banner">
+          <p class="banner__text">Скидка 50%
+            <br>на все услуги</p>
+        </div>
+
+        <div class="links-block  main-index__links-block  main-index__links-block_second">
+          <div class="links-block__svg-wrapper  links-block__svg-wrapper_doctor">
+            <svg class="links-block__svg">
+              <use xlink:href="assets/icons/symbols.svg#ls-doctor" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
-          </button>
-        </div>
-
-      </form>
-
-      <div class="links-block  main-index__links-block">
-        <div class="links-block__svg-wrapper  links-block__svg-wrapper_hospital">
-          <svg class="links-block__svg">
-            <use xlink:href="img/symbols.svg#ls-hospital" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </div>
-        <h3 class="links-block__title">Клиники</h3>
-        <ul class="links-block__columns">
-          <li class="links-block__column">
-            <ul class="links-block__items">
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Взрослые поликлиники</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Акушер-гинеколог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Госпитали</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Аптеки</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Детские поликлиники</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Диспансеры</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Оптики</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Медицинские центры</a>
-              </li>
-            </ul>
-          </li>
-          <li class="links-block__column">
-            <ul class="links-block__items">
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Ортопедические салоны</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Реабилитационные центры</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Родильные дома</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Санатории/профилактории</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Мануальный терапевт</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Станции переливания крови</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Стоматологии</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link  links-block__link_all">Посмотреть все</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="banner  main-index__banner">
-        <p class="banner__text">Скидка 50%
-          <br>на все услуги</p>
-      </div>
-
-      <div class="links-block  main-index__links-block  main-index__links-block_shadowed">
-        <div class="links-block__svg-wrapper  links-block__svg-wrapper_doctor">
-          <svg class="links-block__svg">
-            <use xlink:href="img/symbols.svg#ls-doctor" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </div>
-        <h3 class="links-block__title">Врачи</h3>
-        <ul class="links-block__columns">
-          <li class="links-block__column">
-            <ul class="links-block__items">
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Абдоминальный хирург</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Акушер-гинеколог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Аллерголог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Ангиолог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Андролог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Анестезиолог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Абдоминальный хирург</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Венеролог</a>
-              </li>
-            </ul>
-          </li>
-          <li class="links-block__column">
-            <ul class="links-block__items">
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Врач ЛФК</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Гинеколог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Миколог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Уролог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Мануальный терапевт</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Дерматолог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Нейрохирург</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link  links-block__link_all">Посмотреть все</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="banner  main-index__banner">
-        <p class="banner__text">Скидка 50%
-          <br>на все услуги</p>
-      </div>
-
-      <div class="links-block  main-index__links-block">
-        <div class="links-block__svg-wrapper  links-block__svg-wrapper_service">
-          <svg class="links-block__svg">
-            <use xlink:href="img/symbols.svg#ls-service" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </div>
-        <h3 class="links-block__title">Услуги</h3>
-        <ul class="links-block__columns">
-          <li class="links-block__column">
-            <ul class="links-block__items">
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Акушерство</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Аллергология</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Косметология</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Дерматология</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Наркология</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Анестезиолог</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Кардиология</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Офтальмология</a>
-              </li>
-            </ul>
-          </li>
-          <li class="links-block__column">
-            <ul class="links-block__items">
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Невролгия и нейрохирургия</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Пластическая хирургия</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Педиатрия</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Стоматология</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Функциональная диагностика</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Сцинтиграфия</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link">Изосерология</a>
-              </li>
-              <li class="links-block__item">
-                <a href="#" class="links-block__link  links-block__link_all">Посмотреть все</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="banner  banner_wide  main-index__banner">
-        <p class="banner__text">Скидка 50%
-          <br>на все услуги</p>
-      </div>
-
-      <div class="advantages">
-        <h2 class="advantages__promo">Почему мы?</h2>
-        <p class="advantages__intro">
-          Аналогичная система давно действу&shy;ет на Западе, позволяя выбирать лучших врачей, лучшие больницы и поликлиники на основе.
-        </p>
-        <div class="advantages__items">
-          <div class="advantages__item">
-            <div class="advantages__number-wrapper">
-              <div class="advantages__number">1</div>
-            </div>
-            <div class="advantages__description-wrapper">
-              <h3 class="advantages__title">ЛУЧШИЕ ВРАЧИ</h3>
-              <p class="advantages__description">
-                Ежедневное употре&shy;бление спортивных энергетических напитков не только обеспечи&shy;вает орга&shy;низм энергией.
-              </p>
-            </div>
           </div>
-          <div class="advantages__item">
-            <div class="advantages__number-wrapper">
-              <div class="advantages__number">2</div>
-            </div>
-            <div class="advantages__description-wrapper">
-              <h3 class="advantages__title">ПРОВЕРЕННЫЕ КЛИНИКИ</h3>
-              <p class="advantages__description">
-                Ежедневное употре&shy;бление спортивных энергетических напитков не только обеспечи&shy;вает орга&shy;низм энергией.
-              </p>
-            </div>
-          </div>
-          <div class="advantages__item">
-            <div class="advantages__number-wrapper  advantages__number-wrapper_last">
-              <div class="advantages__number">3</div>
-            </div>
-            <div class="advantages__description-wrapper">
-              <h3 class="advantages__title">НЕОБХОДИМЫЕ УСЛУГИ</h3>
-              <p class="advantages__description">
-                Ежедневное употре&shy;бление спортивных энергетических напитков не только обеспечи&shy;вает орга&shy;низм энергией.
-              </p>
-            </div>
+          <div class="links-block__items">
+            <h3 class="links-block__title">Врачи</h3>
+            <a href="#" class="links-block__link">Абдоминальный хирург</a>
+            <a href="#" class="links-block__link">Акушер-гинеколог</a>
+            <a href="#" class="links-block__link">Аллерголог</a>
+            <a href="#" class="links-block__link">Ангиолог</a>
+            <a href="#" class="links-block__link">Андролог</a>
+            <a href="#" class="links-block__link">Анестезиолог</a>
+            <a href="#" class="links-block__link">Абдоминальный хирург</a>
+            <a href="#" class="links-block__link">Венеролог</a>
+            <a href="#" class="links-block__link">Врач ЛФК</a>
+            <a href="#" class="links-block__link">Гинеколог</a>
+            <a href="#" class="links-block__link">Миколог</a>
+            <a href="#" class="links-block__link">Уролог</a>
+            <a href="#" class="links-block__link">Мануальный терапевт</a>
+            <a href="#" class="links-block__link">Дерматолог</a>
+            <a href="#" class="links-block__link">Нейрохирург</a>
+            <a href="#" class="links-block__link">Посмотреть все</a>
           </div>
         </div>
 
-      </div>
+        <div class="banner  main-index__banner">
+          <p class="banner__text">Скидка 50%
+            <br>на все услуги</p>
+        </div>
 
-      <div class="reviews">
-        <h2 class="reviews__title">
-          Отзывы
-        </h2>
-        <p class="reviews__intro">
-          Аналогичная система давно действу&shy;ет на Западе, позволяя выбирать лучших врачей, лучшие больницы и поликлиники на основе.
-        </p>
-
-        <div class="reviews__slider slider">
-          <div class="reviews__toggles slider__toggles">
-            <div class="slider__toggle  reviews__toggle  reviews__toggle-index">toggle
-              <img class="reviews__toggle-img" src="img/review/review-1.png" alt="rew-1">
-              <img class="reviews__toggle-img  reviews__toggle-img_active" src="img/review/review-1-active.png" alt="rew-1">
-            </div>
-            <div class="slider__toggle  reviews__toggle">toggle
-              <img class="reviews__toggle-img" src="img/review/review-2.png" alt="rew-2">
-              <img class="reviews__toggle-img  reviews__toggle-img_active" src="img/review/review-2-active.png" alt="rew-2">
-            </div>
-            <div class="slider__toggle  reviews__toggle">toggle
-              <img class="reviews__toggle-img" src="img/review/review-3.png" alt="rew-3">
-              <img class="reviews__toggle-img  reviews__toggle-img_active" src="img/review/review-3-active.png" alt="rew-3">
-            </div>
+        <div class="links-block  main-index__links-block">
+          <div class="links-block__svg-wrapper  links-block__svg-wrapper_service">
+            <svg class="links-block__svg">
+              <use xlink:href="assets/icons/symbols.svg#ls-service" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
           </div>
+          <div class="links-block__items">
+            <h3 class="links-block__title">Услуги</h3>
+            <a href="#" class="links-block__link">Акушерство</a>
+            <a href="#" class="links-block__link">Аллергология</a>
+            <a href="#" class="links-block__link">Косметология</a>
+            <a href="#" class="links-block__link">Дерматология</a>
+            <a href="#" class="links-block__link">Наркология</a>
+            <a href="#" class="links-block__link">Анестезиолог</a>
+            <a href="#" class="links-block__link">Кардиология</a>
+            <a href="#" class="links-block__link">Офтальмология</a>
+            <a href="#" class="links-block__link">Невролгия и нейрохирургия</a>
+            <a href="#" class="links-block__link">Пластическая хирургия</a>
+            <a href="#" class="links-block__link">Педиатрия</a>
+            <a href="#" class="links-block__link">Стоматология</a>
+            <a href="#" class="links-block__link">Функциональная диагностика</a>
+            <a href="#" class="links-block__link">Сцинтиграфия</a>
+            <a href="#" class="links-block__link">Изосерология</a>
+            <a href="#" class="links-block__link  links-block__link_all">Посмотреть все</a>
+          </div>
+        </div>
 
-          <div class="slider__inner  reviews__inner">
-            <div class="slider__list">
-              <blockquote class="slider__item  reviews__item">
-                <p class="reviews__quote">
-                  Профессионал своего дела! Я вообще боюсь стоматологов, но к Зуевой Е. Н. ходить одно удовольствие!
+        <div class="banner  banner_wide  main-index__banner">
+          <p class="banner__text">Скидка 50%
+            <br>на все услуги</p>
+        </div>
+
+        <div class="advantages">
+          <h2 class="advantages__promo">Почему мы?</h2>
+          <p class="advantages__intro">
+            Аналогичная система давно действу&shy;ет на Западе, позволяя выбирать лучших врачей, лучшие больницы и поликлиники на основе.
+          </p>
+          <div class="advantages__items">
+            <div class="advantages__item">
+              <div class="advantages__number-wrapper">
+                <div class="advantages__number">1</div>
+              </div>
+              <div class="advantages__description-wrapper">
+                <h3 class="advantages__title">ЛУЧШИЕ ВРАЧИ</h3>
+                <p class="advantages__description">
+                  Ежедневное употре&shy;бление спортивных энергетических напитков не только обеспечи&shy;вает орга&shy;низм энергией.
                 </p>
-                <cite class="reviews__autor">
-                  <b class="reviews__autor-name">Сергей Попков</b> &mdash;
-                  <span class="reviews__author-description">Стартап Менеджер</span>
-                </cite>
-              </blockquote>
-              <blockquote class="slider__item  reviews__item">
-                <p class="reviews__quote">
-                  Крутой врач! Я вообще боюсь стоматологов, но к Зуевой Е. Н. ходить одно удовольствие!
+              </div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__number-wrapper">
+                <div class="advantages__number">2</div>
+              </div>
+              <div class="advantages__description-wrapper">
+                <h3 class="advantages__title">ПРОВЕРЕННЫЕ КЛИНИКИ</h3>
+                <p class="advantages__description">
+                  Ежедневное употре&shy;бление спортивных энергетических напитков не только обеспечи&shy;вает орга&shy;низм энергией.
                 </p>
-                <cite class="reviews__autor">
-                  <b class="reviews__autor-name">Пётр Иванов</b> &mdash;
-                  <span class="reviews__author-description">Водитель трамвая</span>
-                </cite>
-              </blockquote>
-              <blockquote class="slider__item  reviews__item">
-                <p class="reviews__quote">
-                  Отличные услуги! Я вообще боюсь стоматологов, но к Зуевой Е. Н. ходить одно удовольствие!
+              </div>
+            </div>
+            <div class="advantages__item">
+              <div class="advantages__number-wrapper  advantages__number-wrapper_last">
+                <div class="advantages__number">3</div>
+              </div>
+              <div class="advantages__description-wrapper">
+                <h3 class="advantages__title">НЕОБХОДИМЫЕ УСЛУГИ</h3>
+                <p class="advantages__description">
+                  Ежедневное употре&shy;бление спортивных энергетических напитков не только обеспечи&shy;вает орга&shy;низм энергией.
                 </p>
-                <cite class="reviews__autor">
-                  <b class="reviews__autor-name">Иван Николаев</b> &mdash;
-                  <span class="reviews__author-description">Шахтёр</span>
-                </cite>
-              </blockquote>
+              </div>
             </div>
           </div>
 
         </div>
-      </div>
-    </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__info">
-        <svg class="page-footer__logo" width="45" height="43">
-            <use xlink:href="img/symbols.svg#logo-small" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-        <h2 class="page-footer__title">Медицинский навигатор</h2>
-        <span class="page-footer__email">admin@forpatient.ru</span>
-        <div class="social  page-footer__social">
-          <a class="social__link" href="#">Facebook
-            <svg class="social__svg" width="30" height="30">
-              <use xlink:href="img/symbols.svg#f-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="social__link" href="#">Vkontakte
-            <svg class="social__svg" width="30" height="30">
-              <use xlink:href="img/symbols.svg#f-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="social__link" href="#">Twitter
-            <svg class="social__svg" width="30" height="30">
-              <use xlink:href="img/symbols.svg#f-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="social__link" href="#">OK
-            <svg class="social__svg" width="30" height="30">
-              <use xlink:href="img/symbols.svg#f-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="social__link" href="#">Google
-            <svg class="social__svg" width="30" height="30">
-              <use xlink:href="img/symbols.svg#f-g" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="social__link" href="#">Instagram
-            <svg class="social__svg" width="30" height="30">
-              <use xlink:href="img/symbols.svg#f-in" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
+        <div class="reviews">
+          <h2 class="reviews__title">
+            Отзывы
+          </h2>
+          <p class="reviews__intro">
+            Аналогичная система давно действу&shy;ет на Западе, позволяя выбирать лучших врачей, лучшие больницы и поликлиники на основе.
+          </p>
+
+          <div class="reviews__slider slider">
+            <div class="reviews__toggles slider__toggles">
+              <div class="slider__toggle  reviews__toggle  reviews__toggle-index">toggle
+                <img class="reviews__toggle-img" src="assets/images/review/review-1.png" alt="rew-1">
+                <img class="reviews__toggle-img  reviews__toggle-img_active" src="assets/images/review/review-1-active.png" alt="rew-1">
+              </div>
+              <div class="slider__toggle  reviews__toggle">toggle
+                <img class="reviews__toggle-img" src="assets/images/review/review-2.png" alt="rew-2">
+                <img class="reviews__toggle-img  reviews__toggle-img_active" src="assets/images/review/review-2-active.png" alt="rew-2">
+              </div>
+              <div class="slider__toggle  reviews__toggle">toggle
+                <img class="reviews__toggle-img" src="assets/images/review/review-3.png" alt="rew-3">
+                <img class="reviews__toggle-img  reviews__toggle-img_active" src="assets/images/review/review-3-active.png" alt="rew-3">
+              </div>
+            </div>
+
+            <div class="slider__inner  reviews__inner">
+              <div class="slider__list">
+                <blockquote class="slider__item  reviews__item">
+                  <p class="reviews__quote">
+                    Профессионал своего дела! Я вообще боюсь стоматологов, но к Зуевой Е. Н. ходить одно удовольствие!
+                  </p>
+                  <cite class="reviews__autor">
+                    <b class="reviews__autor-name">Сергей Попков</b> &mdash;
+                    <span class="reviews__author-description">Стартап Менеджер</span>
+                  </cite>
+                </blockquote>
+                <blockquote class="slider__item  reviews__item">
+                  <p class="reviews__quote">
+                    Крутой врач! Я вообще боюсь стоматологов, но к Зуевой Е. Н. ходить одно удовольствие!
+                  </p>
+                  <cite class="reviews__autor">
+                    <b class="reviews__autor-name">Пётр Иванов</b> &mdash;
+                    <span class="reviews__author-description">Водитель трамвая</span>
+                  </cite>
+                </blockquote>
+                <blockquote class="slider__item  reviews__item">
+                  <p class="reviews__quote">
+                    Отличные услуги! Я вообще боюсь стоматологов, но к Зуевой Е. Н. ходить одно удовольствие!
+                  </p>
+                  <cite class="reviews__autor">
+                    <b class="reviews__autor-name">Иван Николаев</b> &mdash;
+                    <span class="reviews__author-description">Шахтёр</span>
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
-      <div class="page-footer__vault  vault">
-        <p class="vault__copyright">
-          © 2017 OOO «Для Пациента»
-        </p>
-        <div class="vault__page-links">
-          <a href="#" class="vault__page-link">Клиники</a>
-          <a href="#" class="vault__page-link">Врачи</a>
-          <a href="#" class="vault__page-link">Услуги</a>
+      </main>
+
+      <footer class="page-footer">
+        <div class="page-footer__info">
+          <svg class="page-footer__logo" width="45" height="43" fill="#e4e4e4">
+              <use xlink:href="assets/icons/symbols.svg#logo-small" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <h2 class="page-footer__title">Медицинский навигатор</h2>
+          <span class="page-footer__email">admin@forpatient.ru</span>
+          <div class="social  page-footer__social">
+            <a class="social__link" href="#">Facebook
+              <svg class="social__svg" width="36" height="36">
+                <use xlink:href="assets/icons/symbols.svg#f-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="social__link" href="#">Vkontakte
+              <svg class="social__svg" width="36" height="36">
+                <use xlink:href="assets/icons/symbols.svg#f-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="social__link" href="#">Twitter
+              <svg class="social__svg" width="36" height="36">
+                <use xlink:href="assets/icons/symbols.svg#f-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="social__link" href="#">OK
+              <svg class="social__svg" width="36" height="36">
+                <use xlink:href="assets/icons/symbols.svg#f-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="social__link" href="#">Google
+              <svg class="social__svg" width="36" height="36">
+                <use xlink:href="assets/icons/symbols.svg#f-g" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="social__link" href="#">Instagram
+              <svg class="social__svg" width="36" height="36">
+                <use xlink:href="assets/icons/symbols.svg#f-in" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+          </div>
         </div>
-        <a href="#" class="vault__license">Лицензионное соглашение</a>
-      </div>
-    </footer>
+        <div class="page-footer__vault  vault">
+          <p class="vault__copyright">
+            © 2017 OOO «Для Пациента»
+          </p>
+          <div class="vault__page-links">
+            <a href="#" class="vault__page-link">Клиники</a>
+            <a href="#" class="vault__page-link">Врачи</a>
+            <a href="#" class="vault__page-link">Услуги</a>
+          </div>
+          <a href="#" class="vault__license">Лицензионное соглашение</a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="page-shadow1"></div>
+    <div class="page-shadow2"></div>
   </div>
-
-
   <div class="popup-overlay"></div>
-  <div class="popup checkIn">
-    <h2 class="popup__title">Регистрация</h2>
-    <div class="popup__item  checkIn__1">
-      <button type="button" class="btn  popup__btn  checkIn__1-btn  checkIn__1-btn_email">РЕГИСТРАЦИЯ ЧЕРЕЗ EMAIL</button>
-      <button type="button" class="btn  popup__btn  checkIn__1-btn  checkIn__1-btn_phone">РЕГИСТРАЦИЯ ЧЕРЕЗ ТЕЛЕФОН</button>
-      <p class="checkIn__agreement">
-        Я принимаю условия
-        <a class="checkIn__agreement-link" href="#">Лицензионного соглашения</a>
-        и даю ООО «Мнение Пациента» согласие на обработку персональных данных на условиях и в целях, определенных
-        <a class="checkIn__agreement-link" href="#">Политикой конфиденциальности</a>
-      </p>
+  <div class="popup-wrapper">
+    <div class="popup checkIn">
+      <h2 class="popup__title">Регистрация</h2>
+      <div class="popup__item  checkIn__1">
+        <button type="button" class="btn  popup__btn  checkIn__1-btn  checkIn__1-btn_email">РЕГИСТРАЦИЯ ЧЕРЕЗ EMAIL</button>
+        <button type="button" class="btn  popup__btn  checkIn__1-btn  checkIn__1-btn_phone">РЕГИСТРАЦИЯ ЧЕРЕЗ ТЕЛЕФОН</button>
+        <p class="checkIn__agreement">
+          Я принимаю условия
+          <a class="checkIn__agreement-link" href="#">Лицензионного соглашения</a>
+          и даю ООО «Мнение Пациента» согласие на обработку персональных данных на условиях и в целях, определенных
+          <a class="checkIn__agreement-link" href="#">Политикой конфиденциальности</a>
+        </p>
+      </div>
+  
+      <form action="/echo" method="post" class="popup__item  checkIn__2">
+        <label for="checkIn__2-email-field" class="popup__label">E-MAIL</label>
+        <div class="popup__input-wrapper">
+          <input type="email" name="chekIn-email" placeholder="Введите E-mail" required pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" class="popup__input  checkIn__2-email-field" id="checkIn__2-email-field">
+          <svg class="popup__input-svg  popup__input-svg-ok checkIn__2-email-ok-svg" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </div>
+        <label for="checkIn__2-password-field" class="popup__label">ПАРОЛЬ</label>
+        <div class="popup__input-wrapper">
+          <input type="password" name="password" placeholder="Введите пароль" required class="popup__input  checkIn__2-password-field" id="checkIn__2-password-field">
+          <svg class="popup__input-svg  popup__input-svg-drop  checkIn__2-drop-pass-svg" width="22" height="22" fill="#bdc0cc">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </div>
+        <label for="checkIn__2-password-confirm" class="popup__label">ПОВТОРИТЕ ПАРОЛЬ</label>
+        <div class="popup__input-wrapper">
+          <input type="password" name="password" placeholder="Введите пароль" required class="popup__input  checkIn__2-password-confirm" id="checkIn__2-password-confirm">
+        </div>
+        <p class="checkIn__agreement  checkIn__2-agreement">
+          Нажимая на кнопку зарегистрироваться, я принимаю условия
+          <a class="checkIn__agreement-link" href="#">Лицензионного соглашения</a>
+          и даю согласие на обработку
+          <a class="checkIn__agreement-link" href="#">Персональных данных</a>
+        </p>
+        <button type="submit" name="checkIn-email-submit" class="btn  popup__btn  popup__submit  checkIn__2-submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+      </form>
+  
+      <form action="/echo" method="post" class="popup__item  checkIn__3">
+        <label for="checkIn__3-phone-field" class="popup__label">НОМЕР ТЕЛЕФОНА</label>
+        <div class="popup__input-wrapper">
+          <input type="text" name="chekIn-phone" placeholder="Введите номер телефона" required pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$" class="popup__input  checkIn__3-phone-field" id="checkIn__3-phone-field">
+          <svg class="popup__input-svg  popup__input-svg-ok" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </div>
+        <p class="checkIn__agreement  checkIn__3-agreement">
+          Нажимая на кнопку зарегистрироваться, я принимаю условия
+          <a class="checkIn__agreement-link" href="#">Лицензионного соглашения</a>
+          и даю согласие на обработку
+          <a class="checkIn__agreement-link" href="#">Персональных данных</a>
+        </p>
+        <button type="submit" name="checkIn-phone-check" class="btn  popup__btn  popup__submit  checkIn__3-submit">ДАЛЕЕ</button>
+      </form>
+  
+      <form action="/echo" method="post" class="popup__item  checkIn__4">
+        <label for="checkIn__4-phone-field" class="popup__label  checkIn__4-label">НОМЕР ТЕЛЕФОНА</label>
+        <div class="popup__input-wrapper">
+          <input type="text" name="chekIn-phone" readonly class="popup__input  checkIn__4-phone-field" id="checkIn__4-phone-field">
+        </div>
+        <label for="checkIn__4-code-field" class="popup__label">КОД ИЗ SMS</label>
+        <div class="popup__input-wrapper">
+          <input type="text" name="code" placeholder="Введите код" class="popup__input  checkIn__4-code-field" id="checkIn__4-code-field">
+        </div>
+        <p class="checkIn__4-code-info">Мы отправили вам SMS с кодом. Введите этот код в поле выше</p>
+        <button type="submit" name="checkIn-code-check" class="btn  popup__btn  popup__submit  checkIn__4-submit">ДАЛЕЕ</button>
+      </form>
+  
+      <form action="/echo" method="post" class="popup__item  checkIn__5">
+        <label for="checkIn__5-login-field" class="popup__label">ВАШ ЛОГИН В ДЛЯ ПАЦИЕНТА</label>
+        <div class="popup__input-wrapper  checkIn__5-input-wrapper">
+          <input type="text" name="login" readonly class="popup__input  checkIn__5-login-field" id="checkIn__5-login-field">
+        </div>
+        <label for="checkIn__5-password-field" class="popup__label">ПАРОЛЬ</label>
+        <div class="popup__input-wrapper  checkIn__5-input-wrapper">
+          <input type="password" name="password" placeholder="Введите пароль" required class="popup__input  checkIn__5-password-field" id="checkIn__5-password-field">
+        </div>
+        <p class="checkIn__5-pattern-description">РАЗРЕШЕНЫ ЛАТИНСКИЕ БУКВЫ, ЦИФРЫ И СИМВОЛЫ ! # $ ^ & * ()</p>
+        <button type="submit" name="checkIn-login" class="btn  popup__btn  popup__submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+      </form>
+  
+      <div class="checkIn__social-block  popup__checkIn-social-block">
+        <div class="popup__delimiter">
+          <span class="popup__delimiter-text">ИЛИ</span>
+        </div>
+        <div class="popup__social">
+          <a class="popup__social-link" href="#">Tw
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+          <a class="popup__social-link" href="#">FB
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+          <a class="popup__social-link" href="#">VK
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+          <a class="popup__social-link" href="#">OK
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <button type="button" class="popup__close-btn"></button>
+      <div class="popup__checkIn-signIn">
+        <a href="#" class="popup__sign-link">Войти</a>
+      </div>
     </div>
   
-    <form action="/echo" method="post" class="popup__item  checkIn__2">
-      <label for="checkIn__2-email-field" class="popup__label">E-MAIL</label>
-      <div class="popup__input-wrapper">
-        <input type="email" name="chekIn-email" placeholder="Введите E-mail" class="popup__input  checkIn__2-email-field" id="checkIn__2-email-field">
-        <svg class="popup__input-svg  popup__input-svg-ok checkIn__2-email-ok-svg" width="22" height="22" fill="#bdc0cc">
-            <use xlink:href="img/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </div>
-      <label for="checkIn__2-password-field" class="popup__label">ПАРОЛЬ</label>
-      <div class="popup__input-wrapper">
-        <input type="password" name="password" placeholder="Введите пароль" class="popup__input  checkIn__2-password-field" id="checkIn__2-password-field">
-        <svg class="popup__input-svg  popup__input-svg-drop  checkIn__2-drop-pass-svg" width="22" height="22" fill="#bdc0cc">
-            <use xlink:href="img/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </div>
-      <label for="checkIn__2-password-confirm" class="popup__label">ПОВТОРИТЕ ПАРОЛЬ</label>
-      <div class="popup__input-wrapper">
-        <input type="password" name="password" placeholder="Введите пароль" class="popup__input  checkIn__2-password-confirm" id="checkIn__2-password-confirm">
-      </div>
-      <p class="checkIn__agreement  checkIn__2-agreement">
-        Нажимая на кнопку зарегистрироваться, я принимаю условия
-        <a class="checkIn__agreement-link" href="#">Лицензионного соглашения</a>
-        и даю согласие на обработку
-        <a class="checkIn__agreement-link" href="#">Персональных данных</a>
-      </p>
-      <button type="submit" name="checkIn-email-submit" class="btn  popup__btn  popup__submit  checkIn__2-submit">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
-    </form>
-  
-    <form action="/echo" method="post" class="popup__item  checkIn__3">
-      <label for="checkIn__3-phone-field" class="popup__label">НОМЕР ТЕЛЕФОНА</label>
-      <div class="popup__input-wrapper">
-        <input type="text" name="chekIn-phone" placeholder="Введите номер телефона" class="popup__input  checkIn__3-phone-field" id="checkIn__3-phone-field">
-        <svg class="popup__input-svg  popup__input-svg-drop  checkIn__3-drop-pass-svg" width="22" height="22" fill="#bdc0cc">
-            <use xlink:href="img/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </div>
-      <p class="checkIn__agreement  checkIn__3-agreement">
-        Нажимая на кнопку зарегистрироваться, я принимаю условия
-        <a class="checkIn__agreement-link" href="#">Лицензионного соглашения</a>
-        и даю согласие на обработку
-        <a class="checkIn__agreement-link" href="#">Персональных данных</a>
-      </p>
-      <button type="submit" name="checkIn-phone-check" class="btn  popup__btn  popup__submit  checkIn__3-submit">ДАЛЕЕ</button>
-    </form>
-  
-    <form action="/echo" method="post" class="popup__item  checkIn__4">
-      <label for="checkIn__4-phone-field" class="popup__label  checkIn__4-label">НОМЕР ТЕЛЕФОНА</label>
-      <div class="popup__input-wrapper">
-        <input type="text" name="chekIn-phone" readonly class="popup__input  checkIn__4-phone-field" id="checkIn__4-phone-field">
-      </div>
-      <label for="checkIn__4-code-field" class="popup__label">КОД ИЗ SMS</label>
-      <div class="popup__input-wrapper">
-        <input type="text" name="code" placeholder="Введите код" class="popup__input  checkIn__4-code-field" id="checkIn__4-code-field">
-      </div>
-      <p class="checkIn__4-code-info">Мы отправили вам SMS с кодом. Введите этот код в поле выше</p>
-      <button type="submit" name="checkIn-code-check" class="btn  popup__btn  popup__submit  checkIn__4-submit">ДАЛЕЕ</button>
-    </form>
-  
-    <form action="/echo" method="post" class="popup__item  checkIn__5">
-      <label for="checkIn__5-login-field" class="popup__label">ВАШ ЛОГИН В ДЛЯ ПАЦИЕНТА</label>
-      <div class="popup__input-wrapper  checkIn__5-input-wrapper">
-        <input type="text" name="login" readonly class="popup__input  checkIn__5-login-field" id="checkIn__5-login-field">
-      </div>
-      <label for="checkIn__5-password-field" class="popup__label">ПАРОЛЬ</label>
-      <div class="popup__input-wrapper  checkIn__5-input-wrapper">
-        <input type="password" name="password" placeholder="Введите пароль" class="popup__input  checkIn__5-password-field" id="checkIn__5-password-field">
-      </div>
-      <p class="checkIn__5-pattern-description">РАЗРЕШЕНЫ ЛАТИНСКИЕ БУКВЫ, ЦИФРЫ И СИМВОЛЫ ! # $ ^ & * ()</p>
-      <button type="submit" name="checkIn-login" class="btn  popup__btn  popup__submit">ЗАРЕГЕСТРИРОВАТЬСЯ</button>
-    </form>
-  
-    <div class="checkIn__social-block  popup__checkIn-social-block">
-      <div class="popup__delimiter">
-        <span class="popup__delimiter-text">ИЛИ</span>
-      </div>
-      <div class="popup__social">
-        <a class="popup__social-link" href="#">Tw
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+    <div class="popup signIn">
+      <h2 class="popup__title">Войти</h2>
+      <form action="/echo" method="post" class="popup__item  signIn__1">
+        <label for="signIn__1-email-field" class="popup__label  signIn__1-label">ЛОГИН</label>
+        <div class="popup__input-wrapper">
+          <input type="text" name="signIn-email" placeholder="Введите E-mail или телефон" required pattern="^([-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4})|(\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2})$" class="popup__input  signIn__1-email-field" id="signIn__1-email-field">
+          <svg class="popup__input-svg  popup__input-svg-ok  signIn__1-email-ok-svg" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
-        </a>
-        <a class="popup__social-link" href="#">FB
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </div>
+        <label for="signIn__1-password-field" class="popup__label  signIn__1-label signIn__1-label_pass">ПАРОЛЬ</label>
+        <div class="popup__input-wrapper">
+          <input type="password" name="signIn-password" placeholder="Введите пароль" required class="popup__input  signIn__1-password-field" id="signIn__1-password-field">
+          <svg class="popup__input-svg  popup__input-svg-drop  signIn__1-drop-pass-svg" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
-        </a>
-        <a class="popup__social-link" href="#">VK
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </div>
+        <input type="checkbox" name="remember-pass" id="signIn__1-remember-checkbox" class="signIn__1-remember-checkbox">
+        <label for="signIn__1-remember-checkbox" class="signIn__1-remember-label">
+          <svg class="signIn__1-remember-svg" width="20" height="20" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#ok-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
-        </a>
-        <a class="popup__social-link" href="#">OK
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          Запомнить пароль</label>
+        <button type="submit" name="signIn-submit" class="btn  popup__btn  popup__submit  signIn__1-submit">ВОЙТИ</button>
+        <a href="#" class="signIn__1-forgot-pass">Забыли пароль?</a>
+  
+        <div class="popup__delimiter">
+          <span class="popup__delimiter-text">ИЛИ</span>
+        </div>
+        <div class="popup__social">
+          <a class="popup__social-link" href="#">Tw
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+          <a class="popup__social-link" href="#">FB
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+          <a class="popup__social-link" href="#">VK
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+          <a class="popup__social-link" href="#">OK
+            <svg class="popup__social-svg" width="42" height="42">
+              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </a>
+        </div>
+      </form>
+  
+      <form action="/echo" method="post" class="popup__item  signIn__2">
+        <label for="signIn__2-email-field" class="popup__label  signIn__2-label">ЛОГИН</label>
+        <div class="popup__input-wrapper">
+          <input type="text" name="signIn-login" placeholder="Введите E-mail или телефон" required pattern="^([-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4})|(\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2})$" class="popup__input  signIn__2-email-field" id="signIn__2-email-field">
+          <svg class="popup__input-svg  popup__input-svg-ok  signIn__2-email-ok-svg" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
-        </a>
+        </div>
+        <p class="signIn__2-restore-description">
+          После нажатия кнопки "Сбросить пароль" проверьте свою электронную почту.
+          <br> Мы вышлем вам ссылку на восстановление&nbsp;пароля.
+          <br> Если вы зарегистрированы по телефону, вам придёт sms с временым паролем.
+        </p>
+        <button type="submit" name="restore-submit" class="btn  popup__btn  popup__submit  signIn__2-submit">СБРОСИТЬ ПАРОЛЬ</button>
+        <a href="#" class="signIn__2-bethinked-pass">Вспомнил пароль</a>
+      </form>
+      <button type="button" class="popup__close-btn"></button>
+      <div class="popup__checkIn-signIn">
+        <p class="popup__checkIn-signIn-description">
+          У вас еще нет учётной записи?
+        </p>
+        <a href="#" class="popup__reg-link">Зарегистрируйтесь</a>
       </div>
     </div>
-    <button type="button" class="popup__close-btn"></button>
-    <div class="popup__checkIn-signIn">
-      <a href="#" class="popup__sign-link">Войти</a>
-    </div>
-  </div>
   
-  <div class="popup signIn">
-    <h2 class="popup__title">Войти</h2>
-    <form action="/echo" method="post" class="popup__item  signIn__1">
-      <label for="signIn__1-email-field" class="popup__label  signIn__1-label">E-MAIL ИЛИ ТЕЛЕФОН</label>
-      <div class="popup__input-wrapper">
-        <input type="email" name="signIn-email" placeholder="Введите E-mail или телефон" required class="popup__input  signIn__1-email-field" id="signIn__1-email-field">
-        <svg class="popup__input-svg  popup__input-svg-ok  signIn__1-email-ok-svg" width="22" height="22" fill="#bdc0cc">
-            <use xlink:href="img/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
+    <form action="/echo" method="get" class="popup popup-city">
+      <h2 class="popup-city__title">Выберите свой город</h2>
+      <div class="popup-city__popular-cities">
+        <div class="popup-city__popular-city">Москва</div>
+        <div class="popup-city__popular-city">Волгоград</div>
+        <div class="popup-city__popular-city">Воронеж</div>
+        <div class="popup-city__popular-city">Екатеринбург</div>
+        <div class="popup-city__popular-city">Казань</div>
+        <div class="popup-city__popular-city">Москва</div>
+        <div class="popup-city__popular-city">Волгоград</div>
+        <div class="popup-city__popular-city">Воронеж</div>
+        <div class="popup-city__popular-city">Екатеринбург</div>
+        <div class="popup-city__popular-city">Казань</div>
+        <div class="popup-city__popular-city">Москва</div>
+        <div class="popup-city__popular-city">Волгоград</div>
+        <div class="popup-city__popular-city">Воронеж</div>
+        <div class="popup-city__popular-city">Екатеринбург</div>
+        <div class="popup-city__popular-city">Казань</div>
       </div>
-      <label for="signIn__1-password-field" class="popup__label  signIn__1-label signIn__1-label_pass">ПАРОЛЬ</label>
-      <div class="popup__input-wrapper">
-        <input type="password" name="signIn-password" placeholder="Введите пароль" required class="popup__input  signIn__1-password-field" id="signIn__1-password-field">
-        <svg class="popup__input-svg  popup__input-svg-drop  signIn__1-drop-pass-svg" width="22" height="22" fill="#bdc0cc">
-            <use xlink:href="img/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
+      <div class="popup-city__input-wrapper">
+        <input type="text" placeholder="Поиск" class="popup-city__input">
+        <button type="submit" class="btn  popup-city__btn">Выбрать</button>
+        <div class="popup-city__items">
+          <div class="popup-city__item">Тюмень Тюменская область, Россия</div>
+          <div class="popup-city__item">Тольятти Самарская область, Россия</div>
+          <div class="popup-city__item">Тула Тульская область, Россия</div>
+          <div class="popup-city__item">Томск, Томская область, Россия</div>
+          <div class="popup-city__item">Тверь, Тверская область, Россия</div>
+        </div>
       </div>
-      <input type="checkbox" name="remember-pass" id="signIn__1-remember-checkbox" class="signIn__1-remember-checkbox">
-      <label for="signIn__1-remember-checkbox" class="signIn__1-remember-label">
-        <svg class="signIn__1-remember-svg" width="22" height="22" fill="#bdc0cc">
-            <use xlink:href="img/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-        Запомнить пароль</label>
-      <button type="submit" name="signIn-submit" class="btn  popup__btn  popup__submit  signIn__1-submit">ВОЙТИ</button>
-      <a href="#" class="signIn__1-forgot-pass">Забыли пароль?</a>
   
-      <div class="popup__delimiter">
-        <span class="popup__delimiter-text">ИЛИ</span>
-      </div>
-      <div class="popup__social">
-        <a class="popup__social-link" href="#">Tw
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </a>
-        <a class="popup__social-link" href="#">FB
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </a>
-        <a class="popup__social-link" href="#">VK
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </a>
-        <a class="popup__social-link" href="#">OK
-          <svg class="popup__social-svg" width="42" height="42">
-            <use class="popup__social-use" xlink:href="img/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            <use class="popup__social-use-h" xlink:href="img/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-          </svg>
-        </a>
-      </div>
+      <button type="button" class="popup__close-btn  popup-city__close-btn"></button>
     </form>
-  
-    <form action="/echo" method="post" class="popup__item  signIn__2">
-      <label for="signIn__2-email-field" class="popup__label  signIn__2-label">E-MAIL ИЛИ ТЕЛЕФОН</label>
-      <div class="popup__input-wrapper">
-        <input type="email" name="signIn-login" placeholder="Введите E-mail или телефон" class="popup__input  signIn__2-email-field" id="signIn__2-email-field">
-        <svg class="popup__input-svg  popup__input-svg-ok  signIn__2-email-ok-svg" width="22" height="22" fill="#bdc0cc">
-            <use xlink:href="img/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-        </svg>
-      </div>
-      <p class="signIn__2-restore-description">
-        После нажатия кнопки "Сбросить пароль" проверьте свою электронную почту.
-        <br> Мы вышлем вам ссылку на восстановление&nbsp;пароля.
-        <br> Если вы зарегестрированы по телефону, вам придёт sms с временым паролем.
-      </p>
-      <button type="submit" name="restore-submit" class="btn  popup__btn  popup__submit  signIn__2-submit">СБРОСИТЬ ПАРОЛЬ</button>
-      <a href="#" class="signIn__2-bethinked-pass">Вспомнил пароль</a>
-    </form>
-    <button type="button" class="popup__close-btn"></button>
-    <div class="popup__checkIn-signIn">
-      <p class="popup__checkIn-signIn-description">
-        У вас еще нет учётной записи?
-      </p>
-      <a href="#" class="popup__reg-link">Зарегестрируйтесь</a>
-    </div>
   </div>
   
   <form action="/echo" method="get" class="popup-search">
-    <div class="popup-search__input-wrapper">
-      <label class="popup-search__label  popup-search__label_services">Поиск
-        <input type="search" class="popup-search__input  popup-search__input_services" name="search-input-services" placeholder="Клиники, Врачи, Услуги">
-        <span class="popup-search__services-context">
-          <b>Врачи</b>
-          <span><img src="photo.img" alt="photo"> Стариков Сергей Анатольевич</span>
+    <div class="popup-search__wrapper">
+      <div class="popup-search__input-wrapper  popup-search__input-wrapper_services">
+        <label class="popup-search__label  popup-search__label_services">Поиск
+          <input type="text" class="popup-search__input  popup-search__input_services" name="search-input-services" placeholder="Клиники, Врачи, Услуги">
+          <svg class="clear-svg  popup-search__clear-svg" width="22" height="22" stroke="#97a4b1">
+              <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </label>
+        <div class="search-context  search-context_services-and-history  popup-search__context  popup-search__context_services-and-history">
   
-        </span>
-      </label>
-      <label class="popup-search__label  popup-search__label_city">Город
-        <input type="search" class="popup-search__input  popup-search__input_city" name="search-input-services" placeholder="Регион или по всей стране">
-      </label>
+          <div class="popup-search__context-last  search-context__last">
+            <b class="search-context__partition-title">История поиска</b>
+            <div class="search-context__partition  search-context__partition_history">
+              <div class="search-context__item  search-context__history">ОГАУЗ «Областной перинатальный центр»</div>
+            </div>
+            <b class="search-context__partition-title">Топ Запросов</b>
+            <div class="search-context__partition  search-context__partition_top">
+              <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+              <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+              <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+              <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+              <div class="search-context__item  search-context__top">ОГАУЗ «Областной перинатальный центр»</div>
+            </div>
+          </div>
+  
+          <div class="popup-search__context-services  search-context__services  search-context__search">
+            <b class="search-context__partition-title">Врачи (
+              <span class="search-context__doctors-count">78</span>)
+            </b>
+            <div class="search-context__partition  search-context__partition_doctors">
+              <div class="search-context__item  search-context__item_doctor">
+                <img class="search-context__doctor-photo" src="assets/images/doctors/photo1.png" alt="doctor-photo">
+                <div class="search-context__doctor-name">Стариков Сергей Анатольевич</div>
+                <div class="search-context__doctor-kind">Стоматолог</div>
+              </div>
+              <div class="search-context__item  search-context__item_doctor">
+                <img class="search-context__doctor-photo" src="assets/images/doctors/photo2.png" alt="doctor-photo">
+                <div class="search-context__doctor-name">Семкин Антон Сергеевич</div>
+                <div class="search-context__doctor-kind">Стоматолог</div>
+              </div>
+              <div class="search-context__item  search-context__item_doctor">
+                <img class="search-context__doctor-photo" src="assets/images/doctors/photo3.png" alt="doctor-photo">
+                <div class="search-context__doctor-name">Семенович Ольга Владимировна</div>
+                <div class="search-context__doctor-kind">Стоматолог</div>
+              </div>
+              <div class="search-context__item  search-context__item_doctor">
+                <img class="search-context__doctor-photo" src="assets/images/doctors/photo4.png" alt="doctor-photo">
+                <div class="search-context__doctor-name">Серый Вадим Александрович</div>
+                <div class="search-context__doctor-kind">Стоматолог</div>
+              </div>
+            </div>
+            <b class="search-context__partition-title">Клиники (
+              <span class="search-context__clinics-count">58</span>)
+            </b>
+            <div class="search-context__partition  search-context__partition_clinics">
+              <div class="search-context__item  search-context__clinic">Клиника «Сибирская»</div>
+              <div class="search-context__item  search-context__clinic">Центр Семейной Медицины &quot;ЦСМ &quot;</div>
+              <div class="search-context__item  search-context__clinic">Группа компаний &quot;Клиника Сибирская&quot;</div>
+            </div>
+            <b class="search-context__partition-title">Услуги (
+              <span class="search-context__services-count">14</span>)
+            </b>
+            <div class="search-context__partition  search-context__partition_services">
+              <div class="search-context__item  search-context__service">Стоматология</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-search__input-wrapper  popup-search__input-wrapper_city">
+        <label class="popup-search__label  popup-search__label_city">Город
+          <input type="text" class="popup-search__input  popup-search__input_city" name="search-input-services" placeholder="Регион или по всей стране">
+          <svg class="clear-svg  popup-search__clear-svg" width="22" height="22" stroke="#97a4b1">
+              <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+        </label>
+        <div class="search-context  search-context_location-and-history  popup-search__context  popup-search__context_location-and-history">
+  
+          <div class="popup-search__context-location  search-context__location  search-context__last">
+            <b class="search-context__pin  search-context__pin_locale">
+              <svg class="search-context__location-svg" width="15" height="17" color="#1ed48b">
+                <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+              Определить местонахождение</b>
+            <b class="search-context__pin  search-context__pin_All">
+              <svg class="search-context__location-svg" width="15" height="17" stroke="#1ed48b">
+                <use xlink:href="assets/icons/symbols.svg#globus" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+              По всей России</b>
+            <b class="search-context__partition-title  search-context__partition-title_history">История поиска</b>
+            <div class="search-context__partition  search-context__partition_cities">
+              <div class="search-context__item  search-context__city">Тюмень Тюменская область, Россия</div>
+              <div class="search-context__item  search-context__city">Тольятти Самарская область, Россия</div>
+              <div class="search-context__item  search-context__city">Тула Тульская область, Россия</div>
+              <div class="search-context__item  search-context__city">Томск, Томская область, Россия</div>
+              <div class="search-context__item  search-context__city">Тверь, Тверская область, Россия</div>
+            </div>
+          </div>
+  
+          <div class="popup-search__context-cities  search-context__cities  search-context__search">
+            <div class="search-context__partition  search-context__partition_cities">
+              <div class="search-context__item  search-context__city">Тюмень Тюменская область, Россия</div>
+              <div class="search-context__item  search-context__city">Тольятти Самарская область, Россия</div>
+              <div class="search-context__item  search-context__city">Тула Тульская область, Россия</div>
+              <div class="search-context__item  search-context__city">Томск, Томская область, Россия</div>
+              <div class="search-context__item  search-context__city">Тверь, Тверская область, Россия</div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+  
+  
       <button type="submit" class="btn  popup-search__btn">
         <svg class="popup-search__svg" width="20" height="20">
-          <use xlink:href="img/symbols.svg#search-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          <use xlink:href="assets/icons/symbols.svg#search-icon" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
         </svg>
       </button>
     </div>
     <button type="button" class="popup-search__close-btn"></button>
+    <svg class="popup-search__logo" width="35" height="35" fill="#08aeea">
+      <use xlink:href="assets/icons/symbols.svg#logo-small" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+    </svg>
   </form>
+  <button type="button" class="close-search-btn"></button>
 
   <svg display="none" xmlns="http://www.w3.org/2000/svg">
   </svg>
 
-  <script src="js/main.min.js"></script>
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

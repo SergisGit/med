@@ -534,6 +534,12 @@ input::-ms-clear {
 input::-ms-reveal {
   display: none;
 }
+input[type=text],
+input[type=email],
+input[type=submit],
+textarea {
+  -webkit-appearance: none;
+}
 .page-shadow1,
 .page-shadow2 {
   position: absolute;
@@ -1318,6 +1324,9 @@ input::-ms-reveal {
   text-align: center;
   font-size: 14px;
 }
+.page-footer__email * {
+  text-decoration: none;
+}
 .page-footer__social {
   margin: 30px auto;
 }
@@ -1378,7 +1387,7 @@ input::-ms-reveal {
   padding: 70px 0;
 }
 .popup {
-  margin: auto;
+  margin: auto 0;
   position: relative;
   display: none;
   -webkit-transform: translate3D(0, -100vh, 0);

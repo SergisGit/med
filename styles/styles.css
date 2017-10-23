@@ -1464,6 +1464,7 @@ textarea {
   outline: none;
   border: none;
   background-color: #eff0f4;
+  -webkit-appearance: none;
 }
 .popup__input:focus,
 .popup__input:active {

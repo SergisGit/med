@@ -115,7 +115,6 @@
 
       function openCities() {
         PopupCityItems.style.display = 'block';
-        PopupCityItems.scrollIntoView(true);
       }
       function chooseCity(event) {
         event.preventDefault();
@@ -394,6 +393,7 @@
       }
     }
     contextList.addEventListener('click', pushValue);
+    contextList.addEventListener('touchstart', pushValue);
 
     function closeList(event) {
       if (event.target != searchInput) {

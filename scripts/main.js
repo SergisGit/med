@@ -465,6 +465,7 @@
       popupOverlay
         .classList
         .add('popup-overlay_showed');
+
     } else {
       pageContainer
         .classList
@@ -477,6 +478,7 @@
     searchContainer
       .classList
       .add('search-open');
+    searchContainer.scrollIntoView(false);
   }
 
   function closeSearch() {

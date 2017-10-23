@@ -950,10 +950,19 @@ textarea {
   top: 6px;
   right: 18px;
 }
-.main-index__search-input_trick {
+.main-index__search-input-trick {
+  display: block;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
   position: absolute;
-  padding: 0 20px;
+  padding: 21px 20px;
   font-size: 14px;
+  color: #97a4b1;
 }
 .main-index__search-input_services,
 .main-index__search-input_city {
@@ -1458,6 +1467,12 @@ textarea {
 }
 .popup__input:focus,
 .popup__input:active {
+  background-color: transparent;
+  -webkit-box-shadow: 0 10px 30px #d3d6e1;
+          box-shadow: 0 10px 30px #d3d6e1;
+}
+.popup__input[type="password"]:focus,
+.popup__input[type="password"]:active {
   background-color: transparent;
   -webkit-box-shadow: 0 10px 30px #d3d6e1;
           box-shadow: 0 10px 30px #d3d6e1;
@@ -2920,7 +2935,7 @@ textarea {
     border-left: 1px solid #ededed;
     margin-left: 0;
   }
-  .main-index__search-input_trick {
+  .main-index__search-input-trick {
     display: none;
   }
   .main-index__search-input_services,
@@ -3554,7 +3569,10 @@ textarea {
 @media (max-width: 767px) {
   .main-index__search-submit {
     pointer-events: none;
-    z-index: -1;
+    position: absolute;
+    margin: 0;
+    right: 4px;
+    top: 3px;
   }
   .popup-search {
     left: 6.25%;

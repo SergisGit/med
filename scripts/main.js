@@ -437,7 +437,7 @@
   var pageContainer = document.querySelector('.body__inner'),
     mainNav = document.querySelector('.main-nav'),
     openCtrl = document.querySelector('.main-nav__search-link'),
-    openCtrl2 = document.querySelector('.main-index__search-input_trick'),
+    openCtrl2 = document.querySelector('.main-index__search-input-trick'),
     closeCtrl = document.querySelector('.popup-search__close-btn'),
     closeCtrl2 = document.querySelector('.close-search-btn'),
     searchContainer = document.querySelector('.popup-search'),

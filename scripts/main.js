@@ -395,7 +395,7 @@
     contextList.addEventListener('click', pushValue);
 
     function closeList(event) {
-      if (event.target != searchInput) {
+      if (event.target != searchInput && event.target != contextList) {
         BorderToShadow();
         contextList.removeEventListener('click', pushValue);
         searchInput.removeEventListener('keypress', changeSearchBox);
@@ -406,6 +406,7 @@
       }
     }
     document.addEventListener('click', closeList);
+    document.addEventListener('toucstart', closeList);
   }
 
   inputS.onfocus = function () {

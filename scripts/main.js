@@ -117,9 +117,9 @@
         PopupCityItems.style.display = 'block';
       }
       function chooseCity(event) {
-        event.preventDefault();
         var clickedElement = event.target;
         if (clickedElement.classList.contains('popup-city__item') || clickedElement.classList.contains('popup-city__popular-city')) {
+          event.preventDefault();
           PopupCityInput.value = clickedElement.textContent;
         }
         if (event.target != PopupCityInput) {
@@ -406,7 +406,7 @@
       }
     }
     document.addEventListener('click', closeList);
-    document.addEventListener('touchend', pushValue);
+    document.addEventListener('touchend', closeList);
   }
 
   inputS.onfocus = function () {

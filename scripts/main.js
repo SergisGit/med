@@ -393,7 +393,6 @@
       }
     }
     contextList.addEventListener('click', pushValue);
-    contextList.addEventListener('touchstart', pushValue);
 
     function closeList(event) {
       if (event.target != searchInput) {
@@ -407,6 +406,7 @@
       }
     }
     document.addEventListener('click', closeList);
+    document.addEventListener('touchstart', pushValue);
   }
 
   inputS.onfocus = function () {

@@ -406,7 +406,7 @@
       }
     }
     document.addEventListener('click', closeList);
-    document.addEventListener('touchstart', pushValue);
+    document.addEventListener('touchend', pushValue);
   }
 
   inputS.onfocus = function () {

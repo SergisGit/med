@@ -574,11 +574,15 @@ textarea {
 .popup__input:valid + .popup__input-svg-ok {
   fill: #43cb83;
 }
-.clear-svg {
+input:focus + .clear-svg,
+input:active + .clear-svg {
+  stroke: #97a4b1;
   cursor: pointer;
 }
-.clear-svg:hover,
-.clear-svg:active {
+input:focus + .clear-svg:hover,
+input:active + .clear-svg:hover,
+input:focus + .clear-svg:active,
+input:active + .clear-svg:active {
   stroke: #3b4256;
 }
 .clear-svg * {

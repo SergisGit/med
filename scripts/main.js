@@ -500,4 +500,61 @@
 
   initEvents();
 
+  //custom scroll
+
+  var scrolSet = {
+    prefix: 'custom-scroll_',
+
+    /* vertical */
+    barMinHeight: 10,
+    offsetTop: 0,
+    offsetBottom: 20,
+    /* will be added to offsetBottom in case of horizontal scroll */
+    trackWidth: 10,
+
+    /* horizontal */
+    barMinWidth: 10,
+    offsetLeft: 0,
+    offsetRight: 0,
+    /* will be added to offsetRight in case of vertical scroll */
+    trackHeight: 10,
+
+    /* each bar will have custom-scroll_bar-x or y class */
+    barHtml: '<div />',
+
+    /* both vertical or horizontal bar can be disabled */
+    vertical: true,
+    horizontal: false
+  };
+
+  var scrolSet2 = {
+    prefix: 'custom-scroll-2_',
+
+    /* vertical */
+    barMinHeight: 10,
+    offsetTop: 0,
+    offsetBottom: 0,
+    /* will be added to offsetBottom in case of horizontal scroll */
+    trackWidth: 10,
+
+    /* horizontal */
+    barMinWidth: 10,
+    offsetLeft: 0,
+    offsetRight: 0,
+    /* will be added to offsetRight in case of vertical scroll */
+    trackHeight: 10,
+
+    /* each bar will have custom-scroll_bar-x or y class */
+    barHtml: '<div />',
+
+    /* both vertical or horizontal bar can be disabled */
+    vertical: true,
+    horizontal: false
+  };
+
+
+  $('#scroll-1').customScroll(scrolSet);
+  $('#scroll-2').customScroll(scrolSet);
+  $('#scroll-3').customScroll(scrolSet2);
+  $('#scroll-4').customScroll(scrolSet2);
 })();

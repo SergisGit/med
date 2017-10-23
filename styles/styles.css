@@ -3021,7 +3021,6 @@ input:active + .clear-svg:active {
   .banner__text {
     font-size: 52px;
     line-height: 64px;
-    width: 45%;
     margin-top: 5px;
     margin-left: 8%;
   }

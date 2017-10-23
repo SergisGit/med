@@ -758,6 +758,8 @@ input:active + .clear-svg:active {
   -webkit-transform: scaleY(1.4);
       -ms-transform: scaleY(1.4);
           transform: scaleY(1.4);
+  -webkit-box-shadow: 0 8px 20px rgba(59, 66, 86, 0.12);
+          box-shadow: 0 8px 20px rgba(59, 66, 86, 0.12);
 }
 .main-nav__toggle {
   position: relative;

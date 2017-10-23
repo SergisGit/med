@@ -396,7 +396,9 @@
 
     function closeList(event) {
       if (event.target != searchInput) {
-        BorderToShadow();
+        if (event.target != inputC && event.target != inputS) {
+          BorderToShadow();
+        }
         contextList.removeEventListener('click', pushValue);
         searchInput.removeEventListener('keypress', changeSearchBox);
         document.removeEventListener('click', closeList);
@@ -425,6 +427,11 @@
   inputPopupC.onfocus = function () {
     chooseItem(inputPopupC, contextLocationPopup);
   };
+
+  /*if (inputS.blur && inputC.blur ) {
+    BorderToShadow();
+  }*/
+
 
   function clearInput(event) {
     var clickedElement = event.target;

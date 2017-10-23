@@ -472,7 +472,7 @@
       popupOverlay
         .classList
         .add('popup-overlay_showed');
-
+      pageContainer.style.overflow = "hidden";
     } else {
       pageContainer
         .classList
@@ -492,7 +492,7 @@
     popupOverlay
       .classList
       .remove('popup-overlay_showed');
-
+    pageContainer.style.overflow = "";
     pageContainer
       .classList
       .remove('page-move');

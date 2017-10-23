@@ -447,18 +447,6 @@ template {
   font-weight: 900;
   font-style: normal;
 }
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background-color: #cbd1d8;
-}
-::-webkit-scrollbar-thumb {
-  background: #828896;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0.05em 0.05em 0 rgba(0, 0, 0, 0.1), inset 0 -0.05em 0 rgba(0, 0, 0, 0.07);
-          box-shadow: inset 0.05em 0.05em 0 rgba(0, 0, 0, 0.1), inset 0 -0.05em 0 rgba(0, 0, 0, 0.07);
-}
 body {
   background: #ffffff;
   color: #3b4256;

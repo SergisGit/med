@@ -121,10 +121,11 @@
         var clickedElement = event.target;
         if (clickedElement.classList.contains('popup-city__item') || clickedElement.classList.contains('popup-city__popular-city')) {
           PopupCityInput.value = clickedElement.textContent;
-
         }
         if (event.target != PopupCityInput) {
-          PopupCityItems.style.display = '';
+          setTimeout(function () {
+            PopupCityItems.style.display = '';
+          }, 10);
         }
       }
 
@@ -378,8 +379,12 @@
       event.preventDefault();
       if (clickedElement.classList.contains('search-context__item')) {
         if (clickedElement.classList.contains('search-context__item_doctor')) {
-          var doctorName = clickedElement.querySelector('.search-context__doctor-name').textContent;
-          var doctorKind = clickedElement.querySelector('.search-context__doctor-kind').textContent;
+          var doctorName = clickedElement
+            .querySelector('.search-context__doctor-name')
+            .textContent;
+          var doctorKind = clickedElement
+            .querySelector('.search-context__doctor-kind')
+            .textContent;
           searchInput.value = doctorName + ' - ' + doctorKind;
         } else {
           searchInput.value = clickedElement.textContent;
@@ -554,7 +559,6 @@
     vertical: true,
     horizontal: false
   };
-
 
   $('#scroll-1').customScroll(scrolSet);
   $('#scroll-2').customScroll(scrolSet);

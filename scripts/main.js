@@ -117,6 +117,7 @@
         PopupCityItems.style.display = 'block';
       }
       function chooseCity(event) {
+        event.preventDefault();
         var clickedElement = event.target;
         if (clickedElement.classList.contains('popup-city__item') || clickedElement.classList.contains('popup-city__popular-city')) {
           PopupCityInput.value = clickedElement.textContent;

@@ -565,4 +565,5 @@
   $('#scroll-2').customScroll(scrolSet);
   $('#scroll-3').customScroll(scrolSet2);
   $('#scroll-4').customScroll(scrolSet2);
+  $('#scroll-5').customScroll(scrolSet2);
 })();

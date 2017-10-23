@@ -3579,7 +3579,7 @@ input:active + .clear-svg:active {
   }
   .popup-search__btn {
     top: -40px;
-    right: 12px;
+    right: 6.25%;
     width: 30px;
     height: 30px;
     color: #3b4256;

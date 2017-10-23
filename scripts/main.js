@@ -115,9 +115,7 @@
 
       function openCities() {
         PopupCityItems.style.display = 'block';
-        setTimeout(function () {
-          window.scrollTo(document.body.scrollLeft, document.body.scrollTop);
-        }, 0);
+        PopupCityItems.scrollIntoView(true);
       }
       function chooseCity(event) {
         event.preventDefault();

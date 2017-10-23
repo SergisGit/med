@@ -2953,7 +2953,7 @@ input:active + .clear-svg:active {
   .main-index__search-input_city {
     display: block;
     width: 100%;
-    padding: 0 40px 0 15px;
+    padding: 0 50px 0 15px;
     font-size: 16px;
   }
   .main-index__search-context {
@@ -3448,7 +3448,7 @@ input:active + .clear-svg:active {
   .main-index__search-input_services,
   .main-index__search-input_city {
     font-size: 18px;
-    padding: 0 46px 0 28px;
+    padding: 0 50px 0 28px;
   }
   .main-index__banner {
     margin: 0;
@@ -3591,7 +3591,7 @@ input:active + .clear-svg:active {
   }
   .popup-search__btn {
     top: -40px;
-    right: 4px;
+    right: 12px;
     width: 30px;
     height: 30px;
     color: #3b4256;

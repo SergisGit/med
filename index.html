@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Title</title>
-  <link rel="stylesheet" href="styles/styles.min.css?ver=6">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=7">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
   <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
   <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
@@ -440,32 +440,32 @@
           <span class="page-footer__email"><script type="text/javascript">eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%27%3c%61%20%68%72%65%66%3d%22%6d%61%69%6c%74%6f%3a%61%64%6d%69%6e%40%66%6f%72%70%61%74%69%65%6e%74%2e%72%75%22%3e%61%64%6d%69%6e%40%66%6f%72%70%61%74%69%65%6e%74%2e%72%75%3c%2f%61%3e%27%29%3b'))</script>
           </span>
           <div class="social  page-footer__social">
-            <a class="social__link" href="#">Facebook
+            <a class="social__link" href="#" target="_blank">Facebook
               <svg class="social__svg" width="36" height="36">
                 <use xlink:href="assets/icons/symbols.svg#f-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </a>
-            <a class="social__link" href="#">Vkontakte
+            <a class="social__link" href="#" target="_blank">Vkontakte
               <svg class="social__svg" width="36" height="36">
                 <use xlink:href="assets/icons/symbols.svg#f-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </a>
-            <a class="social__link" href="#">Twitter
+            <a class="social__link" href="#" target="_blank">Twitter
               <svg class="social__svg" width="36" height="36">
                 <use xlink:href="assets/icons/symbols.svg#f-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </a>
-            <a class="social__link" href="#">OK
+            <a class="social__link" href="#" target="_blank">OK
               <svg class="social__svg" width="36" height="36">
                 <use xlink:href="assets/icons/symbols.svg#f-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </a>
-            <a class="social__link" href="#">Google
+            <a class="social__link" href="#" target="_blank">Google
               <svg class="social__svg" width="36" height="36">
                 <use xlink:href="assets/icons/symbols.svg#f-g" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
             </a>
-            <a class="social__link" href="#">Instagram
+            <a class="social__link" href="#" target="_blank">Instagram
               <svg class="social__svg" width="36" height="36">
                 <use xlink:href="assets/icons/symbols.svg#f-in" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               </svg>
@@ -502,26 +502,78 @@
           и даю ООО «Мнение Пациента» согласие на обработку персональных данных на условиях и в целях, определенных
           <a class="checkIn__agreement-link" href="#">Политикой конфиденциальности</a>
         </p>
+        <div class="checkIn__social-block  popup__checkIn-social-block">
+          <div class="popup__delimiter">
+            <span class="popup__delimiter-text">ИЛИ</span>
+          </div>
+          <div class="popup__social">
+            <a class="popup__social-link" href="#" target="_blank">Tw
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">FB
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">VK
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">OK
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
   
       <form action="/echo" method="post" class="popup__item  checkIn__2">
         <label for="checkIn__2-email-field" class="popup__label">E-MAIL</label>
         <div class="popup__input-wrapper">
           <input type="email" name="chekIn-email" placeholder="Введите E-mail" required pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" class="popup__input  checkIn__2-email-field" id="checkIn__2-email-field">
-          <svg class="popup__input-svg  popup__input-svg-ok checkIn__2-email-ok-svg" width="22" height="22" fill="transparent">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
         <label for="checkIn__2-password-field" class="popup__label">ПАРОЛЬ</label>
         <div class="popup__input-wrapper">
-          <input type="password" name="password" placeholder="Введите пароль" required class="popup__input  checkIn__2-password-field" id="checkIn__2-password-field">
-          <svg class="popup__input-svg  popup__input-svg-drop  checkIn__2-drop-pass-svg" width="22" height="22" fill="#bdc0cc">
+          <input type="password" name="password" placeholder="Введите пароль" required minlength="8" class="popup__input  checkIn__2-password-field" id="checkIn__2-password-field">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
         <label for="checkIn__2-password-confirm" class="popup__label">ПОВТОРИТЕ ПАРОЛЬ</label>
         <div class="popup__input-wrapper">
-          <input type="password" name="password" placeholder="Введите пароль" required class="popup__input  checkIn__2-password-confirm" id="checkIn__2-password-confirm">
+          <input type="password" name="password_confirm" placeholder="Введите пароль" required minlength="8" class="popup__input  checkIn__2-password-confirm" id="checkIn__2-password-confirm">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
         </div>
         <p class="checkIn__agreement  checkIn__2-agreement">
           Нажимая на кнопку зарегистрироваться, я принимаю условия
@@ -530,14 +582,51 @@
           <a class="checkIn__agreement-link" href="#">Персональных данных</a>
         </p>
         <button type="submit" name="checkIn-email-submit" class="btn  popup__btn  popup__submit  checkIn__2-submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        <div class="checkIn__social-block  popup__checkIn-social-block">
+          <div class="popup__delimiter">
+            <span class="popup__delimiter-text">ИЛИ</span>
+          </div>
+          <div class="popup__social">
+            <a class="popup__social-link" href="#" target="_blank">Tw
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">FB
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">VK
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">OK
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </form>
   
       <form action="/echo" method="post" class="popup__item  checkIn__3">
         <label for="checkIn__3-phone-field" class="popup__label">НОМЕР ТЕЛЕФОНА</label>
         <div class="popup__input-wrapper">
-          <input type="text" name="chekIn-phone" placeholder="Введите номер телефона" required pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$" class="popup__input  checkIn__3-phone-field" id="checkIn__3-phone-field">
-          <svg class="popup__input-svg  popup__input-svg-ok" width="22" height="22" fill="transparent">
+          <input type="text" name="chekIn_phone" placeholder="Введите номер телефона" required pattern="^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$" class="popup__input  checkIn__3-phone-field" id="checkIn__3-phone-field">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
         <p class="checkIn__agreement  checkIn__3-agreement">
@@ -547,6 +636,37 @@
           <a class="checkIn__agreement-link" href="#">Персональных данных</a>
         </p>
         <button type="submit" name="checkIn-phone-check" class="btn  popup__btn  popup__submit  checkIn__3-submit">ДАЛЕЕ</button>
+        <div class="checkIn__social-block  popup__checkIn-social-block">
+          <div class="popup__delimiter">
+            <span class="popup__delimiter-text">ИЛИ</span>
+          </div>
+          <div class="popup__social">
+            <a class="popup__social-link" href="#" target="_blank">Tw
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">FB
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">VK
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+            <a class="popup__social-link" href="#" target="_blank">OK
+              <svg class="popup__social-svg" width="42" height="42">
+                <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </form>
   
       <form action="/echo" method="post" class="popup__item  checkIn__4">
@@ -568,44 +688,21 @@
           <input type="text" name="login" readonly class="popup__input  checkIn__5-login-field" id="checkIn__5-login-field">
         </div>
         <label for="checkIn__5-password-field" class="popup__label">ПАРОЛЬ</label>
-        <div class="popup__input-wrapper  checkIn__5-input-wrapper">
-          <input type="password" name="password" placeholder="Введите пароль" required class="popup__input  checkIn__5-password-field" id="checkIn__5-password-field">
+        <div class="popup__input-wrapper  checkIn__5-input-wrapper  checkIn__5-input-wrapper_password">
+          <input type="password" name="password" placeholder="Введите пароль" required minlength="8" class="popup__input  checkIn__5-password-field" id="checkIn__5-password-field">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
         </div>
-        <p class="checkIn__5-pattern-description">РАЗРЕШЕНЫ ЛАТИНСКИЕ БУКВЫ, ЦИФРЫ И СИМВОЛЫ ! # $ ^ & * ()</p>
         <button type="submit" name="checkIn-login" class="btn  popup__btn  popup__submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
       </form>
   
-      <div class="checkIn__social-block  popup__checkIn-social-block">
-        <div class="popup__delimiter">
-          <span class="popup__delimiter-text">ИЛИ</span>
-        </div>
-        <div class="popup__social">
-          <a class="popup__social-link" href="#">Tw
-            <svg class="popup__social-svg" width="42" height="42">
-              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="popup__social-link" href="#">FB
-            <svg class="popup__social-svg" width="42" height="42">
-              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="popup__social-link" href="#">VK
-            <svg class="popup__social-svg" width="42" height="42">
-              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-          <a class="popup__social-link" href="#">OK
-            <svg class="popup__social-svg" width="42" height="42">
-              <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-              <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-          </a>
-        </div>
-      </div>
       <button type="button" class="popup__close-btn"></button>
       <div class="popup__checkIn-signIn">
         <a href="#" class="popup__sign-link">Войти</a>
@@ -615,18 +712,30 @@
     <div class="popup signIn">
       <h2 class="popup__title">Войти</h2>
       <form action="/echo" method="post" class="popup__item  signIn__1">
-        <label for="signIn__1-email-field" class="popup__label  signIn__1-label">ЛОГИН</label>
+        <label for="signIn__1-login-field" class="popup__label  signIn__1-label">ЛОГИН</label>
         <div class="popup__input-wrapper">
-          <input type="text" name="signIn-email" placeholder="Введите E-mail или телефон" required pattern="^([-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4})|(\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2})$" class="popup__input  signIn__1-email-field" id="signIn__1-email-field">
-          <svg class="popup__input-svg  popup__input-svg-ok  signIn__1-email-ok-svg" width="22" height="22" fill="transparent">
+          <input type="text" name="signIn_login" placeholder="Введите E-mail или телефон" required pattern="^([-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4})|(\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2})$" class="popup__input  signIn__1-login-field" id="signIn__1-login-field">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
         <label for="signIn__1-password-field" class="popup__label  signIn__1-label signIn__1-label_pass">ПАРОЛЬ</label>
         <div class="popup__input-wrapper">
-          <input type="password" name="signIn-password" placeholder="Введите пароль" required class="popup__input  signIn__1-password-field" id="signIn__1-password-field">
-          <svg class="popup__input-svg  popup__input-svg-drop  signIn__1-drop-pass-svg" width="22" height="22" fill="transparent">
+          <input type="password" name="signIn_password" placeholder="Введите пароль" required minlength="8" class="popup__input  signIn__1-password-field" id="signIn__1-password-field">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
         <input type="checkbox" name="remember-pass" id="signIn__1-remember-checkbox" class="signIn__1-remember-checkbox">
@@ -642,25 +751,25 @@
           <span class="popup__delimiter-text">ИЛИ</span>
         </div>
         <div class="popup__social">
-          <a class="popup__social-link" href="#">Tw
+          <a class="popup__social-link" href="#" target="_blank">Tw
             <svg class="popup__social-svg" width="42" height="42">
               <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-tw" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-tw_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
           </a>
-          <a class="popup__social-link" href="#">FB
+          <a class="popup__social-link" href="#" target="_blank">FB
             <svg class="popup__social-svg" width="42" height="42">
               <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-fb_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
           </a>
-          <a class="popup__social-link" href="#">VK
+          <a class="popup__social-link" href="#" target="_blank">VK
             <svg class="popup__social-svg" width="42" height="42">
               <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-vk" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-vk_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
           </a>
-          <a class="popup__social-link" href="#">OK
+          <a class="popup__social-link" href="#" target="_blank">OK
             <svg class="popup__social-svg" width="42" height="42">
               <use class="popup__social-use" xlink:href="assets/icons/symbols.svg#r-ok" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
               <use class="popup__social-use-h" xlink:href="assets/icons/symbols.svg#r-ok_h" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -672,9 +781,15 @@
       <form action="/echo" method="post" class="popup__item  signIn__2">
         <label for="signIn__2-email-field" class="popup__label  signIn__2-label">ЛОГИН</label>
         <div class="popup__input-wrapper">
-          <input type="text" name="signIn-login" placeholder="Введите E-mail или телефон" required pattern="^([-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4})|(\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2})$" class="popup__input  signIn__2-email-field" id="signIn__2-email-field">
-          <svg class="popup__input-svg  popup__input-svg-ok  signIn__2-email-ok-svg" width="22" height="22" fill="transparent">
+          <input type="text" name="signIn_login" placeholder="Введите E-mail или телефон" required pattern="^([-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4})|(\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2})$" class="popup__input  signIn__2-email-field" id="signIn__2-email-field">
+          <svg class="popup__input-svg  popup__input-svg_ok" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#tick" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
+            <use xlink:href="assets/icons/symbols.svg#cross" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="clear-svg  popup__input-svg" width="22" height="22" stroke="transparent">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </div>
         <p class="signIn__2-restore-description">
@@ -716,7 +831,7 @@
       <div class="popup-city__input-wrapper">
         <input type="text" placeholder="Поиск" class="popup-city__input">
         <button type="submit" class="btn  popup-city__btn">Выбрать</button>
-        <div class="popup-city__items"  id="scroll-5">
+        <div class="popup-city__items" id="scroll-5">
           <div class="popup-city__item">Тюмень Тюменская область, Россия</div>
           <div class="popup-city__item">Тольятти Самарская область, Россия</div>
           <div class="popup-city__item">Тула Тульская область, Россия</div>
@@ -735,7 +850,7 @@
         <label class="popup-search__label  popup-search__label_services">Поиск
           <input type="text" class="popup-search__input  popup-search__input_services" name="search-input-services" placeholder="Клиники, Врачи, Услуги">
           <svg class="clear-svg  popup-search__clear-svg" width="22" height="22" stroke="transparent">
-              <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </label>
         <div class="search-context  search-context_services-and-history  popup-search__context  popup-search__context_services-and-history" id="scroll-3">
@@ -802,7 +917,7 @@
         <label class="popup-search__label  popup-search__label_city">Город
           <input type="text" class="popup-search__input  popup-search__input_city" name="search-input-services" placeholder="Регион или по всей стране">
           <svg class="clear-svg  popup-search__clear-svg" width="22" height="22" stroke="transparent">
-              <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </label>
         <div class="search-context  search-context_location-and-history  popup-search__context  popup-search__context_location-and-history" id="scroll-4">
@@ -861,6 +976,7 @@
   
   <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/jquery.custom-scroll.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
   <script src="scripts/main.min.js"></script>
 </body>
 

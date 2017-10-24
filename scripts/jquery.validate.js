@@ -297,6 +297,9 @@ $.extend( $.validator, {
 		},
 		onfocusout: function( element ) {
 			if ( !this.checkable( element ) && ( element.name in this.submitted || !this.optional( element ) ) ) {
+				element.nextElementSibling.onclick = function () {
+					element.value = "";
+				};
 				this.element( element );
 			}
 		},
@@ -1617,7 +1620,7 @@ return $;
 $.extend( $.validator.messages, {
 	required: "Это поле необходимо заполнить.",
 	remote: "Пожалуйста, введите правильное значение.",
-	email: "Некорректный e-mail",
+	email: "Пожалуйста, введите корректный e-mail",
 	url: "Пожалуйста, введите корректный URL.",
 	date: "Пожалуйста, введите корректную дату.",
 	dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
@@ -1888,14 +1891,14 @@ $.validator.addMethod( "passw", function( value, element ) {
  */
 $.validator.addMethod( "phoneRU", function( value, element ) {
 	return this.optional( element ) || /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/.test( value );
-}, "Некорректный телефон" );
+}, "Пожалуйста, введите корректный телефон" );
 
 /**
  * login pattern: email или телефон.
  */
 $.validator.addMethod( "login", function( value, element ) {
 	return this.optional( element ) || /^([-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4})|(\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2})$/.test( value );
-}, "Вы ввели неверный логин" );
+}, "Пожалуйста, введите корректный логин" );
 
 
 return $;

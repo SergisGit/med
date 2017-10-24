@@ -400,7 +400,7 @@
           BorderToShadow();
         }
         contextList.removeEventListener('click', pushValue);
-        searchInput.removeEventListener('keypress', changeSearchBox);
+        searchInput.removeEventListener('input', changeSearchBox);
         document.removeEventListener('click', closeList);
         contextList.style.display = "";
         SearchBox.style.display = "";
@@ -435,7 +435,6 @@
 
   function clearInput(event) {
     var clickedElement = event.target;
-    event.preventDefault();
     if (clickedElement.previousElementSibling.tagName == 'INPUT') {
       clickedElement.previousElementSibling.value = "";
     }
@@ -584,7 +583,7 @@ function inv() {
  }*/
 
 
-  $(".checkIn__2").validate({
+ var validator = $(".checkIn__2").validate({
     rules: {
       password: {
         passw: true,
@@ -636,6 +635,24 @@ function inv() {
     }
   });
   
+
+/*
+
+  function clearInput(event) {
+    var clickedElement = event.target;
+    event.preventDefault();
+    if (clickedElement.previousElementSibling.tagName == 'INPUT') {
+      clickedElement.previousElementSibling.value = "";
+    }
+  }
+
+  var clearInputBtns = document.querySelectorAll('.clear-svg');
+  for (var j = 0; j < clearInputBtns.length; j += 1) {
+    clearInputBtns[j].addEventListener('click', clearInput);
+  }
+*/
+
+
   
 })();
 

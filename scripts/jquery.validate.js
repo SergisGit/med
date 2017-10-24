@@ -299,6 +299,7 @@ $.extend( $.validator, {
 			if ( !this.checkable( element ) && ( element.name in this.submitted || !this.optional( element ) ) ) {
 				element.nextElementSibling.onclick = function () {
 					element.value = "";
+					element.nextElementSibling.style.pointerEvents = 'none';
 				};
 				this.element( element );
 			}

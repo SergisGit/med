@@ -560,9 +560,6 @@ input:focus ~ .clear-svg:hover,
 input:focus ~ .clear-svg:active {
   stroke: #3b4256;
 }
-.clear-svg * {
-  pointer-events: none;
-}
 .popup-overlay {
   position: fixed;
   top: -20vh;

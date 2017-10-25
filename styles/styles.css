@@ -1465,9 +1465,6 @@ input:focus ~ .clear-svg:active {
   margin: auto 0;
   position: relative;
   display: none;
-  -webkit-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-          transform: scale(0.95);
   opacity: 0.9;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1478,6 +1475,7 @@ input:focus ~ .clear-svg:active {
   background-color: #ffffff;
   -webkit-box-shadow: 0 5px 40px rgba(59, 66, 86, 0.3);
           box-shadow: 0 5px 40px rgba(59, 66, 86, 0.3);
+  opacity: 0;
   z-index: 50;
 }
 .popup_animated {
@@ -2265,6 +2263,8 @@ input:focus ~ .clear-svg:active {
   -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
        -o-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
           transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  pointer-events: none;
+  visibility: hidden;
 }
 input.error {
   color: #3b4256;
@@ -2743,25 +2743,17 @@ label.error {
 }
 @-webkit-keyframes popup-show {
   0% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-    opacity: 0.9;
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     opacity: 1;
   }
 }
 @keyframes popup-show {
   0% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95);
-    opacity: 0.9;
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
     opacity: 1;
   }
 }
@@ -2884,10 +2876,6 @@ label.error {
   }
 }
 @media (min-width: 768px) {
-  .body__wrapper {
-    -webkit-perspective: 1200px;
-            perspective: 1200px;
-  }
   .page-header {
     background-image: url("../assets/images/ph-index-tablet.jpg");
   }

@@ -482,7 +482,8 @@
   }
 
   // Открыть поиск
-  var pageContainer = document.querySelector('.body__inner'),
+  var pageWrapper = document.querySelector('.body__wrapper'),
+    pageContainer = document.querySelector('.body__inner'),
     mainNav = document.querySelector('.main-nav'),
     openCtrl = document.querySelector('.main-nav__search-link'),
     openCtrl2 = document.querySelector('.main-index__search-input-trick'),
@@ -506,15 +507,16 @@
   }
 
   function openSearch() {
-    openCtrl.style.position = "absolute";
-    mainNav.style.position = "absolute";
-
+    
     if (window.matchMedia("(max-width: 767px)").matches) {
       popupOverlay
         .classList
         .add('popup-overlay_showed');
       pageContainer.style.overflow = "hidden";
     } else {
+      pageWrapper.style.perspective = '1200px';
+      pageShadow1.style.visibility = 'visible';
+      pageShadow2.style.visibility = 'visible';
       pageContainer
         .classList
         .add('page-move');
@@ -541,11 +543,12 @@
     searchContainer
       .classList
       .remove('search-open');
-    openCtrl.style.position = "";
-    mainNav.style.position = "";
     pageShadow1.style.transform = '';
     pageShadow2.style.transform = '';
+    pageShadow1.style.visibility = '';
+    pageShadow2.style.visibility = '';
     closeCtrl2.style.transform = '';
+    pageWrapper.style.perspective = '';
   }
 
   initEvents();

@@ -555,10 +555,20 @@ input:focus ~ .popup__input-svg_error {
 input:focus ~ .clear-svg {
   stroke: #97a4b1;
   cursor: pointer;
+  pointer-events: auto;
 }
 input:focus ~ .clear-svg:hover,
 input:focus ~ .clear-svg:active {
   stroke: #3b4256;
+}
+.main-index__search-clear-svg:active {
+  stroke: #97a4b1;
+}
+.clear-svg {
+  pointer-events: none;
+}
+.clear-svg:active {
+  pointer-events: auto;
 }
 .clear-svg * {
   pointer-events: none;

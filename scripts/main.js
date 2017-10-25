@@ -428,16 +428,14 @@
   inputPopupC.onfocus = function () {
     chooseItem(inputPopupC, contextLocationPopup);
   };
-
-  /*if (inputS.blur && inputC.blur ) {
-    BorderToShadow();
-  }*/
-
+  
   function clearInput(event) {
-    var clickedElement = event.target;
-    if (clickedElement.previousElementSibling.tagName == 'INPUT') {
-      clickedElement.previousElementSibling.value = "";
+    var clickedElement = event.target,
+    previosEl = clickedElement.previousElementSibling;
+    while (previosEl.tagName != 'INPUT') {
+      previosEl = previosEl.previousElementSibling;
     }
+    previosEl.value = "";
   }
 
   var clearInputBtns = document.querySelectorAll('.clear-svg');
@@ -522,7 +520,7 @@
     /* vertical */
     barMinHeight: 10,
     offsetTop: 0,
-    offsetBottom: 20,
+    offsetBottom: 0,
     /* will be added to offsetBottom in case of horizontal scroll */
     trackWidth: 10,
 
@@ -572,116 +570,5 @@
   $('#scroll-4').customScroll(scrolSet2);
   $('#scroll-5').customScroll(scrolSet2);
 
-  /*var inputsValidate = document.querySelectorAll('.input-validate');
-
-function inv() {
-   inputsValidate[k].style.display = 'none';
- }
-
- for(var k = 0; k < inputsValidate.length; k++) {
-   inputsValidate[k].onblur = inv;
- }*/
-
-
- var validator = $(".checkIn__2").validate({
-    rules: {
-      password: {
-        passw: true,
-        required: true
-      },
-      password_confirm: {
-        equalTo: "#checkIn__2-password-field"
-      }
-    }
-  });
-
-  $(".checkIn__3").validate({
-    rules: {
-      chekIn_phone: {
-        phoneRU: true,
-        required: true
-      }
-    }
-  });
-
-  $(".checkIn__5").validate({
-    rules: {
-      password: {
-        passw: true,
-        required: true
-      }
-    }
-  });
-
-  $(".signIn__1").validate({
-    rules: {
-      signIn_login: {
-        login: true,
-        required: true
-      },
-      signIn_password: {
-        passw: true,
-        required: true
-      }
-    }
-  });
-
-  $(".signIn__2").validate({
-    rules: {
-      signIn_login: {
-        login: true,
-        required: true
-      }
-    }
-  });
-  
-
-/*
-
-  function clearInput(event) {
-    var clickedElement = event.target;
-    event.preventDefault();
-    if (clickedElement.previousElementSibling.tagName == 'INPUT') {
-      clickedElement.previousElementSibling.value = "";
-    }
-  }
-
-  var clearInputBtns = document.querySelectorAll('.clear-svg');
-  for (var j = 0; j < clearInputBtns.length; j += 1) {
-    clearInputBtns[j].addEventListener('click', clearInput);
-  }
-*/
-
-
   
 })();
-
-
-/*
-
-(function () {
-  var input = document.querySelector('input[name="pass"]');
-  document.querySelector(".password-reveal").addEventListener("click", function () {
-    if (input.getAttribute('type') != 'text') {
-      input.setAttribute('type', 'text');
-    } else {
-      input.setAttribute('type', 'password');
-    }
-  });
-})();
-
-
-
-// Вариант 1. Привязываем контекст и первые по порядку параметры
-function someFunk(a, b, event) {
-  console.log(a, b, event);
-}
-element.addEventListener('click', someFunk.bind(null, 1, 2));
-
-// Вариант 2. Используем интерфейс EventListener
-function someFunk(event) {
-  console.log(this.a, this.b, event);
-}
-element.addEventListener('click', {handleEvent: someFunk, a: 1, b: 2});
-
-*/

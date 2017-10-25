@@ -3800,7 +3800,6 @@ label.error {
     width: 30px;
     height: 30px;
     color: #3b4256;
-    background-color: blue;
     border-radius: 0;
   }
   .popup-search__btn:hover,
@@ -3814,7 +3813,6 @@ label.error {
     width: 20px;
     height: 20px;
     margin: auto;
-    background-color: pink;
   }
   .popup-search__logo {
     position: absolute;

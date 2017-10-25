@@ -405,7 +405,6 @@
         contextList.style.display = "";
         SearchBox.style.display = "";
         lastSearch.style.display = "";
-        searchInput.blur();
       }
     }
     document.addEventListener('click', closeList);

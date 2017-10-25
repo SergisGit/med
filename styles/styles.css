@@ -3789,12 +3789,18 @@ label.error {
     right: 6.25%;
   }
   .popup-search__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     top: -40px;
     right: 8%;
     width: 30px;
     height: 30px;
     color: #3b4256;
-    background-color: red;
+    background-color: blue;
     border-radius: 0;
   }
   .popup-search__btn:hover,
@@ -3803,8 +3809,11 @@ label.error {
   }
   .popup-search__svg {
     display: block;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 20px;
     height: 20px;
+    margin: auto;
     background-color: pink;
   }
   .popup-search__logo {

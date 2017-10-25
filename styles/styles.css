@@ -1231,8 +1231,6 @@ input:focus ~ .clear-svg:active {
   -o-transition: transform 0.5s linear;
   transition: transform 0.5s linear;
   transition: transform 0.5s linear, -webkit-transform 0.5s linear;
-  -webkit-box-shadow: 0 20px 0 0 #ededed;
-          box-shadow: 0 20px 0 0 #ededed;
 }
 .advantages__number-past-in {
   position: absolute;

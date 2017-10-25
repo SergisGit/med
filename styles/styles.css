@@ -1165,14 +1165,8 @@ input:focus ~ .clear-svg:active {
       -ms-flex-align: center;
           align-items: center;
 }
-.advantages__item:first-child .advantages__number-wrapper::before {
-  height: 90px;
-}
 .advantages__item:first-child .advantages__description-wrapper {
   padding: 55px 0 20px;
-}
-.advantages__item:last-child .advantages__number-wrapper::after {
-  height: 40px;
 }
 .advantages__item:last-child .advantages__description-wrapper {
   padding: 20px 0 0px;
@@ -1203,6 +1197,12 @@ input:focus ~ .clear-svg:active {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+.advantages__number-pre_first {
+  height: 90px;
+}
+.advantages__number-past_last {
+  height: 40px;
 }
 .advantages__number-pre-in {
   position: absolute;

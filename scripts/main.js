@@ -365,7 +365,8 @@
   function chooseItem(searchInput, contextList) {
     contextList.style.display = "block";
     var lastSearch = contextList.querySelector('.search-context__last'),
-      SearchBox = contextList.querySelector('.search-context__search');
+      SearchBox = contextList.querySelector('.search-context__search'),
+      ClearSvg = searchInput.nextElementSibling;
 
     function changeSearchBox() {
       SearchBox.style.display = "block";
@@ -395,12 +396,12 @@
     contextList.addEventListener('click', pushValue);
 
     function closeList(event) {
-      if (event.target != searchInput) {
+      if (event.target != searchInput && event.target != ClearSvg) {
         if (event.target != inputC && event.target != inputS) {
           BorderToShadow();
         }
-        contextList.removeEventListener('click', pushValue);
         searchInput.removeEventListener('input', changeSearchBox);
+        contextList.removeEventListener('click', pushValue);
         document.removeEventListener('click', closeList);
         contextList.style.display = "";
         SearchBox.style.display = "";
@@ -410,21 +411,21 @@
     document.addEventListener('click', closeList);
   }
 
-  inputS.onfocus = function () {
+  inputS.onclick = function () {
     shadowToBorder();
     chooseItem(inputS, contextHistory);
   };
 
-  inputC.onfocus = function () {
+  inputC.onclick = function () {
     shadowToBorder();
     chooseItem(inputC, contextLocation);
   };
 
-  inputPopupS.onfocus = function () {
+  inputPopupS.onclick = function () {
     chooseItem(inputPopupS, contextHistoryPopup);
   };
 
-  inputPopupC.onfocus = function () {
+  inputPopupC.onclick = function () {
     chooseItem(inputPopupC, contextLocationPopup);
   };
   

@@ -573,6 +573,9 @@ input:focus ~ .clear-svg:active {
 .clear-svg * {
   pointer-events: none;
 }
+.links-block__look-all-svg {
+  stroke: #55c9af;
+}
 .popup-overlay {
   position: fixed;
   top: -20vh;
@@ -1051,15 +1054,38 @@ input:focus ~ .clear-svg:active {
   display: block;
   text-decoration: none;
   padding: 7px 0 6px;
-  -webkit-transition: all 0.1s;
-  -o-transition: all 0.1s;
-  transition: all 0.1s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .links-block__link:hover,
 .links-block__link:active {
   color: #1ed48b;
   padding-left: 20px;
   margin-right: -20px;
+}
+.links-block__link_look-all {
+  color: #1ed48b;
+}
+.links-block__link_look-all:hover,
+.links-block__link_look-all:active {
+  padding-left: 0;
+  margin-right: 0;
+}
+.links-block__link_look-all:hover .links-block__look-all-svg,
+.links-block__link_look-all:active .links-block__look-all-svg {
+  opacity: 1;
+  -webkit-transform: translateX(14px);
+      -ms-transform: translateX(14px);
+          transform: translateX(14px);
+}
+.links-block__look-all-svg {
+  position: relative;
+  top: 2px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 0;
 }
 .links-block__title {
   font-size: 20px;
@@ -1393,9 +1419,10 @@ input:focus ~ .clear-svg:active {
   margin: auto 0;
   position: relative;
   display: none;
-  -webkit-transform: translate3D(0, -100vh, 0);
-      -ms-transform: translate3D(0, -100vh, 0);
-          transform: translate3D(0, -100vh, 0);
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+  opacity: 0.9;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 280px;
@@ -2670,22 +2697,26 @@ label.error {
 }
 @-webkit-keyframes popup-show {
   0% {
-    -webkit-transform: translate3d(0, -100vh, 0);
-            transform: translate3d(0, -100vh, 0);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    opacity: 0.9;
   }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes popup-show {
   0% {
-    -webkit-transform: translate3d(0, -100vh, 0);
-            transform: translate3d(0, -100vh, 0);
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    opacity: 0.9;
   }
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }
 @-webkit-keyframes toUp {

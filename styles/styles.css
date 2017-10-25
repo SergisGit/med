@@ -3789,21 +3789,13 @@ label.error {
     right: 6.25%;
   }
   .popup-search__btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     top: -40px;
     right: 8%;
     width: 30px;
     height: 30px;
     color: #3b4256;
     background-color: red;
+    border-radius: 0;
   }
   .popup-search__btn:hover,
   .popup-search__btn:active {
@@ -3811,7 +3803,9 @@ label.error {
   }
   .popup-search__svg {
     display: block;
-    background-color: blue;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
   }
   .popup-search__logo {
     position: absolute;

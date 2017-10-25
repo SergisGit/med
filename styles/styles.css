@@ -3794,11 +3794,15 @@ label.error {
     width: 30px;
     height: 30px;
     color: #3b4256;
-    background-color: transparent;
+    background-color: red;
+    text-align: center;
   }
   .popup-search__btn:hover,
   .popup-search__btn:active {
     background-color: transparent;
+  }
+  .popup-search__svg {
+    background-color: green;
   }
   .popup-search__logo {
     position: absolute;

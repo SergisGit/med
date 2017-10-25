@@ -3800,6 +3800,7 @@ label.error {
     width: 30px;
     height: 30px;
     color: #3b4256;
+    background-color: transparent;
     border-radius: 0;
   }
   .popup-search__btn:hover,

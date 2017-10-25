@@ -213,28 +213,28 @@
         advantagesPre[0].style.transform = 'scaleY(1)';
         setTimeout(function () {
           advantagesNumbers[0].style.animation = "rubberBand 1s forwards";
-          advantagesItems[0].style.animation = "toUp 0.5s forwards";
+          advantagesItems[0].style.animation = "toUp 0.3s forwards";
           setTimeout(function () {
             advantagesPast[0].style.transform = 'scaleY(1)';
             setTimeout(function() { 
               advantagesPre[1].style.transform = 'scaleY(1)';
               setTimeout(function() { 
                 advantagesNumbers[1].style.animation = "rubberBand 1s forwards";
-                advantagesItems[1].style.animation = "toUp 0.5s forwards";
+                advantagesItems[1].style.animation = "toUp 0.3s forwards";
                 setTimeout(function() { 
                   advantagesPast[1].style.transform = 'scaleY(1)';
                   setTimeout(function() { 
                     advantagesPre[2].style.transform = 'scaleY(1)';
                     setTimeout(function() { 
                       advantagesNumbers[2].style.animation = "rubberBand 1s forwards";
-                      advantagesItems[2].style.animation = "toUp 0.5s forwards";
-                     }, 500);
-                   }, 500);
-                 }, 500);
-               }, 500);
-             }, 500);
-          }, 500);
-        }, 1000);
+                      advantagesItems[2].style.animation = "toUp 0.3s forwards";
+                     }, 300);
+                   }, 300);
+                 }, 300);
+               }, 300);
+             }, 300);
+          }, 300);
+        }, 500);
       }
 
       /*  for (var i = 0; i < advantagesNumbers.length; i += 1) {

@@ -3811,7 +3811,7 @@ label.error {
   }
   .popup-search__svg {
     display: block;
-    background-color: green;
+    background-color: blue;
   }
   .popup-search__logo {
     position: absolute;

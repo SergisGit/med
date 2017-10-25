@@ -1166,7 +1166,7 @@ input:focus ~ .clear-svg:active {
           align-items: center;
 }
 .advantages__item:first-child .advantages__description-wrapper {
-  padding: 55px 0 20px;
+  padding: 45px 0 20px;
 }
 .advantages__item:last-child .advantages__description-wrapper {
   padding: 20px 0 0px;
@@ -3274,7 +3274,7 @@ label.error {
     height: 100px;
   }
   .advantages__item:first-child .advantages__description-wrapper {
-    padding: 75px 0 35px;
+    padding: 65px 0 35px;
   }
   .advantages__item:last-child .advantages__number-wrapper::after {
     height: 47px;
@@ -3295,7 +3295,7 @@ label.error {
   .advantages__description-wrapper {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding: 35px 0;
+    padding: 25px 0 35px;
     width: 40%;
     max-width: 225px;
     margin-left: 0;

@@ -189,7 +189,10 @@
   };
 
   if (advantages) {
-    var advantagesItems = advantages.querySelectorAll(".advantages__description-wrapper");
+    var advantagesItems = advantages.querySelectorAll(".advantages__description-wrapper"),
+      advantagesNumbers = advantages.querySelectorAll(".advantages__number"),
+      advantagesPre = advantages.querySelectorAll(".advantages__number-pre-in"),
+      advantagesPast = advantages.querySelectorAll(".advantages__number-past-in");
 
     for (var i = 0; i < advantagesItems.length; i += 1) {
       advantagesItems[i].style.transform = "translate3d(0,100px,0)";
@@ -199,12 +202,47 @@
     document.addEventListener("DOMContentLoaded", scrolling, false);
     window.addEventListener("scroll", throttleScroll, false);
 
+    var animate = function (i) {
+      advantagesItems[i].style.animation = "toUp 1s forwards";
+      advantagesNumbers[i].style.animation = "rubberBand 1s forwards";
+      advantagesPast[i].style.transform = 'scaleY(1)';
+    };
+
     var scrolling = function (e) {
-      for (var i = 0; i < advantagesItems.length; i += 1) {
-        if (isPartiallyVisible(advantagesItems[i])) {
-          advantagesItems[i].style.animation = "toUp 1s forwards";
-        }
+      if (isFullyVisible(advantagesPre[0])) {
+        advantagesPre[0].style.transform = 'scaleY(1)';
+        setTimeout(function () {
+          advantagesNumbers[0].style.animation = "rubberBand 1s forwards";
+          advantagesItems[0].style.animation = "toUp 0.5s forwards";
+          setTimeout(function () {
+            advantagesPast[0].style.transform = 'scaleY(1)';
+            setTimeout(function() { 
+              advantagesPre[1].style.transform = 'scaleY(1)';
+              setTimeout(function() { 
+                advantagesNumbers[1].style.animation = "rubberBand 1s forwards";
+                advantagesItems[1].style.animation = "toUp 0.5s forwards";
+                setTimeout(function() { 
+                  advantagesPast[1].style.transform = 'scaleY(1)';
+                  setTimeout(function() { 
+                    advantagesPre[2].style.transform = 'scaleY(1)';
+                    setTimeout(function() { 
+                      advantagesNumbers[2].style.animation = "rubberBand 1s forwards";
+                      advantagesItems[2].style.animation = "toUp 0.5s forwards";
+                     }, 500);
+                   }, 500);
+                 }, 500);
+               }, 500);
+             }, 500);
+          }, 500);
+        }, 1000);
       }
+
+      /*  for (var i = 0; i < advantagesNumbers.length; i += 1) {
+        if (isFullyVisible(advantagesNumbers[i])) {
+          advantagesPre[i].style.transform = 'scaleY(1)';
+          setTimeout(animate.bind(null,i), 1000);
+        }
+      }*/
     };
   }
 
@@ -428,10 +466,10 @@
   inputPopupC.onclick = function () {
     chooseItem(inputPopupC, contextLocationPopup);
   };
-  
+
   function clearInput(event) {
     var clickedElement = event.target,
-    previosEl = clickedElement.previousElementSibling;
+      previosEl = clickedElement.previousElementSibling;
     while (previosEl.tagName != 'INPUT') {
       previosEl = previosEl.previousElementSibling;
     }
@@ -570,5 +608,4 @@
   $('#scroll-4').customScroll(scrolSet2);
   $('#scroll-5').customScroll(scrolSet2);
 
-  
 })();

@@ -483,9 +483,9 @@
     }
     document.addEventListener('click', closeList);
 
-    function closeList2(event) {
-      if (event.target != searchInput && event.target != ClearSvg  && event.target != contextList) {
-        if (event.target != inputC && event.target != inputS) {
+    function closeList2(touchPoint) {
+      if (touchPoint.target != searchInput && touchPoint.target != ClearSvg  && touchPoint.target != contextList) {
+        if (touchPoint.target != inputC && touchPoint.target != inputS) {
           BorderToShadow();
         }
         searchInput.removeEventListener('input', changeSearchBox);

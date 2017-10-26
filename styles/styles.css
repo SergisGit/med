@@ -1948,13 +1948,15 @@ input:focus ~ .password-svg {
   position: absolute;
   top: 70px;
   left: 0;
+  background-color: #ffffff;
   min-height: 30vh;
   width: 100%;
   font-size: 16px;
-  background-color: #ffffff;
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 1;
+  -webkit-box-shadow: 50px 10px 0 10px #ffffff, -50px 10px 0 10px #ffffff;
+          box-shadow: 50px 10px 0 10px #ffffff, -50px 10px 0 10px #ffffff;
 }
 .search-context__search {
   display: none;
@@ -1966,8 +1968,7 @@ input:focus ~ .password-svg {
 }
 .search-context__pin {
   display: block;
-  margin: 5px 0;
-  padding: 5px 5px;
+  padding: 10px 5px;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
@@ -1989,8 +1990,7 @@ input:focus ~ .password-svg {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  margin: 10px 0;
-  padding: 5px;
+  padding: 10px 5px;
   border-bottom: 1px solid #ededed;
   cursor: pointer;
 }
@@ -2180,7 +2180,6 @@ input:focus ~ .password-svg {
   top: 0;
   width: 6px;
   height: 100%;
-  background: #c9cfd6;
   border-radius: 3px;
   z-index: 1;
 }
@@ -3480,13 +3479,15 @@ label.error {
     display: none;
   }
   .search-context {
+    -webkit-box-shadow: 50px 10px 0 10px rgba(255, 255, 255, 0.5), -50px 10px 0 10px rgba(255, 255, 255, 0.5);
+            box-shadow: 50px 10px 0 10px rgba(255, 255, 255, 0.5), -50px 10px 0 10px rgba(255, 255, 255, 0.5);
     top: 55px;
   }
   .search-context__partition-title {
     padding: 0;
   }
   .search-context__pin {
-    padding: 5px 0;
+    padding: 10px 0;
   }
   .search-context__item {
     padding-left: 0;
@@ -3551,6 +3552,9 @@ label.error {
   .popup-city__close-btn {
     top: 14px;
     right: 24px;
+  }
+  .custom-scroll-2_container::after {
+    background: #c9cfd6;
   }
   .page-move {
     -webkit-transform: translate3d(0px, 70vh, -100px);

@@ -482,25 +482,6 @@
       }
     }
     document.addEventListener('click', closeList);
-
-    function closeList2(event) {
-      event.stopPropagation();
-      var changedTouch = event.changedTouches[0];
-      var touches = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
-      if (touches != searchInput && touches != ClearSvg  && touches != contextList && touches != contextList.childNodes[0] && touches != contextList.childNodes[1] && touches != contextList.childNodes[2] && touches != contextList.childNodes[3]) {
-        if (touches != inputC && touches != inputS) {
-          BorderToShadow();
-        }
-        searchInput.removeEventListener('input', changeSearchBox);
-        contextList.removeEventListener('click', pushValue);
-        document.removeEventListener('click', closeList);
-        contextList.style.display = "";
-        SearchBox.style.display = "";
-        lastSearch.style.display = "";
-        searchInput.blur();
-      }
-    }
-    document.addEventListener('touchstart', closeList2);
   }
 
   inputS.onclick = function () {

@@ -37,19 +37,23 @@
       }
     });
 
-  /*if (window.matchMedia("(min-width: 768px)").matches) {
-    $(window)
-      .scroll(function () {
-        if ($(window).scrollTop() == 0) {
+    function scrollnav() {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        if ($(window).scrollTop() === 0) {
           mainNav.style.position = 'absolute';
           mainNav.style.animation = "";
+          mainNav.style.transform = "translate3d(0,0,0)";
         }
-        if ($(window).scrollTop() >= 250) {
+        if ($(window).scrollTop() >= 350) {
           mainNav.style.position = 'fixed';
-          mainNav.style.animation = "animateMenu 1s forwards";
+          mainNav.style.transform = "";
+          mainNav.style.animation = "animateMenu 0.5s forwards";
         }
-      });
-  }*/
+      }
+    }
+
+  window.addEventListener("scroll", scrollnav, false);
+
   function popupShow(popup, openLink) {
     var close = popup.querySelector('.popup__close-btn'),
       popupItems = popup.querySelectorAll('.popup__item');
@@ -264,13 +268,6 @@
           }, 300);
         }, 500);
       }
-
-      /*  for (var i = 0; i < advantagesNumbers.length; i += 1) {
-        if (isFullyVisible(advantagesNumbers[i])) {
-          advantagesPre[i].style.transform = 'scaleY(1)';
-          setTimeout(animate.bind(null,i), 1000);
-        }
-      }*/
     };
   }
 
@@ -532,6 +529,8 @@
   }
 
   function openSearch() {
+    mainNav.style.position = 'absolute';
+    window.removeEventListener("scroll", scrollnav, false);
     popupOverlay.classList.add('popup-overlay_showed-mobile');
     pageContainer.classList.add('overflow-mobile');
     pageContainer.classList.add('page-move');
@@ -545,7 +544,6 @@
   }
 
   function closeSearch() {
-
     popupOverlay.classList.remove('popup-overlay_showed-mobile');
     pageContainer.classList.remove('overflow-mobile');
     pageContainer.classList.remove('page-move');
@@ -555,6 +553,22 @@
     closeCtrl2.classList.remove('scale-tablet');
 
     searchContainer.classList.remove('search-open');
+    
+
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      setTimeout(function () {
+        if ($(window).scrollTop() >= 350) {
+          mainNav.style.position = 'fixed';
+          mainNav.style.transform = "";
+          mainNav.style.animation = "animateMenu 0.5s forwards";
+        }
+      }, 1100);
+    } else {
+      mainNav.style.position = 'fixed';
+    }
+    setTimeout(function () {
+      window.addEventListener("scroll", scrollnav, false);
+    }, 1200);
   }
 
   initEvents();

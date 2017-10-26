@@ -562,14 +562,15 @@ input:focus ~ .clear-svg:hover,
 input:focus ~ .clear-svg:active {
   stroke: #3b4256;
 }
-.main-index__search-clear-svg:active {
-  stroke: #97a4b1;
-}
 .clear-svg {
   pointer-events: none;
 }
 .clear-svg:active {
   pointer-events: auto;
+  stroke: #97a4b1;
+}
+.clear-svg:active ~ .popup__input-svg_error {
+  fill: transparent;
 }
 input:focus ~ .password-svg {
   stroke: #97a4b1;
@@ -587,8 +588,15 @@ input:focus ~ .password-svg {
 .password-svg * {
   pointer-events: none;
 }
-.password-svg:hover,
-.password-svg:active {
+input[type="text"] ~ .password-svg {
+  pointer-events: auto;
+  stroke: #3b4256;
+  cursor: pointer;
+}
+input[type="text"] ~ .password-svg:active {
+  stroke: #97a4b1;
+}
+input[type="password"] ~ .password-svg:active {
   stroke: #3b4256;
 }
 .links-block__look-all-svg {
@@ -1948,7 +1956,6 @@ input:focus ~ .password-svg {
   position: absolute;
   top: 70px;
   left: 0;
-  background-color: #ffffff;
   min-height: 30vh;
   width: 100%;
   font-size: 16px;
@@ -3482,6 +3489,7 @@ label.error {
     display: none;
   }
   .search-context {
+    background-color: #ffffff;
     -webkit-box-shadow: 50px 10px 0 10px rgba(255, 255, 255, 0.5), -50px 10px 0 10px rgba(255, 255, 255, 0.5);
             box-shadow: 50px 10px 0 10px rgba(255, 255, 255, 0.5), -50px 10px 0 10px rgba(255, 255, 255, 0.5);
     top: 55px;
@@ -3880,6 +3888,9 @@ label.error {
   }
   .popup-search__context {
     height: 50vh;
+  }
+  .popup-search__context_services-and-history {
+    top: 140px;
   }
   .overflow-mobile {
     overflow: hidden;

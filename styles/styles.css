@@ -700,32 +700,6 @@ input:focus ~ .clear-svg:active {
 .main-nav__check {
   display: none;
 }
-.main-nav__check:checked ~ .main-nav__inner {
-  height: 100vh;
-}
-.main-nav__check:checked ~ .main-nav__inner::before {
-  bottom: -20vh;
-}
-.main-nav__check:checked ~ .main-nav__inner .main-nav__user-block,
-.main-nav__check:checked ~ .main-nav__inner .main-nav__items {
-  display: block;
-}
-.main-nav__check:checked ~ .main-nav__inner .main-nav__search-link,
-.main-nav__check:checked ~ .main-nav__inner .main-nav__main-link {
-  z-index: 0;
-}
-.main-nav__check:checked ~ .main-nav__inner .main-nav__toggle::before {
-  -webkit-transform: translate(-1px, 6px) rotate(45deg);
-      -ms-transform: translate(-1px, 6px) rotate(45deg);
-          transform: translate(-1px, 6px) rotate(45deg);
-}
-.main-nav__check:checked ~ .main-nav__inner .main-nav__toggle::after {
-  -webkit-transform: translate(-1px, -6px) rotate(-45deg);
-      -ms-transform: translate(-1px, -6px) rotate(-45deg);
-          transform: translate(-1px, -6px) rotate(-45deg);
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
 .main-nav__inner {
   position: absolute;
   display: -webkit-box;
@@ -1781,8 +1755,6 @@ input:focus ~ .clear-svg:active {
   min-width: 280px;
   top: 224px;
   opacity: 0;
-  -webkit-transform: scale3d(0.8, 0.8, 1);
-          transform: scale3d(0.8, 0.8, 1);
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   -o-transition: opacity 1s, transform 1s;
@@ -2235,8 +2207,8 @@ input:focus ~ .clear-svg:active {
 }
 .search-open {
   opacity: 1;
-  -webkit-transform: translate3d(0, -150px, 0) scale3d(1, 1, 1);
-          transform: translate3d(0, -150px, 0) scale3d(1, 1, 1);
+  -webkit-transform: translate3d(0, -150px, 0);
+          transform: translate3d(0, -150px, 0);
   z-index: 50;
 }
 .page-shadow1,
@@ -2875,6 +2847,34 @@ label.error {
             transform: scale3d(1, 1, 1);
   }
 }
+@-webkit-keyframes animateMenu {
+  0% {
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes animateMenu {
+  0% {
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
 @media (min-width: 768px) {
   .page-header {
     background-image: url("../assets/images/ph-index-tablet.jpg");
@@ -2991,20 +2991,6 @@ label.error {
   }
   .main-nav__inner {
     overflow-y: visible;
-  }
-  .main-nav__check:checked ~ .main-nav__inner {
-    height: auto;
-  }
-  .main-nav__check:checked ~ .main-nav__inner::before {
-    display: none;
-  }
-  .main-nav__check:checked ~ .main-nav__inner .main-nav__items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .main-nav__check:checked ~ .main-nav__inner .main-nav__user-block {
-    display: block;
   }
   .main-nav__main-link {
     width: 222px;
@@ -3410,8 +3396,8 @@ label.error {
     width: 100%;
     left: 50%;
     right: auto;
-    -webkit-transform: translate3d(-50%, 0, 0) scale3d(0.8, 0.8, 1);
-            transform: translate3d(-50%, 0, 0) scale3d(0.8, 0.8, 1);
+    -webkit-transform: translate3d(-50%, 0, 0);
+            transform: translate3d(-50%, 0, 0);
     padding: 0;
   }
   .popup-search__wrapper {
@@ -3554,8 +3540,27 @@ label.error {
     margin-bottom: 75vh;
   }
   .search-open {
-    -webkit-transform: translate3d(-50%, -150px, 0) scale3d(1, 1, 1);
-            transform: translate3d(-50%, -150px, 0) scale3d(1, 1, 1);
+    -webkit-transform: translate3d(-50%, -150px, 0);
+            transform: translate3d(-50%, -150px, 0);
+  }
+  .add-perspective {
+    -webkit-perspective: 1200px;
+            perspective: 1200px;
+  }
+  .scale-tablet {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+  .shadow1-change {
+    visibility: visible;
+    -webkit-transform: translate3d(0px, -40px, -300px);
+            transform: translate3d(0px, -40px, -300px);
+  }
+  .shadow2-change {
+    visibility: visible;
+    -webkit-transform: translate3d(0px, -20px, -200px);
+            transform: translate3d(0px, -20px, -200px);
   }
 }
 @media (min-width: 768px) and (max-width: 1299px) {
@@ -3765,6 +3770,38 @@ label.error {
   }
 }
 @media (max-width: 767px) {
+  .popup-overlay_showed-mobile {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+  .main-nav__check:checked ~ .main-nav__inner {
+    height: 100vh;
+  }
+  .main-nav__check:checked ~ .main-nav__inner::before {
+    bottom: -20vh;
+  }
+  .main-nav__check:checked ~ .main-nav__inner .main-nav__user-block,
+  .main-nav__check:checked ~ .main-nav__inner .main-nav__items {
+    display: block;
+  }
+  .main-nav__check:checked ~ .main-nav__inner .main-nav__search-link,
+  .main-nav__check:checked ~ .main-nav__inner .main-nav__main-link {
+    z-index: 0;
+  }
+  .main-nav__check:checked ~ .main-nav__inner .main-nav__toggle::before {
+    -webkit-transform: translate(-1px, 6px) rotate(45deg);
+        -ms-transform: translate(-1px, 6px) rotate(45deg);
+            transform: translate(-1px, 6px) rotate(45deg);
+  }
+  .main-nav__check:checked ~ .main-nav__inner .main-nav__toggle::after {
+    -webkit-transform: translate(-1px, -6px) rotate(-45deg);
+        -ms-transform: translate(-1px, -6px) rotate(-45deg);
+            transform: translate(-1px, -6px) rotate(-45deg);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
   .main-index__search-submit {
     pointer-events: none;
     position: absolute;
@@ -3783,7 +3820,7 @@ label.error {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    top: -40px;
+    top: -42px;
     right: 8%;
     width: 30px;
     height: 30px;
@@ -3814,5 +3851,8 @@ label.error {
   }
   .popup-search__context {
     height: 50vh;
+  }
+  .overflow-mobile {
+    overflow: hidden;
   }
 }

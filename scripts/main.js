@@ -1,7 +1,12 @@
 (function () {
   'use strict';
 
-  var reviewsSlider = document.querySelector('.reviews__slider'),
+  var body = document.querySelector('.body'),
+    pageWrapper = document.querySelector('.body__wrapper'),
+    pageContainer = document.querySelector('.body__inner'), 
+    mainNav = document.querySelector('.main-nav'),
+    mainNavCheck = document.querySelector('.main-nav__check'),
+    reviewsSlider = document.querySelector('.reviews__slider'),
     advantages = document.querySelector('.advantages'),
     popupOverlay = document.querySelector('.popup-overlay'),
     popupWrapper = document.querySelector('.popup-wrapper'),
@@ -22,6 +27,29 @@
     PopupCityInput = document.querySelector('.popup-city__input'),
     PopupCityItems = document.querySelector('.popup-city__items');
 
+
+    mainNavCheck.addEventListener('change', function(){
+      if (mainNavCheck.checked) {
+        body.classList.add('overflow-mobile');
+      }
+      else {
+        body.classList.remove('overflow-mobile');
+      }
+    });
+
+  /*if (window.matchMedia("(min-width: 768px)").matches) {
+    $(window)
+      .scroll(function () {
+        if ($(window).scrollTop() == 0) {
+          mainNav.style.position = 'absolute';
+          mainNav.style.animation = "";
+        }
+        if ($(window).scrollTop() >= 250) {
+          mainNav.style.position = 'fixed';
+          mainNav.style.animation = "animateMenu 1s forwards";
+        }
+      });
+  }*/
   function popupShow(popup, openLink) {
     var close = popup.querySelector('.popup__close-btn'),
       popupItems = popup.querySelectorAll('.popup__item');
@@ -216,23 +244,23 @@
           advantagesItems[0].style.animation = "toUp 0.3s forwards";
           setTimeout(function () {
             advantagesPast[0].style.transform = 'scaleY(1)';
-            setTimeout(function() { 
+            setTimeout(function () {
               advantagesPre[1].style.transform = 'scaleY(1)';
-              setTimeout(function() { 
+              setTimeout(function () {
                 advantagesNumbers[1].style.animation = "rubberBand 1s forwards";
                 advantagesItems[1].style.animation = "toUp 0.3s forwards";
-                setTimeout(function() { 
+                setTimeout(function () {
                   advantagesPast[1].style.transform = 'scaleY(1)';
-                  setTimeout(function() { 
+                  setTimeout(function () {
                     advantagesPre[2].style.transform = 'scaleY(1)';
-                    setTimeout(function() { 
+                    setTimeout(function () {
                       advantagesNumbers[2].style.animation = "rubberBand 1s forwards";
                       advantagesItems[2].style.animation = "toUp 0.3s forwards";
-                     }, 300);
-                   }, 300);
-                 }, 300);
-               }, 300);
-             }, 300);
+                    }, 300);
+                  }, 300);
+                }, 300);
+              }, 300);
+            }, 300);
           }, 300);
         }, 500);
       }
@@ -482,10 +510,7 @@
   }
 
   // Открыть поиск
-  var pageWrapper = document.querySelector('.body__wrapper'),
-    pageContainer = document.querySelector('.body__inner'),
-    mainNav = document.querySelector('.main-nav'),
-    openCtrl = document.querySelector('.main-nav__search-link'),
+  var openCtrl = document.querySelector('.main-nav__search-link'),
     openCtrl2 = document.querySelector('.main-index__search-input-trick'),
     closeCtrl = document.querySelector('.popup-search__close-btn'),
     closeCtrl2 = document.querySelector('.close-search-btn'),
@@ -507,48 +532,29 @@
   }
 
   function openSearch() {
-    
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      popupOverlay
-        .classList
-        .add('popup-overlay_showed');
-      pageContainer.style.overflow = "hidden";
-    } else {
-      pageWrapper.style.perspective = '1200px';
-      pageShadow1.style.visibility = 'visible';
-      pageShadow2.style.visibility = 'visible';
-      pageContainer
-        .classList
-        .add('page-move');
-      pageShadow1.style.transform = 'translate3d(0px, -40px, -300px)';
-      pageShadow2.style.transform = 'translate3d(0px, -20px, -200px)';
-      closeCtrl2.style.transform = 'scale(1)';
-    }
+    popupOverlay.classList.add('popup-overlay_showed-mobile');
+    pageContainer.classList.add('overflow-mobile');
+    pageContainer.classList.add('page-move');
+    pageWrapper.classList.add('add-perspective');
+    pageShadow1.classList.add('shadow1-change');
+    pageShadow2.classList.add('shadow2-change');
+    closeCtrl2.classList.add('scale-tablet');
 
-    searchContainer
-      .classList
-      .add('search-open');
+    searchContainer.classList.add('search-open');
     searchContainer.scrollIntoView(false);
   }
 
   function closeSearch() {
-    popupOverlay
-      .classList
-      .remove('popup-overlay_showed');
-    pageContainer.style.overflow = "";
-    pageContainer
-      .classList
-      .remove('page-move');
 
-    searchContainer
-      .classList
-      .remove('search-open');
-    pageShadow1.style.transform = '';
-    pageShadow2.style.transform = '';
-    pageShadow1.style.visibility = '';
-    pageShadow2.style.visibility = '';
-    closeCtrl2.style.transform = '';
-    pageWrapper.style.perspective = '';
+    popupOverlay.classList.remove('popup-overlay_showed-mobile');
+    pageContainer.classList.remove('overflow-mobile');
+    pageContainer.classList.remove('page-move');
+    pageWrapper.classList.remove('add-perspective');
+    pageShadow1.classList.remove('shadow1-change');
+    pageShadow2.classList.remove('shadow2-change');
+    closeCtrl2.classList.remove('scale-tablet');
+
+    searchContainer.classList.remove('search-open');
   }
 
   initEvents();

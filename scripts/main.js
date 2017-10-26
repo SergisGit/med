@@ -28,6 +28,12 @@
     PopupCityInput = document.querySelector('.popup-city__input'),
     PopupCityItems = document.querySelector('.popup-city__items');
 
+
+    if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+      document.querySelector('html').classList.add('is-ios');
+    }
+
+
   mainNavCheck.addEventListener('change', function () {
     if (mainNavCheck.checked) {
       body

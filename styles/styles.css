@@ -571,11 +571,35 @@ input:focus ~ .clear-svg:active {
 .clear-svg:active {
   pointer-events: auto;
 }
-.clear-svg * {
+input:focus ~ .password-svg {
+  stroke: #97a4b1;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.password-svg {
   pointer-events: none;
+}
+.password-svg:active {
+  pointer-events: auto;
+}
+.popup__input-svg_back *,
+.clear-svg *,
+.password-svg * {
+  pointer-events: none;
+}
+.password-svg:hover,
+.password-svg:active {
+  stroke: #3b4256;
 }
 .links-block__look-all-svg {
   stroke: #55c9af;
+}
+.popup__input-svg_back {
+  cursor: pointer;
+}
+.popup__input-svg_back:hover,
+.popup__input-svg_back:active {
+  stroke: #3b4256;
 }
 .popup-overlay {
   position: fixed;
@@ -1469,17 +1493,6 @@ input:focus ~ .clear-svg:active {
   display: block;
   margin-bottom: 27px;
 }
-.popup__input-btn {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  top: 10px;
-  right: 10px;
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  background: url("../assets/icons/x-circle.svg") no-repeat;
-}
 .popup__input-svg {
   position: absolute;
   top: 0;
@@ -1489,6 +1502,13 @@ input:focus ~ .clear-svg:active {
 }
 .popup__input-svg_clear {
   z-index: 1;
+}
+.popup__input-password-svg {
+  position: absolute;
+  top: 0;
+  right: 44px;
+  border: 10px solid transparent;
+  border-radius: 50%;
 }
 .popup__label {
   display: block;
@@ -1515,6 +1535,9 @@ input:focus ~ .clear-svg:active {
   border: none;
   background-color: #eff0f4;
   -webkit-appearance: none;
+}
+.popup__input_password {
+  padding-right: 84px;
 }
 .popup__input:focus,
 .popup__input:active {
@@ -1727,6 +1750,12 @@ input:focus ~ .clear-svg:active {
 }
 .checkIn__4-phone-field {
   pointer-events: none;
+}
+.checkIn__4-phone-field:active,
+.checkIn__4-phone-field:focus {
+  background-color: #eff0f4;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .checkIn__4-code-info {
   margin: 25px auto;

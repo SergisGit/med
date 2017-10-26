@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Title</title>
-  <link rel="stylesheet" href="styles/styles.min.css?ver=4">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=5">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
   <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
   <link rel="icon" type="image/png" href="assets/icons/favicon-32x32.png" sizes="32x32">
@@ -570,7 +570,7 @@
         </label>
         <label for="checkIn__2-password-field" class="popup__label">ПАРОЛЬ</label>
         <label class="popup__input-wrapper">
-          <input type="password" name="password" placeholder="Введите пароль" required minlength="8" class="popup__input  checkIn__2-password-field" id="checkIn__2-password-field">
+          <input type="password" name="password" placeholder="Введите пароль" required minlength="8" class="popup__input  popup__input_password  checkIn__2-password-field" id="checkIn__2-password-field">
           <svg class="clear-svg  popup__input-svg  popup__input-svg_clear" width="22" height="22" stroke="transparent">
             <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
@@ -579,12 +579,15 @@
           </svg>
           <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#alert" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-password-svg  password-svg" width="22" height="22" stroke="transparrent">
+            <use xlink:href="assets/icons/symbols.svg#eay" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
           
         </label>
         <label for="checkIn__2-password-confirm" class="popup__label">ПОВТОРИТЕ ПАРОЛЬ</label>
         <label class="popup__input-wrapper">
-          <input type="password" name="password_confirm" placeholder="Введите пароль" required minlength="8" class="popup__input  checkIn__2-password-confirm" id="checkIn__2-password-confirm">
+          <input type="password" name="password_confirm" placeholder="Введите пароль" required minlength="8" class="popup__input  popup__input_password  checkIn__2-password-confirm" id="checkIn__2-password-confirm">
           <svg class="clear-svg  popup__input-svg  popup__input-svg_clear" width="22" height="22" stroke="transparent">
             <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
@@ -593,6 +596,9 @@
           </svg>
           <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#alert" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-password-svg  password-svg" width="22" height="22" stroke="transparrent">
+            <use xlink:href="assets/icons/symbols.svg#eay" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </label>
         <p class="checkIn__agreement  checkIn__2-agreement">
@@ -693,6 +699,9 @@
         <label for="checkIn__4-phone-field" class="popup__label  checkIn__4-label">НОМЕР ТЕЛЕФОНА</label>
         <label class="popup__input-wrapper">
           <input type="text" name="chekIn-phone" readonly class="popup__input  checkIn__4-phone-field" id="checkIn__4-phone-field">
+          <svg class="popup__input-svg  popup__input-svg_back" width="22" height="22" stroke="#97a4b1">
+            <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
         </label>
         <label for="checkIn__4-code-field" class="popup__label">КОД ИЗ SMS</label>
         <label class="popup__input-wrapper">
@@ -709,7 +718,7 @@
         </label>
         <label for="checkIn__5-password-field" class="popup__label">ПАРОЛЬ</label>
         <label class="popup__input-wrapper  checkIn__5-input-wrapper  checkIn__5-input-wrapper_password">
-          <input type="password" name="password" placeholder="Введите пароль" required minlength="8" class="popup__input  checkIn__5-password-field" id="checkIn__5-password-field">
+          <input type="password" name="password" placeholder="Введите пароль" required minlength="8" class="popup__input  popup__input_password  checkIn__5-password-field" id="checkIn__5-password-field">
           <svg class="clear-svg  popup__input-svg  popup__input-svg_clear" width="22" height="22" stroke="transparent">
             <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
@@ -718,6 +727,9 @@
           </svg>
           <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#alert" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-password-svg  password-svg" width="22" height="22" stroke="transparrent">
+            <use xlink:href="assets/icons/symbols.svg#eay" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </label>
         <button type="submit" name="checkIn-login" class="btn  popup__btn  popup__submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
@@ -747,7 +759,7 @@
         </label>
         <label for="signIn__1-password-field" class="popup__label  signIn__1-label signIn__1-label_pass">ПАРОЛЬ</label>
         <label class="popup__input-wrapper">
-          <input type="password" name="signIn_password" placeholder="Введите пароль" required minlength="8" class="popup__input  signIn__1-password-field" id="signIn__1-password-field">
+          <input type="password" name="signIn_password" placeholder="Введите пароль" required minlength="8" class="popup__input  popup__input_password  signIn__1-password-field" id="signIn__1-password-field">
           <svg class="clear-svg  popup__input-svg  popup__input-svg_clear" width="22" height="22" stroke="transparent">
             <use xlink:href="assets/icons/symbols.svg#x-circle" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
@@ -756,6 +768,9 @@
           </svg>
           <svg class="popup__input-svg  popup__input-svg_error" width="22" height="22" fill="transparent">
             <use xlink:href="assets/icons/symbols.svg#alert" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>
+          <svg class="popup__input-password-svg  password-svg" width="22" height="22" stroke="transparrent">
+            <use xlink:href="assets/icons/symbols.svg#eay" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
           </svg>
         </label>
         <input type="checkbox" name="remember-pass" id="signIn__1-remember-checkbox" class="signIn__1-remember-checkbox">

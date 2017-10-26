@@ -3,7 +3,7 @@
 
   var body = document.querySelector('.body'),
     pageWrapper = document.querySelector('.body__wrapper'),
-    pageContainer = document.querySelector('.body__inner'), 
+    pageContainer = document.querySelector('.body__inner'),
     mainNav = document.querySelector('.main-nav'),
     mainNavCheck = document.querySelector('.main-nav__check'),
     reviewsSlider = document.querySelector('.reviews__slider'),
@@ -21,36 +21,39 @@
     popupSignLink = document.querySelector('.popup__sign-link'),
     checkInEmailBtn = document.querySelector('.checkIn__1-btn_email'),
     checkInPhoneBtn = document.querySelector('.checkIn__1-btn_phone'),
+    popupBackBtn = document.querySelector('.popup__input-svg_back'),
     forgotPassLink = document.querySelector('.signIn__1-forgot-pass'),
     bethinkedPassLink = document.querySelector('.signIn__2-bethinked-pass'),
     checkInSocial = document.querySelector('.checkIn__social-block'),
     PopupCityInput = document.querySelector('.popup-city__input'),
     PopupCityItems = document.querySelector('.popup-city__items');
 
+  mainNavCheck.addEventListener('change', function () {
+    if (mainNavCheck.checked) {
+      body
+        .classList
+        .add('overflow-mobile');
+    } else {
+      body
+        .classList
+        .remove('overflow-mobile');
+    }
+  });
 
-    mainNavCheck.addEventListener('change', function(){
-      if (mainNavCheck.checked) {
-        body.classList.add('overflow-mobile');
+  function scrollnav() {
+    if (window.matchMedia("(min-width: 768px)").matches) {
+      if ($(window).scrollTop() === 0) {
+        mainNav.style.position = 'absolute';
+        mainNav.style.animation = "";
+        mainNav.style.transform = "translate3d(0,0,0)";
       }
-      else {
-        body.classList.remove('overflow-mobile');
-      }
-    });
-
-    function scrollnav() {
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        if ($(window).scrollTop() === 0) {
-          mainNav.style.position = 'absolute';
-          mainNav.style.animation = "";
-          mainNav.style.transform = "translate3d(0,0,0)";
-        }
-        if ($(window).scrollTop() >= 350) {
-          mainNav.style.position = 'fixed';
-          mainNav.style.transform = "";
-          mainNav.style.animation = "animateMenu 0.5s forwards";
-        }
+      if ($(window).scrollTop() >= 350) {
+        mainNav.style.position = 'fixed';
+        mainNav.style.transform = "";
+        mainNav.style.animation = "animateMenu 0.5s forwards";
       }
     }
+  }
 
   window.addEventListener("scroll", scrollnav, false);
 
@@ -77,7 +80,7 @@
       if (popup == checkIn) {
         checkInEmailBtn.removeEventListener('click', popupItems_0_1);
         checkInPhoneBtn.removeEventListener('click', popupItems_0_2);
-        checkInSocial.style.display = 'block';
+        popupBackBtn.removeEventListener('click', popupItems_3_2);
       }
       if (popup == signIn) {
         forgotPassLink.removeEventListener('click', popupItems_0_1);
@@ -115,6 +118,11 @@
 
     function popupItems_0_2() {
       popupItems[0].style.display = 'none';
+      popupItems[2].style.display = 'block';
+    }
+
+    function popupItems_3_2() {
+      popupItems[3].style.display = 'none';
       popupItems[2].style.display = 'block';
     }
 
@@ -165,6 +173,8 @@
         popupSignLink.addEventListener('click', checkInToSignIn);
         checkInEmailBtn.addEventListener('click', popupItems_0_1);
         checkInPhoneBtn.addEventListener('click', popupItems_0_2);
+        popupBackBtn.addEventListener('click', popupItems_3_2);
+
       }
 
       if (popup == signIn) {
@@ -506,6 +516,24 @@
     clearInputBtns[j].addEventListener('click', clearInput);
   }
 
+  function showPass(event) {
+    var clickedElement = event.target,
+      previosEl = clickedElement.previousElementSibling;
+    while (previosEl.tagName != 'INPUT') {
+      previosEl = previosEl.previousElementSibling;
+    }
+    if (previosEl.type == "password") {
+      previosEl.setAttribute('type', 'text');
+    } else {
+      previosEl.setAttribute('type', 'password');
+    }
+  }
+
+  var passwBtns = document.querySelectorAll('.password-svg');
+  for (var l = 0; l < passwBtns.length; l += 1) {
+    passwBtns[l].addEventListener('click', showPass);
+  }
+
   // Открыть поиск
   var openCtrl = document.querySelector('.main-nav__search-link'),
     openCtrl2 = document.querySelector('.main-index__search-input-trick'),
@@ -531,29 +559,60 @@
   function openSearch() {
     mainNav.style.position = 'absolute';
     window.removeEventListener("scroll", scrollnav, false);
-    popupOverlay.classList.add('popup-overlay_showed-mobile');
-    pageContainer.classList.add('overflow-mobile');
-    pageContainer.classList.add('page-move');
-    pageWrapper.classList.add('add-perspective');
-    pageShadow1.classList.add('shadow1-change');
-    pageShadow2.classList.add('shadow2-change');
-    closeCtrl2.classList.add('scale-tablet');
+    popupOverlay
+      .classList
+      .add('popup-overlay_showed-mobile');
+    pageContainer
+      .classList
+      .add('overflow-mobile');
+    pageContainer
+      .classList
+      .add('page-move');
+    pageWrapper
+      .classList
+      .add('add-perspective');
+    pageShadow1
+      .classList
+      .add('shadow1-change');
+    pageShadow2
+      .classList
+      .add('shadow2-change');
+    closeCtrl2
+      .classList
+      .add('scale-tablet');
 
-    searchContainer.classList.add('search-open');
+    searchContainer
+      .classList
+      .add('search-open');
     searchContainer.scrollIntoView(false);
   }
 
   function closeSearch() {
-    popupOverlay.classList.remove('popup-overlay_showed-mobile');
-    pageContainer.classList.remove('overflow-mobile');
-    pageContainer.classList.remove('page-move');
-    pageWrapper.classList.remove('add-perspective');
-    pageShadow1.classList.remove('shadow1-change');
-    pageShadow2.classList.remove('shadow2-change');
-    closeCtrl2.classList.remove('scale-tablet');
+    popupOverlay
+      .classList
+      .remove('popup-overlay_showed-mobile');
+    pageContainer
+      .classList
+      .remove('overflow-mobile');
+    pageContainer
+      .classList
+      .remove('page-move');
+    pageWrapper
+      .classList
+      .remove('add-perspective');
+    pageShadow1
+      .classList
+      .remove('shadow1-change');
+    pageShadow2
+      .classList
+      .remove('shadow2-change');
+    closeCtrl2
+      .classList
+      .remove('scale-tablet');
 
-    searchContainer.classList.remove('search-open');
-    
+    searchContainer
+      .classList
+      .remove('search-open');
 
     if (window.matchMedia("(min-width: 768px)").matches) {
       setTimeout(function () {

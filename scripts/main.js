@@ -494,11 +494,9 @@
         contextList.style.display = "";
         SearchBox.style.display = "";
         lastSearch.style.display = "";
+        searchInput.blur();
       }
     }
-
-
-
     document.addEventListener('touchstart', closeList2);
   }
 

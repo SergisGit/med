@@ -2281,6 +2281,9 @@ label.error {
   line-height: 14px;
   color: #e74c3c;
 }
+.is-ios * {
+  cursor: pointer;
+}
 @-webkit-keyframes fadeInRight {
   0% {
     -webkit-transform: translateX(100vw);

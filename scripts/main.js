@@ -484,7 +484,9 @@
     document.addEventListener('click', closeList);
 
     function closeList2(event) {
-      var touches = event.target;
+      event.stopPropagation();
+      var changedTouch = event.changedTouches[0];
+      var touches = document.elementFromPoint(changedTouch.clientX, changedTouch.clientY);
       if (touches != searchInput && touches != ClearSvg  && touches != contextList && touches != contextList.childNodes[0] && touches != contextList.childNodes[1] && touches != contextList.childNodes[2] && touches != contextList.childNodes[3]) {
         if (touches != inputC && touches != inputS) {
           BorderToShadow();

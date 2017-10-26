@@ -29,7 +29,7 @@
     PopupCityItems = document.querySelector('.popup-city__items');
 
 
-    if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+    if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) {
       document.querySelector('html').classList.add('is-ios');
     }
 

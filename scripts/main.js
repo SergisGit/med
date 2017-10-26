@@ -482,6 +482,24 @@
       }
     }
     document.addEventListener('click', closeList);
+
+    function closeList2(event) {
+      if (event.target != searchInput && event.target != ClearSvg  && event.target != contextList) {
+        if (event.target != inputC && event.target != inputS) {
+          BorderToShadow();
+        }
+        searchInput.removeEventListener('input', changeSearchBox);
+        contextList.removeEventListener('click', pushValue);
+        document.removeEventListener('click', closeList);
+        contextList.style.display = "";
+        SearchBox.style.display = "";
+        lastSearch.style.display = "";
+      }
+    }
+
+
+
+    document.addEventListener('touchstart', closeList2);
   }
 
   inputS.onclick = function () {

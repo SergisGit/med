@@ -2,6 +2,7 @@
   'use strict';
 
   var body = document.querySelector('.body'),
+    mainSearch = document.querySelector('.main-search'),
     pageWrapper = document.querySelector('.body__wrapper'),
     pageContainer = document.querySelector('.body__inner'),
     mainNav = document.querySelector('.main-nav'),
@@ -705,6 +706,23 @@
   $('#scroll-3').customScroll(scrolSet2);
   $('#scroll-4').customScroll(scrolSet2);
   $('#scroll-5').customScroll(scrolSet2);
+
+  //Поисковые страницы 
+
+  //закрытие выпадающео меню
+  function uncheck(event) {
+    if ((!cardSorting.contains(event.target) || event.target.classList.contains('card-sorting__variant')) && cardSortingCheck.checked == true) {
+      cardSortingCheck.checked = '';
+    }
+  }
+
+  if (mainSearch) {
+    var cardSortingCheck = document.querySelector('.card-sorting__check'),
+      cardSorting = document.querySelector('.card-sorting');
+    document.addEventListener('click', uncheck);
+  }
+
+
 
 })();
 

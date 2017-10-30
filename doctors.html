@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Для Пациента</title>
-  <link rel="stylesheet" href="styles/styles.min.css?ver=11">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=12">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
   <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
@@ -119,6 +119,7 @@
               <span class="card-sorting__current">по рейтингу</span>
             </label>
             <div class="card-sorting__variants">
+              <a class="card-sorting__variant  card-sorting__variant_current">По рейтингу</a>
               <a href="#" class="card-sorting__variant">По кол-ву отзывов</a>
               <a href="#" class="card-sorting__variant">По возрастанию цены</a>
               <a href="#" class="card-sorting__variant">По убыванию цены</a>
@@ -231,6 +232,22 @@
           </div>
 
         </div>
+
+        <div class="main-search__paginator  paginator">
+          <a class="paginator__btn  paginator__btn_prev  paginator__btn_disabled btn">Назад</a>
+          <a href="#" class="paginator__btn  paginator__btn_next  btn">Далее</a>
+          <div class="paginator__page-links">
+            <a class="paginator__page-link  paginator__page-link_current">1</a>
+            <a href="#" class="paginator__page-link">2</a>
+            <a href="#" class="paginator__page-link">3</a>
+            <a href="#" class="paginator__page-link">4</a>
+            <a href="#" class="paginator__page-link">5</a>
+            <span class="paginator__dots">...</span>
+            <a href="#" class="paginator__page-link">23</a>
+            <a href="#" class="paginator__page-link">24</a>
+          </div>
+        </div>
+
       </main>
 
       <footer class="page-footer">

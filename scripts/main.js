@@ -78,6 +78,9 @@
       popupOverlay
         .classList
         .remove('popup-overlay_showed');
+      body
+        .classList
+        .remove('overflow');
       for (var i = 1; i < popupItems.length; i += 1) {
         popupItems[i].style.display = 'none';
       }
@@ -177,6 +180,9 @@
       popup
         .classList
         .add('popup_animated');
+      body
+        .classList
+        .add('overflow');
 
       window.addEventListener('keydown', popupEscClose);
       document.addEventListener('click', popupClickClose);
@@ -714,11 +720,18 @@
     if ((!cardSorting.contains(event.target) || event.target.classList.contains('card-sorting__variant')) && cardSortingCheck.checked == true) {
       cardSortingCheck.checked = '';
     }
+    if (mainSearchFiltersToggle.contains(event.target)) {
+      searchFilters.classList.add('show-block');
+      body.classList.add('overflow');
+    }
   }
 
   if (mainSearch) {
     var cardSortingCheck = document.querySelector('.card-sorting__check'),
-      cardSorting = document.querySelector('.card-sorting');
+      cardSorting = document.querySelector('.card-sorting'),
+      mainSearchFiltersToggle = document.querySelector('.main-search__filters-toggle'),
+      searchFilters = document.querySelector('.search-filters');
+
     document.addEventListener('click', uncheck);
   }
 

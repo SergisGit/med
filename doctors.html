@@ -112,6 +112,194 @@
           <span class="main-search__count">754</span>
         </h1>
 
+        <div class="main-search__filters  search-filters">
+          <a href="#" class="search-filters__clear-all">Очистить все</a>
+          <button type="button" class="search-filters__close-btn"></button>
+          <div class="search-filters__wrapper">
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_specialities">
+                <span class="search-filters__title">Специализации</span>
+                <span class="search-filters__value">5</span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_specialities">
+                <button type="button" class="search-filters__form-cancel">Специализации</button>
+                <label class="search-filters__search-input-label">
+                  <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
+                </label>
+                <div class="search-filters__form-list">
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Акушер-гинеколог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Аллерголог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Андролог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Венероглог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Гастроэнтеролог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Гинеколог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Дерматолог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Иммунолог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Кардиолог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Косметолог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Логопед</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Маммолог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Мануальный терапевт</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Нарколог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Невролог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Онколог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Ортопед-травматолог</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Оториноларинголог (ЛОР)</span>
+                  </label>
+                  <label class="search-filters__item">
+                    <input type="checkbox" class="search-filters__checkbox">
+                    <span class="search-filters__item-title">Офтальмолог (окулист)</span>
+                  </label>
+                </div>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_rating">
+                <span class="search-filters__title">Рейтинг</span>
+                <span class="search-filters__value"></span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_rating">
+                <button type="button" class="search-filters__form-cancel">Рейтинг</button>
+                <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_1">
+                <label for="search-filters__rate-radio_1" class="search-filters__rate-item  search-filters__rate-item_1">
+                  <span class="search-filters__rate-stars"></span>
+                  <span class="search-filters__rate-voices">14</span>
+                </label>
+                <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_2">
+                <label for="search-filters__rate-radio_2" class="search-filters__rate-item  search-filters__rate-item_2">
+                  <span class="search-filters__rate-stars"></span>
+                  <span class="search-filters__rate-voices">22</span>
+                </label>
+                <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_3">
+                <label for="search-filters__rate-radio_3" class="search-filters__rate-item  search-filters__rate-item_3">
+                  <span class="search-filters__rate-stars"></span>
+                  <span class="search-filters__rate-voices">34</span>
+                </label>
+                <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_4">
+                <label for="search-filters__rate-radio_4" class="search-filters__rate-item  search-filters__rate-item_4">
+                  <span class="search-filters__rate-stars"></span>
+                  <span class="search-filters__rate-voices">45</span>
+                </label>
+                <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_5">
+                <label for="search-filters__rate-radio_5" class="search-filters__rate-item  search-filters__rate-item_5">
+                  <span class="search-filters__rate-stars"></span>
+                  <span class="search-filters__rate-voices">56</span>
+                </label>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_xp">
+                <span class="search-filters__title">Стаж</span>
+                <span class="search-filters__value"></span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_xp">
+                <button type="button" class="search-filters__form-cancel">Стаж</button>
+                <input type="radio" name="search-filters__xp-radio" class="search-filters__radio" id="search-filters__xp-radio_5">
+                <label for="search-filters__xp-radio_5" class="search-filters__xp-item">От 5 лет</label>
+                <input type="radio" name="search-filters__xp-radio" class="search-filters__radio" id="search-filters__xp-radio_10">
+                <label for="search-filters__xp-radio_10" class="search-filters__xp-item">От 10 лет</label>
+                <input type="radio" name="search-filters__xp-radio" class="search-filters__radio" id="search-filters__xp-radio_15">
+                <label for="search-filters__xp-radio_15" class="search-filters__xp-item">От 15 лет</label>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_cost">
+                <span class="search-filters__title  search-filters__title_cost">Цена</span>
+                <span class="search-filters__value  search-filters__value_cost">
+                  <span class="search-filters__min-value">3500</span>&#8381; -
+                  <span class="search-filters__max-value">8000</span>&#8381;
+                </span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_cost">
+                <button type="button" class="search-filters__form-cancel">Цена</button>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_gender">
+                <span class="search-filters__title">Пол</span>
+                <span class="search-filters__value">Мужской</span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_gender">
+                <button type="button" class="search-filters__form-cancel">Пол</button>
+                <input type="radio" name="search-filters__gender-radio" class="search-filters__radio" id="search-filters__gender-radio_m">
+                <label for="search-filters__gender-radio_m" class="search-filters__gender-item">Мужчина</label>
+                <input type="radio" name="search-filters__gender-radio" class="search-filters__radio" id="search-filters__gender-radio_w">
+                <label for="search-filters__gender-radio_w" class="search-filters__gender-item">Женщина</label>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+          </div>
+          <a href="#" class="search-filters__save-link btn">Сохранить</a>
+        </div>
+
         <div class="main-search__switches">
           <div class="main-search__card-sorting  card-sorting">
             <input type="checkbox" id="sorting-check" class="card-sorting__check">
@@ -125,6 +313,11 @@
               <a href="#" class="card-sorting__variant">По убыванию цены</a>
             </div>
           </div>
+          <div class="main-search__filters-toggle">
+            <svg class="filter-svg  main-search__filter-svg" width="22" height="20">
+              <use xlink:href="assets/icons/symbols.svg#filter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </div>
         </div>
 
         <div class="main-search__list">
@@ -132,9 +325,9 @@
           <div class="main-search__card  search-card">
             <div class="search-card__info">
               <div class="search-card__content  search-card__content_doctor">
-                <a class="search-card__single-card-link" href="#"></a>
                 <div class="search-card__image-wrapper">
                   <img src="assets\images\card-doctors\doc1.png" class="search-card__doc-image" alt="doc-image">
+                  <a href="#" class="search-card__like-link  search-card__like-link_doctor"></a>
                 </div>
                 <h3 class="search-card__title  search-card__title_doc-name">Михайлов Михаил Альбертович</h3>
                 <span class="search-card__doc-speciality">Стоматолог, Стоматолог-хирург</span>
@@ -155,6 +348,7 @@
                       <span class="search-card__doc-cost-value">1000</span>&#8381;</span>
                   </div>
                 </div>
+                <a class="search-card__single-card-link" href="#"></a>
               </div>
               <div class="search-card__actions">
                 <a href="#" class="btn btn_s search-card__actions-btn">Оставить отзыв</a>
@@ -183,9 +377,9 @@
           <div class="main-search__card  search-card">
             <div class="search-card__info">
               <div class="search-card__content  search-card__content_doctor">
-                <a class="search-card__single-card-link" href="#"></a>
                 <div class="search-card__image-wrapper">
                   <img src="assets\images\card-doctors\doc1.png" class="search-card__doc-image" alt="doc-image">
+                  <a href="#" class="search-card__like-link  search-card__like-link_liked  search-card__like-link_doctor"></a>
                 </div>
                 <h3 class="search-card__title  search-card__title_doc-name">Михайлов Михаил Альбертович</h3>
                 <span class="search-card__doc-speciality">Стоматолог, Стоматолог-хирург</span>
@@ -206,6 +400,7 @@
                       <span class="search-card__doc-cost-value">1000</span>&#8381;</span>
                   </div>
                 </div>
+                <a class="search-card__single-card-link" href="#"></a>
               </div>
               <div class="search-card__actions">
                 <a href="#" class="btn btn_s search-card__actions-btn">Оставить отзыв</a>

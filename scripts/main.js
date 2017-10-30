@@ -28,23 +28,25 @@
     PopupCityInput = document.querySelector('.popup-city__input'),
     PopupCityItems = document.querySelector('.popup-city__items');
 
+  if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) {
+    document
+      .querySelector('html')
+      .classList
+      .add('is-ios');
+  }
 
-    if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i))) {
-      document.querySelector('html').classList.add('is-ios');
-    }
-
-
-  mainNavCheck.addEventListener('change', function () {
-    if (mainNavCheck.checked) {
-      body
-        .classList
-        .add('overflow-mobile');
-    } else {
-      body
-        .classList
-        .remove('overflow-mobile');
-    }
-  });
+  mainNavCheck
+    .addEventListener('change', function () {
+      if (mainNavCheck.checked) {
+        body
+          .classList
+          .add('overflow-mobile');
+      } else {
+        body
+          .classList
+          .remove('overflow-mobile');
+      }
+    });
 
   function scrollnav() {
     if (window.matchMedia("(min-width: 768px)").matches) {
@@ -78,7 +80,10 @@
       for (var i = 1; i < popupItems.length; i += 1) {
         popupItems[i].style.display = 'none';
       }
-      popupItems[0].style.display = 'block';
+
+      if (popup == checkIn || popup == signIn) {
+        popupItems[0].style.display = 'block';
+      }
 
       window.removeEventListener('keydown', popupEscClose);
       document.removeEventListener('click', popupClickClose);
@@ -132,6 +137,36 @@
       popupItems[2].style.display = 'block';
     }
 
+    function checkInToSignIn(event) {
+      event.preventDefault();
+      popupClose();
+      popupSignLink.removeEventListener('click', checkInToSignIn);
+      signLink.click();
+    }
+
+    function SignInTocheckIn(event) {
+      event.preventDefault();
+      popupClose();
+      popupRegLink.removeEventListener('click', SignInTocheckIn);
+      regLink.click();
+    }
+
+    function openCities() {
+      PopupCityItems.style.display = 'block';
+    }
+    function chooseCity(event) {
+      var clickedElement = event.target;
+      if (clickedElement.classList.contains('popup-city__item') || clickedElement.classList.contains('popup-city__popular-city')) {
+        event.preventDefault();
+        PopupCityInput.value = clickedElement.textContent;
+      }
+      if (event.target != PopupCityInput) {
+        setTimeout(function () {
+          PopupCityItems.style.display = '';
+        }, 10);
+      }
+    }
+
     function openLinkListener(event) {
       event.preventDefault();
       popupWrapper.style.display = 'flex';
@@ -144,36 +179,6 @@
 
       window.addEventListener('keydown', popupEscClose);
       document.addEventListener('click', popupClickClose);
-
-      function checkInToSignIn(event) {
-        event.preventDefault();
-        popupClose();
-        popupSignLink.removeEventListener('click', checkInToSignIn);
-        signLink.click();
-      }
-
-      function SignInTocheckIn(event) {
-        event.preventDefault();
-        popupClose();
-        popupRegLink.removeEventListener('click', SignInTocheckIn);
-        regLink.click();
-      }
-
-      function openCities() {
-        PopupCityItems.style.display = 'block';
-      }
-      function chooseCity(event) {
-        var clickedElement = event.target;
-        if (clickedElement.classList.contains('popup-city__item') || clickedElement.classList.contains('popup-city__popular-city')) {
-          event.preventDefault();
-          PopupCityInput.value = clickedElement.textContent;
-        }
-        if (event.target != PopupCityInput) {
-          setTimeout(function () {
-            PopupCityItems.style.display = '';
-          }, 10);
-        }
-      }
 
       if (popup == checkIn) {
         popupSignLink.addEventListener('click', checkInToSignIn);
@@ -194,7 +199,6 @@
         document.addEventListener('click', chooseCity);
       }
     }
-
     openLink.addEventListener('click', openLinkListener);
   }
 
@@ -490,15 +494,19 @@
     document.addEventListener('click', closeList);
   }
 
-  inputS.onclick = function () {
-    shadowToBorder();
-    chooseItem(inputS, contextHistory);
-  };
+  if (inputS) {
+    inputS.onclick = function () {
+      shadowToBorder();
+      chooseItem(inputS, contextHistory);
+    };
+  }
 
-  inputC.onclick = function () {
-    shadowToBorder();
-    chooseItem(inputC, contextLocation);
-  };
+  if (inputC) {
+    inputC.onclick = function () {
+      shadowToBorder();
+      chooseItem(inputC, contextLocation);
+    };
+  }
 
   inputPopupS.onclick = function () {
     chooseItem(inputPopupS, contextHistoryPopup);
@@ -551,7 +559,9 @@
 
   function initEvents() {
     openCtrl.addEventListener('click', openSearch);
-    openCtrl2.addEventListener('click', openSearch);
+    if (openCtrl2) {
+      openCtrl2.addEventListener('click', openSearch);
+    }
     closeCtrl.addEventListener('click', closeSearch);
     closeCtrl2.addEventListener('click', closeSearch);
     document.addEventListener('keyup', function (ev) {
@@ -603,9 +613,6 @@
     pageContainer
       .classList
       .remove('page-move');
-    pageWrapper
-      .classList
-      .remove('add-perspective');
     pageShadow1
       .classList
       .remove('shadow1-change');
@@ -615,6 +622,9 @@
     closeCtrl2
       .classList
       .remove('scale-tablet');
+    pageWrapper
+      .classList
+      .remove('add-perspective');
 
     searchContainer
       .classList
@@ -697,3 +707,30 @@
   $('#scroll-5').customScroll(scrolSet2);
 
 })();
+
+// dotdotdot - обрезание многострочного текста
+
+$(document).ready(function () {
+  if (document.querySelector(".cutted-text")) {
+    $(".cutted-text").dotdotdot({
+
+      ellipsis: "\u2026 ",
+      /* The text to add as ellipsis. */
+
+      truncate: "word",
+      /* How to truncate the text: By "node", "word" or "letter". */
+
+      keep: null,
+      /* jQuery-selector for elements to keep after the ellipsis. */
+
+      watch: "window",
+      /* Whether to update the ellipsis: 
+         true: Monitors the wrapper width and height.
+         "window": Monitors the window width and height.
+      */
+
+      tolerance: 0
+      /* Deviation for the measured wrapper height. */
+    });
+  }
+});

@@ -635,6 +635,7 @@ input[type="password"] ~ .password-svg:active {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: 90px;
   border-radius: 30px;
   outline: none;
   border: none;
@@ -646,6 +647,8 @@ input[type="password"] ~ .password-svg:active {
   font-size: 14px;
   text-transform: uppercase;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   cursor: pointer;
 }
 .btn:hover {
@@ -657,6 +660,28 @@ input[type="password"] ~ .password-svg:active {
           transform: scale(0.98);
   background-color: #069bd1;
 }
+.btn_s {
+  height: 42px;
+  border-radius: 21px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: none;
+  padding: 12px 17px;
+  font-weight: 300;
+}
+.btn_s:hover,
+.btn_s:active {
+  -webkit-box-shadow: 0 3px 17px rgba(8, 174, 234, 0.25);
+          box-shadow: 0 3px 17px rgba(8, 174, 234, 0.25);
+}
+.btn_grey {
+  background-color: transparent;
+  color: #3b4256;
+}
+.btn_grey:hover,
+.btn_grey:active {
+  background-color: #f3f3f3;
+}
 .page-header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -667,8 +692,10 @@ input[type="password"] ~ .password-svg:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-top: 62px;
+}
+.page-header_index {
   min-height: 390px;
-  padding-top: 70px;
   background-image: url("../assets/images/ph-index-mobile.jpg");
   background-position: 50% 1px;
   background-repeat: no-repeat;
@@ -693,7 +720,7 @@ input[type="password"] ~ .password-svg:active {
   background-color: #ffffff;
   -webkit-box-shadow: 0 5px 40px rgba(59, 66, 86, 0.3);
           box-shadow: 0 5px 40px rgba(59, 66, 86, 0.3);
-  z-index: 2;
+  z-index: 30;
 }
 .main-nav_avt .main-nav__regitems {
   padding-top: 0;
@@ -1384,6 +1411,378 @@ input[type="password"] ~ .password-svg:active {
 .reviews__autor-name {
   font-weight: 600;
 }
+.main-search {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 280px;
+  padding: 0 6.25%;
+}
+.main-search__title {
+  max-width: 930px;
+  margin: 22px auto;
+  font-size: 17px;
+  font-weight: 400;
+}
+.main-search__count {
+  color: #08aeea;
+}
+.main-search__card {
+  margin: 10px auto;
+}
+.search-card {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 930px;
+  padding: 10px 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ededed;
+  background-color: #ffffff;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: hidden;
+}
+.search-card:hover,
+.search-card:active {
+  -webkit-box-shadow: 0 5px 20px rgba(59, 66, 86, 0.2);
+          box-shadow: 0 5px 20px rgba(59, 66, 86, 0.2);
+}
+.search-card__content {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid transparent;
+  padding-bottom: 10px;
+}
+.search-card__content_doctor {
+  min-height: 120px;
+  padding-left: 88px;
+}
+.search-card__single-card-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.search-card__image-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 78px;
+}
+.search-card__doc-image {
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.search-card__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.search-card__title_doc-name {
+  margin-top: 10px;
+}
+.search-card__title_clinic-name {
+  padding-right: 70px;
+}
+.search-card__clinic-location {
+  position: relative;
+  display: inline-block;
+  min-height: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 16px;
+  text-decoration: none;
+  z-index: 1;
+}
+.search-card__clinic-location:hover,
+.search-card__clinic-location:active {
+  color: #08aeea;
+}
+.search-card__location-svg {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.search-card__doc-cost {
+  padding-left: 16px;
+}
+.search-card__clinic-location {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1px 0;
+  padding-left: 16px;
+  z-index: 1;
+}
+.search-card__clinic-location:hover,
+.search-card__clinic-location:active {
+  color: #08aeea;
+}
+.search-card__schedule-block,
+.search-card__phone-block {
+  position: relative;
+  padding: 1px 0;
+  z-index: 1;
+}
+.search-card__schedule-block {
+  z-index: 2;
+}
+.search-card__schedule-title,
+.search-card__phone-title {
+  display: inline-block;
+  width: 100px;
+}
+.search-card__schedule {
+  position: relative;
+  cursor: pointer;
+}
+.search-card__schedule-check {
+  display: none;
+}
+.search-card__schedule-check:checked ~ .search-card__schedule-week {
+  display: table;
+}
+.search-card__schedule-check:checked ~ .search-card__schedule-today::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.search-card__schedule-check:checked ~ .search-card__schedule-today::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.search-card__schedule-today {
+  position: relative;
+  display: inline-block;
+  padding-right: 25px;
+}
+.search-card__schedule-today::before,
+.search-card__schedule-today::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 8px;
+  height: 2px;
+  background-color: #3b4256;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.search-card__schedule-today::after {
+  right: 5px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.search-card__schedule-week {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 120%;
+  border-collapse: collapse;
+  -webkit-box-shadow: 0 10px 20px rgba(8, 174, 234, 0.1);
+          box-shadow: 0 10px 20px rgba(8, 174, 234, 0.1);
+  background-color: #ffffff;
+}
+.search-card__schedule-line {
+  display: table-row;
+}
+.search-card__schedule-day,
+.search-card__schedule-time {
+  display: table-cell;
+  padding: 2px 8px;
+  font-size: 10px;
+  vertical-align: baseline;
+}
+.search-card__schedule-time {
+  font-size: 13px;
+}
+.search-card__clinic-offer {
+  margin: 8px 0;
+  font-size: 16px;
+}
+.search-card__clinic-description {
+  margin: 5px 0 0;
+  height: 60px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.search-card__actions-btn {
+  display: block;
+  width: 96%;
+  margin: 14px auto;
+}
+.search-card__review-block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 -10px;
+  padding-bottom: 10px;
+  background-color: #f9f9f9;
+  text-decoration: none;
+}
+.search-card__review-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.search-card__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 160px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-bottom: 1px solid #ededed;
+}
+.search-card__stars-container {
+  width: 160px;
+  height: 20px;
+  background: red;
+}
+.search-card__rating-value {
+  width: 152px;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.search-card__reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 15px;
+}
+.search-card__reviews-count {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.search-card__reviews-count-title {
+  font-size: 13px;
+}
+.card-sorting {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+}
+.card-sorting__check {
+  display: none;
+}
+.card-sorting__check:checked ~ .card-sorting__variants {
+  display: block;
+}
+.card-sorting__check:checked ~ .card-sorting__label::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.card-sorting__check:checked ~ .card-sorting__label::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.card-sorting__label {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px 0;
+  padding-right: 25px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.card-sorting__label::before,
+.card-sorting__label::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 10px;
+  height: 2px;
+  background-color: #3b4256;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.card-sorting__label::after {
+  right: 4px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.card-sorting__current {
+  display: inline-block;
+  color: #08aeea;
+  font-size: 0;
+}
+.card-sorting__variants {
+  position: absolute;
+  display: none;
+  top: 120%;
+  width: 180px;
+  padding: 5px 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 5px 20px rgba(8, 174, 234, 0.2);
+          box-shadow: 0 5px 20px rgba(8, 174, 234, 0.2);
+  overflow: hidden;
+  z-index: 2;
+}
+.card-sorting__variant {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.card-sorting__variant:hover,
+.card-sorting__variant:active {
+  padding-left: 20px;
+  background-color: rgba(8, 174, 234, 0.1);
+}
 .page-footer {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2035,10 +2434,6 @@ input[type="password"] ~ .password-svg:active {
 .popup-city {
   padding: 4px 20px 28px;
 }
-.popup-city__close-btn {
-  top: 10px;
-  right: 10px;
-}
 .popup-city__title {
   margin: 0;
   padding: 14px 0;
@@ -2092,7 +2487,7 @@ input[type="password"] ~ .password-svg:active {
   height: 200px;
   left: 0;
   right: 0;
-  top: 48px;
+  bottom: 4px;
   margin-bottom: 50px;
   padding: 4px 20px;
   border: 1px solid #ededed;
@@ -2914,6 +3309,9 @@ label.error {
 }
 @media (min-width: 768px) {
   .page-header {
+    padding-top: 102px;
+  }
+  .page-header_index {
     background-image: url("../assets/images/ph-index-tablet.jpg");
   }
   .main-nav {
@@ -3352,6 +3750,138 @@ label.error {
     line-height: 20px;
     margin-bottom: 55px;
   }
+  .main-search {
+    width: 93.5%;
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .main-search__title {
+    font-size: 23px;
+  }
+  .search-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .search-card__info {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 20px 20px 0;
+  }
+  .search-card__content {
+    padding-bottom: 20px;
+  }
+  .search-card__content_doctor {
+    padding-left: 116px;
+  }
+  .search-card__image-wrapper {
+    width: 96px;
+  }
+  .search-card__title {
+    font-size: 18px;
+  }
+  .search-card__clinic-location {
+    padding: 4px 0 0;
+    padding-left: 22px;
+  }
+  .search-card__location-svg {
+    width: 14px;
+    height: 17px;
+  }
+  .search-card__schedule-title,
+  .search-card__phone-title {
+    display: inline-block;
+    width: 130px;
+  }
+  .search-card__schedule-today::before,
+  .search-card__schedule-today::after {
+    top: 11px;
+  }
+  .search-card__schedule-day,
+  .search-card__schedule-time {
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+  .search-card__schedule-time {
+    font-size: 14px;
+  }
+  .search-card__doc-cost {
+    padding-left: 22px;
+  }
+  .search-card__clinic-offer {
+    margin: 6px 0 8px;
+    font-size: 17px;
+  }
+  .search-card__clinic-description {
+    height: 70px;
+  }
+  .search-card__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 20px 0;
+  }
+  .search-card__actions-btn {
+    width: auto;
+    margin: 0;
+    margin-right: 25px;
+  }
+  .search-card__review-block {
+    width: 210px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .search-card__rating {
+    height: 50%;
+    padding: 15px 0;
+  }
+  .search-card__rating-value {
+    margin: 15px 0 0;
+  }
+  .search-card__reviews {
+    height: 50%;
+    text-align: center;
+    padding: 0;
+  }
+  .search-card__reviews-count {
+    margin-top: 15px;
+  }
+  .card-sorting {
+    font-size: 17px;
+  }
+  .card-sorting__label {
+    font-size: inherit;
+  }
+  .card-sorting__label::before,
+  .card-sorting__label::after {
+    top: 14px;
+  }
+  .card-sorting__current {
+    margin-right: 5px;
+    font-size: inherit;
+  }
+  .card-sorting__variants {
+    width: 210px;
+  }
+  .card-sorting__variant {
+    padding: 10px 12px;
+  }
+  .card-sorting__variant:hover,
+  .card-sorting__variant:active {
+    padding-left: 22px;
+  }
   .page-footer {
     width: 93.5%;
     max-width: 1170px;
@@ -3568,10 +4098,6 @@ label.error {
   .popup-city__btn {
     display: block;
   }
-  .popup-city__close-btn {
-    top: 14px;
-    right: 24px;
-  }
   .custom-scroll-2_container::after {
     background: #c9cfd6;
   }
@@ -3622,7 +4148,15 @@ label.error {
   }
 }
 @media (min-width: 1300px) {
+  .btn_s {
+    padding: 11px 22px;
+    font-size: 18px;
+    line-height: 18px;
+  }
   .page-header {
+    padding-top: 72px;
+  }
+  .page-header_index {
     background-image: url("../assets/images/ph-index-desktop.jpg");
   }
   .main-nav {
@@ -3770,6 +4304,71 @@ label.error {
   }
   .reviews__title {
     margin: 63px 0 41px;
+  }
+  .main-search__title {
+    margin: 22px 0;
+  }
+  .main-search__card {
+    margin: 10px 0;
+  }
+  .search-card {
+    font-size: 17px;
+    line-height: 26px;
+  }
+  .search-card__content_doctor {
+    min-height: 160px;
+    padding-left: 150px;
+  }
+  .search-card__info {
+    padding: 30px 30px 0;
+  }
+  .search-card__image-wrapper {
+    width: 120px;
+  }
+  .search-card__title {
+    font-size: 24px;
+  }
+  .search-card__title_doc-name {
+    margin-top: 0;
+  }
+  .search-card__clinic-location {
+    padding: 4px 0 0;
+    padding-left: 28px;
+  }
+  .search-card__location-svg {
+    top: 6px;
+  }
+  .search-card__doc-cost {
+    padding-left: 28px;
+  }
+  .search-card__clinic-description {
+    height: 86px;
+  }
+  .search-card__schedule-today::before,
+  .search-card__schedule-today::after {
+    top: 13px;
+  }
+  .search-card__schedule-day,
+  .search-card__schedule-time {
+    padding: 2px 8px;
+    font-size: 14px;
+  }
+  .search-card__schedule-time {
+    font-size: 16px;
+  }
+  .search-card__clinic-offer {
+    margin: 6px 0 8px;
+    font-size: 19px;
+  }
+  .card-sorting {
+    font-size: 19px;
+  }
+  .card-sorting__label::before,
+  .card-sorting__label::after {
+    top: 16px;
+  }
+  .card-sorting__variants {
+    width: 240px;
   }
   .page-footer {
     padding-top: 84px;

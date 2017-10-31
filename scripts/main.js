@@ -713,16 +713,26 @@
   $('#scroll-4').customScroll(scrolSet2);
   $('#scroll-5').customScroll(scrolSet2);
 
-  //Поисковые страницы 
-
-  //закрытие выпадающео меню
-  function uncheck(event) {
+  //Поисковые страницы закрытие выпадающео меню
+  function filtersFunc(event) {
     if ((!cardSorting.contains(event.target) || event.target.classList.contains('card-sorting__variant')) && cardSortingCheck.checked == true) {
       cardSortingCheck.checked = '';
     }
     if (mainSearchFiltersToggle.contains(event.target)) {
-      searchFilters.classList.add('show-block');
-      body.classList.add('overflow');
+      searchFilters
+        .classList
+        .add('visible-block');
+      body
+        .classList
+        .add('overflow-no-widescreen');
+    }
+    if (filtersClose.contains(event.target)) {
+      searchFilters
+        .classList
+        .remove('visible-block');
+      body
+        .classList
+        .remove('overflow-no-widescreen');
     }
   }
 
@@ -730,13 +740,151 @@
     var cardSortingCheck = document.querySelector('.card-sorting__check'),
       cardSorting = document.querySelector('.card-sorting'),
       mainSearchFiltersToggle = document.querySelector('.main-search__filters-toggle'),
-      searchFilters = document.querySelector('.search-filters');
+      searchFilters = document.querySelector('.search-filters'),
+      filtersClose = document.querySelector('.search-filters__close-btn');
 
-    document.addEventListener('click', uncheck);
+    document.addEventListener('click', filtersFunc);
   }
 
+  //nouislider
+  if (document.querySelector('.price-block')) {
 
+    var range = document.getElementById('filter-range'),
+      inputMin = document.getElementById('filter-price-min'),
+      inputMax = document.getElementById('filter-price-max'),
+      inputs = [
+        inputMin, inputMax
+      ],
+      left = parseInt(range.dataset.left),
+      right = parseInt(range.dataset.right),
+      min = parseInt(range.dataset.min),
+      max = parseInt(range.dataset.max);
 
+    inputMin.oninput = function () {
+      inputMin.style.width = ((inputMin.value.length) * 8) + 'px';
+    };
+
+    inputMax.oninput = function () {
+      inputMax.style.width = ((inputMax.value.length) * 8) + 'px';
+    };
+
+    noUiSlider.create(range, {
+      start: [
+        left, right
+      ],
+      connect: true,
+      step: 10,
+      range: {
+        'min': min,
+        'max': max
+      },
+      format: wNumb({decimals: 0})
+    });
+
+    range
+      .noUiSlider
+      .on('update', function (values, handle) {
+        inputs[handle].value = values[handle];
+        inputMin.style.width = ((inputMin.value.length) * 8) + 'px';
+        inputMax.style.width = ((inputMax.value.length) * 8) + 'px';
+      });
+
+    var setSliderHandle = function (i, value) {
+      var r = [null, null];
+      r[i] = value;
+      range
+        .noUiSlider
+        .set(r);
+    };
+
+    // Listen to keydown events on the input field.
+    inputs.forEach(function (input, handle) {
+
+      input
+        .addEventListener('change', function () {
+          setSliderHandle(handle, this.value);
+        });
+
+      input.addEventListener('keydown', function (e) {
+
+        var values = range
+          .noUiSlider
+          .get();
+        var value = Number(values[handle]);
+
+        // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+        var steps = range
+          .noUiSlider
+          .steps();
+
+        // [down, up]
+        var step = steps[handle];
+
+        var position;
+
+        // 13 is enter, 38 is key up, 40 is key down.
+        switch (e.which) {
+
+          case 13:
+            setSliderHandle(handle, this.value);
+            e.preventDefault();
+            break;
+
+          case 38:
+
+            // Get step to go increase slider value (up)
+            position = step[1];
+
+            // false = no step is set
+            if (position === false) {
+              position = 1;
+            }
+
+            // null = edge of slider
+            if (position !== null) {
+              setSliderHandle(handle, value + position);
+            }
+
+            break;
+
+          case 40:
+
+            position = step[0];
+
+            if (position === false) {
+              position = 1;
+            }
+
+            if (position !== null) {
+              setSliderHandle(handle, value - position);
+            }
+            break;
+        }
+      });
+    });
+
+    var rangeWidth = range.clientWidth;
+
+    var bar = $('.bar');
+
+    $.fn.peity.defaults.bar = {
+      delimiter: ",",
+      fill: ["#e6e6e6"],
+      height: 40,
+      max: null,
+      min: 0,
+      padding: 0.1,
+      width: rangeWidth
+    };
+
+    bar.peity("bar");
+
+    $(window).resize(function () {
+     bar.peity("bar", {width: 0});
+     rangeWidth = range.clientWidth;
+     bar.peity("bar", {width: rangeWidth});
+    });
+  }
 })();
 
 // dotdotdot - обрезание многострочного текста
@@ -755,7 +903,7 @@ $(document).ready(function () {
       /* jQuery-selector for elements to keep after the ellipsis. */
 
       watch: "window",
-      /* Whether to update the ellipsis: 
+      /* Whether to update the ellipsis:
          true: Monitors the wrapper width and height.
          "window": Monitors the window width and height.
       */

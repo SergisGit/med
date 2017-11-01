@@ -905,6 +905,7 @@
      bar.peity("bar", {width: rangeWidth});
     });
   }
+
 })();
 
 // dotdotdot - обрезание многострочного текста
@@ -933,3 +934,42 @@ $(document).ready(function () {
     });
   }
 });
+
+
+ // Google Map
+(function () {
+  function gMap() {
+    var markLatLng = new google.maps.LatLng(56.499883782746224,84.99850023423404);
+    var mapOptions = {
+      zoom: 16,
+      center: markLatLng,
+      disableDefaultUI: true,
+      draggable: true, // false - запрет перемещения. По умолчанию true.
+      scrollwheel: false, // скролл отключен.
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_BOTTOM
+      }
+    };
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  
+    // Some circle marker properties
+    new google.maps.Marker({
+      position: markLatLng,
+      map: map,
+      icon: {
+        url: "./assets/icons/mappin.svg"
+      },
+      title: 'Врач'
+    });
+  
+    google.maps.event.addDomListener(window, 'resize', function () {
+      map.setCenter(markLatLng);
+    });
+  }
+  
+  var mapContainer = document.getElementById('map');
+  if (mapContainer) {
+    google.maps.event.addDomListener(window, 'load', gMap);
+  }
+})();

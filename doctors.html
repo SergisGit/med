@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Для Пациента</title>
-  <link rel="stylesheet" href="styles/styles.min.css?ver=13">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=14">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
   <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
@@ -466,7 +466,10 @@
             <a href="#" class="paginator__page-link">24</a>
           </div>
         </div>
-
+        <div class="map-container">
+          <div class="map" id="map"></div>
+        </div>
+        
       </main>
 
       <footer class="page-footer">
@@ -1035,6 +1038,7 @@
   <script src="scripts/jquery.validate-advance.min.js"></script>
   <script src="scripts/nouislider.wNumb.min.js"></script>
   <script src="scripts/jquery.peity.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHf8ldsOy9f9D9N-eFUAQbMe0wisVxCrk&callback=initMap"></script>
   <script src="scripts/main.min.js"></script>
 </body>
 

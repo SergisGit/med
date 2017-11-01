@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Для Пациента</title>
-  <link rel="stylesheet" href="styles/styles.min.css?ver=12">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=13">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
   <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
@@ -112,6 +112,394 @@
           <span class="main-search__count">628</span>
         </h1>
 
+        <div class="main-search__filters  search-filters">
+          <a href="#" class="search-filters__clear-all">Очистить все</a>
+          <button type="button" class="search-filters__close-btn"></button>
+          <div class="search-filters__wrapper">
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_clinic-option">
+                <span class="search-filters__title">Тип учреждения</span>
+                <span class="search-filters__value">5</span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_clinic-option">
+                <button type="button" class="search-filters__form-cancel">Тип учреждения</button>
+                <div class="search-filters__form-inner">
+                  <label class="search-filters__search-input-label">
+                    <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
+                  </label>
+                  <div class="search-filters__form-list">
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Аптеки</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Больницы</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Бюро медико-социальной экспертизы</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Венероглогвзрослые поликлиники</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Госпитали</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Детские поликлиники</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Диагностические центры</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Диспансеры</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Женские консультации</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Косметологические клиники</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Лаборатории</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Маммолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Медико-санитарные части</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Научно исследовательские институты</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Ортопедические салоны</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Реабилитационные центры</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Родильные дома</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Санатории/профилактории</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Станции переливания крови</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Станции медицинской помощи</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Стоматологические клиники</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Травмпункты</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Центры борьбы со СПИДом</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Проктолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Психиатр</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Психолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Психотерапевт</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Пульмонолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Ревматолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Репродуктолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Стоматолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Трихолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Травматолог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Терапевт</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Уролог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Флеболог</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Хирург</span>
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Эндокринолог</span>
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_clinic-option">
+                <span class="search-filters__title">Услуга</span>
+                <span class="search-filters__value">5</span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_clinic-option">
+                <button type="button" class="search-filters__form-cancel">Услуга</button>
+                <div class="search-filters__form-inner">
+                  <label class="search-filters__search-input-label">
+                    <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
+                  </label>
+                  <div class="search-filters__form-list">
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Акушерство</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Аллергология</span> 
+                      (<span class="search-filters__item-value">793</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Андрология</span> 
+                      (<span class="search-filters__item-value">1207</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Венерология</span> 
+                      (<span class="search-filters__item-value">1025</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Гастроэнтерология</span> 
+                      (<span class="search-filters__item-value">1223</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Гинекология</span> 
+                      (<span class="search-filters__item-value">1285</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Андрология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Дерматология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Косметология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Кардиология</span> 
+                      (<span class="search-filters__item-value">1158</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Логопедия</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">ЛОР</span> 
+                      (<span class="search-filters__item-value">686</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Маммология</span> 
+                      (<span class="search-filters__item-value">859</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Наркология</span> 
+                      (<span class="search-filters__item-value">802</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Неврология</span> 
+                      (<span class="search-filters__item-value">784</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Пластическая хирургия</span> 
+                      (<span class="search-filters__item-value">1158</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Педиатрия</span> 
+                      (<span class="search-filters__item-value">1471</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Проктология</span> 
+                      (<span class="search-filters__item-value">1324</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Психиатрия</span> 
+                      (<span class="search-filters__item-value">1427</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Пульмонология</span> 
+                      (<span class="search-filters__item-value">2157</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Ревматология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Смоматология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Травматология-ортопедия</span> 
+                      (<span class="search-filters__item-value">1158</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Трихология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Урология</span> 
+                      (<span class="search-filters__item-value">1158</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Логопедия</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Флебология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Эндокринология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Физиотерапия</span> 
+                      (<span class="search-filters__item-value">1158</span>)
+                    </label>
+                    <label class="search-filters__item">
+                      <input type="checkbox" class="search-filters__checkbox">
+                      <span class="search-filters__item-title">Офтальмология</span> 
+                      (<span class="search-filters__item-value">1056</span>)
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_rating">
+                <span class="search-filters__title">Рейтинг</span>
+                <span class="search-filters__value"></span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_rating">
+                <button type="button" class="search-filters__form-cancel">Рейтинг</button>
+                <div class="search-filters__form-inner">
+                  <input type="radio" name="search-filters__rate-radio" value="rating-1" class="search-filters__radio" id="search-filters__rate-radio_1">
+                  <label for="search-filters__rate-radio_1" class="search-filters__rate-item  search-filters__rate-item_1">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">14</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-2" class="search-filters__radio" id="search-filters__rate-radio_2">
+                  <label for="search-filters__rate-radio_2" class="search-filters__rate-item  search-filters__rate-item_2">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">22</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-3" class="search-filters__radio" id="search-filters__rate-radio_3">
+                  <label for="search-filters__rate-radio_3" class="search-filters__rate-item  search-filters__rate-item_3">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">34</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-4" class="search-filters__radio" id="search-filters__rate-radio_4">
+                  <label for="search-filters__rate-radio_4" class="search-filters__rate-item  search-filters__rate-item_4">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">45</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-5" class="search-filters__radio" id="search-filters__rate-radio_5">
+                  <label for="search-filters__rate-radio_5" class="search-filters__rate-item  search-filters__rate-item_5">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">56</span>
+                  </label>
+                </div>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+          </div>
+          <a href="#" class="search-filters__save-link btn">Сохранить</a>
+        </div>
+
         <div class="main-search__switches">
           <div class="main-search__card-sorting  card-sorting">
             <input type="checkbox" id="sorting-check" class="card-sorting__check">
@@ -120,10 +508,16 @@
             </label>
             <div class="card-sorting__variants">
               <a class="card-sorting__variant  card-sorting__variant_current">По рейтингу</a>
-              <a href="#" class="card-sorting__variant">По кол-ву отзывов</a>
+              <a href="#" class="card-sorting__variant">По дате</a>
               <a href="#" class="card-sorting__variant">По возрастанию цены</a>
               <a href="#" class="card-sorting__variant">По убыванию цены</a>
             </div>
+          </div>
+          <div class="main-search__filters-toggle">
+            <svg class="filter-svg  main-search__filter-svg" width="22" height="20">
+              <use xlink:href="assets/icons/symbols.svg#filter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+            <span class="main-search__filters-value  main-search__filters-value_active">6</span>
           </div>
         </div>
 

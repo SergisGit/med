@@ -715,6 +715,7 @@
 
   //Поисковые страницы закрытие выпадающео меню
   function filtersFunc(event) {
+    var i;
     if ((!cardSorting.contains(event.target) || event.target.classList.contains('card-sorting__variant')) && cardSortingCheck.checked == true) {
       cardSortingCheck.checked = '';
     }
@@ -733,6 +734,22 @@
       body
         .classList
         .remove('overflow-no-widescreen');
+
+        for (i = 0; i < searchFiltersForms.length; i += 1) {
+          searchFiltersForms[i].classList.remove('visible-block');
+        }
+    }
+
+    for (i = 0; i < searchFiltersAll.length; i += 1) {
+      if (searchFiltersAll[i].contains(event.target)) {
+        searchFiltersForms[i].classList.add('visible-block');
+      }
+    }
+
+    for (i = 0; i < searchFiltersFormsCancel.length; i += 1) {
+      if (searchFiltersFormsCancel[i].contains(event.target)) {
+        searchFiltersForms[i].classList.remove('visible-block');
+      }
     }
   }
 
@@ -741,7 +758,10 @@
       cardSorting = document.querySelector('.card-sorting'),
       mainSearchFiltersToggle = document.querySelector('.main-search__filters-toggle'),
       searchFilters = document.querySelector('.search-filters'),
-      filtersClose = document.querySelector('.search-filters__close-btn');
+      filtersClose = document.querySelector('.search-filters__close-btn'),
+      searchFiltersAll = document.querySelectorAll('.search-filters__filter'),
+      searchFiltersForms = document.querySelectorAll('.search-filters__form'),
+      searchFiltersFormsCancel = document.querySelectorAll('.search-filters__form-cancel');
 
     document.addEventListener('click', filtersFunc);
   }

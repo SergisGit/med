@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Для Пациента</title>
-  <link rel="stylesheet" href="styles/styles.min.css?ver=12">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=13">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
   <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
@@ -221,27 +221,27 @@
               <form action="/echo" class="search-filters__form  search-filters__form_rating">
                 <button type="button" class="search-filters__form-cancel">Рейтинг</button>
                 <div class="search-filters__form-inner">
-                  <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_1">
+                  <input type="radio" name="search-filters__rate-radio" value="rating-1" class="search-filters__radio" id="search-filters__rate-radio_1">
                   <label for="search-filters__rate-radio_1" class="search-filters__rate-item  search-filters__rate-item_1">
                     <span class="search-filters__rate-stars"></span>
                     <span class="search-filters__rate-voices">14</span>
                   </label>
-                  <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_2">
+                  <input type="radio" name="search-filters__rate-radio" value="rating-2" class="search-filters__radio" id="search-filters__rate-radio_2">
                   <label for="search-filters__rate-radio_2" class="search-filters__rate-item  search-filters__rate-item_2">
                     <span class="search-filters__rate-stars"></span>
                     <span class="search-filters__rate-voices">22</span>
                   </label>
-                  <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_3">
+                  <input type="radio" name="search-filters__rate-radio" value="rating-3" class="search-filters__radio" id="search-filters__rate-radio_3">
                   <label for="search-filters__rate-radio_3" class="search-filters__rate-item  search-filters__rate-item_3">
                     <span class="search-filters__rate-stars"></span>
                     <span class="search-filters__rate-voices">34</span>
                   </label>
-                  <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_4">
+                  <input type="radio" name="search-filters__rate-radio" value="rating-4" class="search-filters__radio" id="search-filters__rate-radio_4">
                   <label for="search-filters__rate-radio_4" class="search-filters__rate-item  search-filters__rate-item_4">
                     <span class="search-filters__rate-stars"></span>
                     <span class="search-filters__rate-voices">45</span>
                   </label>
-                  <input type="radio" name="search-filters__rate-radio" class="search-filters__radio" id="search-filters__rate-radio_5">
+                  <input type="radio" name="search-filters__rate-radio" value="rating-5" class="search-filters__radio" id="search-filters__rate-radio_5">
                   <label for="search-filters__rate-radio_5" class="search-filters__rate-item  search-filters__rate-item_5">
                     <span class="search-filters__rate-stars"></span>
                     <span class="search-filters__rate-voices">56</span>
@@ -260,11 +260,11 @@
               <form action="/echo" class="search-filters__form  search-filters__form_xp">
                 <button type="button" class="search-filters__form-cancel">Стаж</button>
                 <div class="search-filters__form-inner">
-                  <input type="radio" name="search-filters__xp-radio" class="search-filters__radio" id="search-filters__xp-radio_5">
+                  <input type="radio" name="search-filters__xp-radio" value="xp-5" class="search-filters__radio" id="search-filters__xp-radio_5">
                   <label for="search-filters__xp-radio_5" class="search-filters__xp-item">От 5 лет</label>
-                  <input type="radio" name="search-filters__xp-radio" class="search-filters__radio" id="search-filters__xp-radio_10">
+                  <input type="radio" name="search-filters__xp-radio" value="xp-10" class="search-filters__radio" id="search-filters__xp-radio_10">
                   <label for="search-filters__xp-radio_10" class="search-filters__xp-item">От 10 лет</label>
-                  <input type="radio" name="search-filters__xp-radio" class="search-filters__radio" id="search-filters__xp-radio_15">
+                  <input type="radio" name="search-filters__xp-radio" value="xp-15" class="search-filters__radio" id="search-filters__xp-radio_15">
                   <label for="search-filters__xp-radio_15" class="search-filters__xp-item">От 15 лет</label>
                 </div>
                 <button type="submit" class="search-filters__submit  btn">Сохранить</button>
@@ -310,9 +310,9 @@
               <form action="/echo" class="search-filters__form  search-filters__form_gender">
                 <button type="button" class="search-filters__form-cancel">Пол</button>
                 <div class="search-filters__form-inner">
-                  <input type="radio" name="search-filters__gender-radio" class="search-filters__radio" id="search-filters__gender-radio_m">
+                  <input type="radio" name="search-filters__gender-radio" value="man" class="search-filters__radio" id="search-filters__gender-radio_m">
                   <label for="search-filters__gender-radio_m" class="search-filters__gender-item">Мужчина</label>
-                  <input type="radio" name="search-filters__gender-radio" class="search-filters__radio" id="search-filters__gender-radio_w">
+                  <input type="radio" name="search-filters__gender-radio" value="woman" class="search-filters__radio" id="search-filters__gender-radio_w">
                   <label for="search-filters__gender-radio_w" class="search-filters__gender-item">Женщина</label>
                 </div>
                 <button type="submit" class="search-filters__submit  btn">Сохранить</button>
@@ -337,9 +337,10 @@
             </div>
           </div>
           <div class="main-search__filters-toggle">
-            <svg class="filter-svg  main-search__filter-svg" width="22" height="20">
+            <svg class="filters-svg  main-search__filters-svg" width="22" height="20">
               <use xlink:href="assets/icons/symbols.svg#filter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
+            <span class="main-search__filters-value  main-search__filters-value_active">6</span>
           </div>
         </div>
 

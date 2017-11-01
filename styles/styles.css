@@ -1443,10 +1443,55 @@ input[type="password"] ~ .password-svg:active {
   margin-right: auto;
 }
 .main-search__filters-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
 }
 .main-search__filters-toggle * {
   pointer-events: none;
+}
+.main-search__filters-value-wrapper {
+  height: 22px;
+  margin-left: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background-color: #08aeea;
+  border-radius: 11px;
+  overflow: hidden;
+}
+.main-search__filters-value {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 11px;
+  margin-left: 5px;
+  padding: 4px 6px;
+  background-color: #08aeea;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+}
+.main-search__filters-value_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .main-search__paginator {
   margin: 20px auto;
@@ -2786,7 +2831,7 @@ input[type="password"] ~ .password-svg:active {
 }
 .search-filters__form-cancel {
   position: relative;
-  height: 42px;
+  height: 44px;
   margin: 20px 0;
   border-radius: 21px;
   padding: 0 57px 0 15px;
@@ -4940,12 +4985,16 @@ label.error {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-align: top;
-        -ms-flex-align: top;
-            align-items: top;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
     top: 0;
     left: 0;
+    min-width: 400px;
     padding-top: 20px;
+    padding-bottom: 0;
   }
   .search-filters__form-inner {
     width: 100%;
@@ -5342,11 +5391,23 @@ label.error {
     margin-bottom: 20px;
   }
   .search-filters__form {
-    padding: 0;
-    background: red;
+    padding: 5px 0 0;
+    width: 100vw;
+    height: auto;
+    min-height: 0;
   }
-  .search-filters__filter {
-    margin: 0;
+  .search-filters__form::before {
+    content: "";
+    position: fixed;
+    left: -100vw;
+    right: -100vw;
+    top: -100vh;
+    bottom: -100vh;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    background-color: rgba(255, 255, 255, 0.99);
+    z-index: -1;
   }
   .overflow-no-widescreen {
     overflow: visible;

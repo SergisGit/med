@@ -5589,6 +5589,17 @@ label.error {
     background-color: rgba(255, 255, 255, 0.99);
     z-index: -1;
   }
+  .search-filters__form-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .search-filters__form-list .search-filters__item {
+    width: 35%;
+  }
   .map-container {
     position: fixed;
     visibility: visible;

@@ -744,6 +744,9 @@
           .classList
           .remove('visible-45');
       }
+      mainNav
+        .classList
+        .remove('zindex');
     }
 
     //Фильтры второго уровня
@@ -752,6 +755,9 @@
         searchFiltersForms[i]
           .classList
           .add('visible-45');
+        mainNav
+          .classList
+          .add('zindex');
       }
     }
 
@@ -760,6 +766,9 @@
         searchFiltersForms[i]
           .classList
           .remove('visible-45');
+        mainNav
+          .classList
+          .remove('zindex');
       }
     }
 
@@ -815,7 +824,9 @@
       max = parseInt(range.dataset.max);
 
     var noLetters = function (input) {
-      input.value=input.value.replace(/[^\d]+/g,'');
+      input.value = input
+        .value
+        .replace(/[^\d]+/g, '');
     };
 
     inputMin.oninput = function () {

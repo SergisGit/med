@@ -2806,7 +2806,8 @@ input[type="password"] ~ .password-svg:active {
   color: #3b4256;
 }
 .search-filters__save-link,
-.search-filters__submit {
+.search-filters__submit,
+.search-filters__show-all-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2821,6 +2822,8 @@ input[type="password"] ~ .password-svg:active {
   margin-top: 20px;
   padding: 5px;
   border-radius: 6px;
+  text-transform: none;
+  font-size: 17px;
 }
 .search-filters__submit {
   margin-top: 15px;
@@ -2846,6 +2849,12 @@ input[type="password"] ~ .password-svg:active {
   visibility: hidden;
   z-index: -1;
 }
+.search-filters__selected-items {
+  width: 100%;
+}
+.search-filters__alphabet {
+  display: none;
+}
 .search-filters__form-inner {
   width: 100%;
   display: -webkit-box;
@@ -2859,6 +2868,12 @@ input[type="password"] ~ .password-svg:active {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.search-filters__form-inner_specialities,
+.search-filters__form-inner_clinics,
+.search-filters__form-inner_service,
+.search-filters__form-inner_services {
+  border-top: 1px solid #ededed;
+}
 .search-filters__price-block {
   display: block;
   width: 100%;
@@ -2866,18 +2881,32 @@ input[type="password"] ~ .password-svg:active {
   padding: 0;
 }
 .search-filters__form-cancel {
+  margin: 20px 0;
+}
+.search-filters__selected-item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.search-filters__form-cancel,
+.search-filters__selected-item {
   position: relative;
   height: 44px;
-  margin: 20px 0;
   border-radius: 21px;
   padding: 0 57px 0 15px;
-  border: none;
+  border: 1px solid #e5e5e5;
   outline: none;
-  background-color: #e5e5e5;
+  background-color: transparent;
   overflow: hidden;
   cursor: pointer;
 }
-.search-filters__form-cancel::after {
+.search-filters__form-cancel:hover,
+.search-filters__selected-item:hover,
+.search-filters__form-cancel:active,
+.search-filters__selected-item:active {
+  background-color: #e5e5e5;
+}
+.search-filters__form-cancel::after,
+.search-filters__selected-item::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -2892,7 +2921,6 @@ input[type="password"] ~ .password-svg:active {
   display: inline-block;
   width: 100%;
   padding: 20px 0;
-  border-top: 1px solid #ededed;
 }
 .search-filters__search-input {
   -webkit-box-sizing: border-box;
@@ -2917,10 +2945,23 @@ input[type="password"] ~ .password-svg:active {
           align-items: flex-start;
   margin: 10px 0 15px;
 }
-.search-filters__item {
+.search-filters__item,
+.search-filters__link-item {
   display: inline-block;
   margin: 5px 0;
   cursor: pointer;
+}
+.search-filters__link-item {
+  text-decoration: none;
+  -webkit-transition: padding-left 0.1s, margin-right 0.1s, color 0.1s;
+  -o-transition: padding-left 0.1s, margin-right 0.1s, color 0.1s;
+  transition: padding-left 0.1s, margin-right 0.1s, color 0.1s;
+}
+.search-filters__link-item:hover,
+.search-filters__link-item:active {
+  padding-left: 10px;
+  margin-right: -10px;
+  color: #1ed48b;
 }
 .search-filters__item-title {
   position: relative;
@@ -3466,9 +3507,6 @@ input[type="password"] ~ .password-svg:active {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
 }
 .noUi-active {
   background-color: #08aeea;
@@ -5156,6 +5194,40 @@ label.error {
     padding-top: 20px;
     padding-bottom: 0;
   }
+  .search-filters__alphabet {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-ordinal-group: -2;
+        -ms-flex-order: -3;
+            order: -3;
+    width: 100%;
+  }
+  .search-filters__alphabet-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 26px;
+    margin-bottom: 20px;
+  }
+  .search-filters__alphabet-link:hover,
+  .search-filters__alphabet-link:active {
+    color: #1ed48b;
+  }
+  .search-filters__alphabet-link:hover .search-filters__alphabet-quantity,
+  .search-filters__alphabet-link:active .search-filters__alphabet-quantity {
+    color: #1ed48b;
+  }
+  .search-filters__alphabet-quantity,
+  .search-filters__form-list-quantity {
+    display: inline-block;
+    padding: 0 2px;
+    font-size: 14px;
+    color: #bbbbbb;
+  }
   .search-filters__form-inner {
     width: 100%;
     margin: 0;
@@ -5169,7 +5241,18 @@ label.error {
         flex-wrap: wrap;
     width: 100%;
   }
-  .search-filters__item {
+  .search-filters__form-list-letter {
+    display: block;
+    width: 100%;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ededed;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .search-filters__item,
+  .search-filters__link-item {
     width: 50%;
   }
   .search-filters__price-block {
@@ -5186,12 +5269,15 @@ label.error {
   .search-filters__search-input-label {
     width: 450px;
   }
-  .search-filters__submit {
+  .search-filters__submit,
+  .search-filters__show-all-link {
     width: auto;
     height: 42px;
-    margin: 0;
-    border-radius: 21px;
     padding: 0 17px;
+    border-radius: 21px;
+  }
+  .search-filters__submit {
+    margin: 0;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -5537,6 +5623,9 @@ label.error {
   }
 }
 @media (min-width: 1430px) {
+  .main-nav {
+    z-index: 30;
+  }
   .main-search {
     position: relative;
   }
@@ -5584,7 +5673,7 @@ label.error {
   }
   .search-filters__form {
     padding: 5px 0 0;
-    width: 100vw;
+    width: 930px;
     height: auto;
     min-height: 0;
   }
@@ -5601,8 +5690,14 @@ label.error {
     background-color: rgba(255, 255, 255, 0.99);
     z-index: -1;
   }
-  .search-filters__item {
-    width: 35%;
+  .search-filters__alphabet {
+    position: absolute;
+    width: 930px;
+    bottom: 100%;
+    left: 0;
+  }
+  .search-filters__form-list {
+    width: 930px;
   }
   .map-container {
     position: fixed;
@@ -5622,6 +5717,10 @@ label.error {
   }
   .overflow-no-widescreen {
     overflow: visible;
+  }
+  .zindex {
+    z-index: -1;
+    opacity: 0;
   }
 }
 @media (max-width: 767px) {

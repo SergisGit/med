@@ -717,7 +717,7 @@
   function filtersFunc(event) {
     var i;
 
-     //закрытие выпадающего меню сортировки
+    //закрытие выпадающего меню сортировки
     if ((!cardSorting.contains(event.target) || event.target.classList.contains('card-sorting__variant')) && cardSortingCheck.checked == true) {
       cardSortingCheck.checked = '';
     }
@@ -739,37 +739,47 @@
         .classList
         .remove('overflow-no-widescreen');
 
-        for (i = 0; i < searchFiltersForms.length; i += 1) {
-          searchFiltersForms[i].classList.remove('visible-45');
-        }
+      for (i = 0; i < searchFiltersForms.length; i += 1) {
+        searchFiltersForms[i]
+          .classList
+          .remove('visible-45');
+      }
     }
 
     //Фильтры второго уровня
     for (i = 0; i < searchFiltersAll.length; i += 1) {
       if (searchFiltersAll[i].contains(event.target)) {
-        searchFiltersForms[i].classList.add('visible-45');
+        searchFiltersForms[i]
+          .classList
+          .add('visible-45');
       }
     }
 
     for (i = 0; i < searchFiltersFormsCancel.length; i += 1) {
       if (searchFiltersFormsCancel[i].contains(event.target)) {
-        searchFiltersForms[i].classList.remove('visible-45');
+        searchFiltersForms[i]
+          .classList
+          .remove('visible-45');
       }
     }
 
     //Показать и закрыть арту
     if (mapOpenBtn.contains(event.target)) {
-      mapContainer.classList.add('visible-10');
+      mapContainer
+        .classList
+        .add('visible-10');
       body
-      .classList
-      .add('overflow-no-widescreen');
+        .classList
+        .add('overflow-no-widescreen');
     }
 
     if (mapCloseBtn.contains(event.target)) {
-      mapContainer.classList.remove('visible-10');
+      mapContainer
+        .classList
+        .remove('visible-10');
       body
-      .classList
-      .remove('overflow-no-widescreen');
+        .classList
+        .remove('overflow-no-widescreen');
     }
 
   }
@@ -804,12 +814,24 @@
       min = parseInt(range.dataset.min),
       max = parseInt(range.dataset.max);
 
+    var noLetters = function (input) {
+      var value = input.value;
+      var rep = /[^0-9]/;
+      if (rep.test(value)) {
+        value = value.replace(rep, '');
+        input.value = value;
+        input.style.width = ((inputMin.value.length) * 8) + 'px';
+      }
+    };
+
     inputMin.oninput = function () {
       inputMin.style.width = ((inputMin.value.length) * 8) + 'px';
+      noLetters(inputMin);
     };
 
     inputMax.oninput = function () {
       inputMax.style.width = ((inputMax.value.length) * 8) + 'px';
+      noLetters(inputMax);
     };
 
     noUiSlider.create(range, {
@@ -924,9 +946,9 @@
     bar.peity("bar");
 
     $(window).resize(function () {
-     bar.peity("bar", {width: 0});
-     rangeWidth = range.clientWidth;
-     bar.peity("bar", {width: rangeWidth});
+      bar.peity("bar", {width: 0});
+      rangeWidth = range.clientWidth;
+      bar.peity("bar", {width: rangeWidth});
     });
   }
 
@@ -959,11 +981,12 @@ $(document).ready(function () {
   }
 });
 
-
- // Google Map
+// Google Map
 (function () {
   function gMap() {
-    var markLatLng = new google.maps.LatLng(56.499883782746224,84.99850023423404);
+    var markLatLng = new google
+      .maps
+      .LatLng(56.499883782746224, 84.99850023423404);
     var mapOptions = {
       zoom: 16,
       center: markLatLng,
@@ -975,78 +998,102 @@ $(document).ready(function () {
         position: google.maps.ControlPosition.RIGHT_BOTTOM
       }
     };
-    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    
-    map.data.loadGeoJson('json/googleMap.json');
+    var map = new google
+      .maps
+      .Map(document.getElementById('map'), mapOptions);
 
+    map
+      .data
+      .loadGeoJson('json/googleMap.json');
 
-    var mImage = new google.maps.MarkerImage('./assets/icons/mappin.svg',
-    new google.maps.Size(44, 36));
+    var mImage = new google
+      .maps
+      .MarkerImage('./assets/icons/mappin.svg', new google.maps.Size(44, 36));
 
-    var mImage2 = new google.maps.MarkerImage('./assets/icons/mappin-h.svg',
-    new google.maps.Size(44, 36));
+    var mImage2 = new google
+      .maps
+      .MarkerImage('./assets/icons/mappin-h.svg', new google.maps.Size(44, 36));
 
-    map.data.setStyle(function(feature) {
-      return ({
-        icon: mImage
+    map
+      .data
+      .setStyle(function (feature) {
+        return ({icon: mImage});
       });
-    });
 
-    var infowindow = new google.maps.InfoWindow({
-      maxWidth: 280
-    });
+    var infowindow = new google
+      .maps
+      .InfoWindow({maxWidth: 280});
 
+    map
+      .data
+      .addListener('mouseover', function (event) {
+        map
+          .data
+          .revertStyle();
+        map
+          .data
+          .overrideStyle(event.feature, {icon: mImage2});
+        infowindow.setPosition(event.feature.getGeometry().get());
+        infowindow.setOptions({
+          pixelOffset: new google
+            .maps
+            .Size(0, -30)
+        });
 
-    map.data.addListener('mouseover', function(event) {
-      map.data.revertStyle();
-      map.data.overrideStyle(event.feature, {icon: mImage2});
-      infowindow.setPosition(event.feature.getGeometry().get());
-      infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+        var faceImage = event
+            .feature
+            .getProperty('faceImage'),
+          alt = event
+            .feature
+            .getProperty('alt'),
+          name = event
+            .feature
+            .getProperty('name'),
+          description = event
+            .feature
+            .getProperty('description'),
+          stars = event
+            .feature
+            .getProperty('stars'),
+          address = event
+            .feature
+            .getProperty('address');
 
-      var faceImage = event.feature.getProperty('faceImage'),
-        alt = event.feature.getProperty('alt'),
-        name = event.feature.getProperty('name'),
-        description = event.feature.getProperty('description'),
-        stars = event.feature.getProperty('stars'),
-        address = event.feature.getProperty('address');
-
-      infowindow.setContent(
-        '<div class="infowindow">'+
-          '<div class="infowindow__image-wrapper">' + 
-            '<img class="infowindow__image" src= "' + faceImage + '" alt="' + alt + '">'+
-          '</div>' +
-          '<div class="infowindow__content">' + 
-            '<div class="infowindow__title">' + name + '</div>' +
-            '<div class="infowindow__description">' + description + '</div>' +
-            '<div class="infowindow__stars-container">' + 
-              '<div class="infowindow__stars" style="width:' + stars + '">' + '</div>' +
-            '</div>' +
-            '<div class="infowindow__description">' + address + '</div>' +
-          '</div>' +
-        '</div>'
-      );
-      infowindow.open(map);
-    });
+        infowindow.setContent('<div class="infowindow"><div class="infowindow__image-wrapper"><img class="infow' +
+            'indow__image" src= "' + faceImage + '" alt="' + alt + '"></div><div class="infowindow__content"><div class="infowindow__title">' + name + '</div><div class="infowindow__description">' + description + '</div><div class="infowindow__stars-container"><div class="infowindow__stars" st' +
+            'yle="width:' + stars + '"></div></div><div class="infowindow__description">' + address + '</div></div></div>');
+        infowindow.open(map);
+      });
 
     /*map.data.addListener('mouseout', function(event) {
       map.data.revertStyle();
     }); */
 
-    google.maps.event.addListener(map, 'click', function(event) {
-      if (infowindow) {
+    google
+      .maps
+      .event
+      .addListener(map, 'click', function (event) {
+        if (infowindow) {
           infowindow.close();
-          map.data.revertStyle();
-      }
-    });
+          map
+            .data
+            .revertStyle();
+        }
+      });
 
-
-    google.maps.event.addDomListener(window, 'resize', function () {
-      map.setCenter(markLatLng);
-    });
+    google
+      .maps
+      .event
+      .addDomListener(window, 'resize', function () {
+        map.setCenter(markLatLng);
+      });
   }
-  
+
   var mapContainer = document.getElementById('map');
   if (mapContainer) {
-    google.maps.event.addDomListener(window, 'load', gMap);
+    google
+      .maps
+      .event
+      .addDomListener(window, 'load', gMap);
   }
 })();

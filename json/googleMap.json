@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Михайлов Михаил Альбертович",
+		"faceImage": "assets/images/card-doctors/doc1.png",
+		"alt": "Михайлов",
+		"description": "Стоматолог / Стоматолог-хирург",
+		"address": "ул. Александра Солженицына, д.5, стр.1",
+		"stars": "90%"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.99841511249541,
+          56.49987457635921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Матвесоян Степан Нарбеевич",
+		"faceImage": "assets/images/card-doctors/doc2.png",
+		"alt": "Матвесоян",
+		"description": "Стоматолог / Стоматолог-хирург",
+		"address": "ул. Александра Солженицына, д.5, стр.1",
+		"stars": "80%"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.99601721763611,
+          56.49919654011172
+        ]
+      }
+    }
+  ]
+}

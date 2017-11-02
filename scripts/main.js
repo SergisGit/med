@@ -713,44 +713,65 @@
   $('#scroll-4').customScroll(scrolSet2);
   $('#scroll-5').customScroll(scrolSet2);
 
-  //Поисковые страницы закрытие выпадающео меню
+  //Поисковые страницы
   function filtersFunc(event) {
     var i;
+
+     //закрытие выпадающего меню сортировки
     if ((!cardSorting.contains(event.target) || event.target.classList.contains('card-sorting__variant')) && cardSortingCheck.checked == true) {
       cardSortingCheck.checked = '';
     }
+    //Открыть филтры
     if (mainSearchFiltersToggle.contains(event.target)) {
       searchFilters
         .classList
-        .add('visible-block');
+        .add('visible-45');
       body
         .classList
         .add('overflow-no-widescreen');
     }
+    //Закрыть фильтры
     if (filtersClose.contains(event.target)) {
       searchFilters
         .classList
-        .remove('visible-block');
+        .remove('visible-45');
       body
         .classList
         .remove('overflow-no-widescreen');
 
         for (i = 0; i < searchFiltersForms.length; i += 1) {
-          searchFiltersForms[i].classList.remove('visible-block');
+          searchFiltersForms[i].classList.remove('visible-45');
         }
     }
 
+    //Фильтры второго уровня
     for (i = 0; i < searchFiltersAll.length; i += 1) {
       if (searchFiltersAll[i].contains(event.target)) {
-        searchFiltersForms[i].classList.add('visible-block');
+        searchFiltersForms[i].classList.add('visible-45');
       }
     }
 
     for (i = 0; i < searchFiltersFormsCancel.length; i += 1) {
       if (searchFiltersFormsCancel[i].contains(event.target)) {
-        searchFiltersForms[i].classList.remove('visible-block');
+        searchFiltersForms[i].classList.remove('visible-45');
       }
     }
+
+    //Показать и закрыть арту
+    if (mapOpenBtn.contains(event.target)) {
+      mapContainer.classList.add('visible-10');
+      body
+      .classList
+      .add('overflow-no-widescreen');
+    }
+
+    if (mapCloseBtn.contains(event.target)) {
+      mapContainer.classList.remove('visible-10');
+      body
+      .classList
+      .remove('overflow-no-widescreen');
+    }
+
   }
 
   if (mainSearch) {
@@ -761,7 +782,10 @@
       filtersClose = document.querySelector('.search-filters__close-btn'),
       searchFiltersAll = document.querySelectorAll('.search-filters__filter'),
       searchFiltersForms = document.querySelectorAll('.search-filters__form'),
-      searchFiltersFormsCancel = document.querySelectorAll('.search-filters__form-cancel');
+      searchFiltersFormsCancel = document.querySelectorAll('.search-filters__form-cancel'),
+      mapOpenBtn = document.querySelector('.main-search__map-btn'),
+      mapContainer = document.querySelector('.map-container'),
+      mapCloseBtn = document.querySelector('.map-container__close-btn');
 
     document.addEventListener('click', filtersFunc);
   }
@@ -952,17 +976,70 @@ $(document).ready(function () {
       }
     };
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  
-    // Some circle marker properties
-    new google.maps.Marker({
-      position: markLatLng,
-      map: map,
-      icon: {
-        url: "./assets/icons/mappin.svg"
-      },
-      title: 'Врач'
+    
+    map.data.loadGeoJson('json/googleMap.json');
+
+
+    var mImage = new google.maps.MarkerImage('./assets/icons/mappin.svg',
+    new google.maps.Size(44, 36));
+
+    var mImage2 = new google.maps.MarkerImage('./assets/icons/mappin-h.svg',
+    new google.maps.Size(44, 36));
+
+    map.data.setStyle(function(feature) {
+      return ({
+        icon: mImage
+      });
     });
-  
+
+    var infowindow = new google.maps.InfoWindow({
+      maxWidth: 280
+    });
+
+
+    map.data.addListener('mouseover', function(event) {
+      map.data.revertStyle();
+      map.data.overrideStyle(event.feature, {icon: mImage2});
+      infowindow.setPosition(event.feature.getGeometry().get());
+      infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+
+      var faceImage = event.feature.getProperty('faceImage'),
+        alt = event.feature.getProperty('alt'),
+        name = event.feature.getProperty('name'),
+        description = event.feature.getProperty('description'),
+        stars = event.feature.getProperty('stars'),
+        address = event.feature.getProperty('address');
+
+      infowindow.setContent(
+        '<div class="infowindow">'+
+          '<div class="infowindow__image-wrapper">' + 
+            '<img class="infowindow__image" src= "' + faceImage + '" alt="' + alt + '">'+
+          '</div>' +
+          '<div class="infowindow__content">' + 
+            '<div class="infowindow__title">' + name + '</div>' +
+            '<div class="infowindow__description">' + description + '</div>' +
+            '<div class="infowindow__stars-container">' + 
+              '<div class="infowindow__stars" style="width:' + stars + '">' + '</div>' +
+            '</div>' +
+            '<div class="infowindow__description">' + address + '</div>' +
+          '</div>' +
+        '</div>'
+      );
+      infowindow.open(map);
+    });
+
+    /*map.data.addListener('mouseout', function(event) {
+      map.data.revertStyle();
+    }); */
+
+    google.maps.event.addListener(map, 'click', function(event) {
+      if (infowindow) {
+          infowindow.close();
+          map.data.revertStyle();
+      }
+    });
+
+
     google.maps.event.addDomListener(window, 'resize', function () {
       map.setCenter(markLatLng);
     });

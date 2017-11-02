@@ -108,9 +108,23 @@
       </header>
 
       <main class="main  main-search">
-        <h1 class="main-search__title">Найдено клиник:
-          <span class="main-search__count">628</span>
+        <h1 class="main-search__title">Результаты поиска по запросу <span class="main-search__keyword">грыжа</span>
         </h1>
+
+        <div class="main-search__section-links">
+          <div class="main-search__section-link-wrapper">
+            <a href="#" class="main-search__section-link">Врачи</a>
+            <span class="main-search__section-count">110</span>
+          </div>
+          <div class="main-search__section-link-wrapper">
+            <a href="#" class="main-search__section-link">Клиники</a>
+            <span class="main-search__section-count">14347</span>
+          </div>
+          <div class="main-search__section-link-wrapper">
+            <a href="#" class="main-search__section-link">Услуги</a>
+            <span class="main-search__section-count">748</span>
+          </div>
+        </div>
 
         <div class="main-search__filters  search-filters">
           <a href="#" class="search-filters__clear-all">Очистить все</a>
@@ -118,12 +132,12 @@
           <div class="search-filters__wrapper">
 
             <div class="search-filters__filter-wrapper">
-              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_clinic-option">
+              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_specialities">
                 <span class="search-filters__title">Специализации</span>
                 <span class="search-filters__value">5</span>
                 <a href="#" class="search-filters__clear-filter"></a>
               </div>
-              <form action="/echo" class="search-filters__form  search-filters__form_clinic-option">
+              <form action="/echo" class="search-filters__form  search-filters__form_specialities">
                 <button type="button" class="search-filters__form-cancel">Специализации</button>
                 <div class="search-filters__form-inner">
                   <label class="search-filters__search-input-label">
@@ -132,47 +146,47 @@
                   <div class="search-filters__form-list">
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Аптеки</span>
+                      <span class="search-filters__item-title">Акушер-гинеколог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Больницы</span>
+                      <span class="search-filters__item-title">Аллерголог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Бюро медико-социальной экспертизы</span>
+                      <span class="search-filters__item-title">Андролог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Венероглогвзрослые поликлиники</span>
+                      <span class="search-filters__item-title">Венероглог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Госпитали</span>
+                      <span class="search-filters__item-title">Гастроэнтеролог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Детские поликлиники</span>
+                      <span class="search-filters__item-title">Гинеколог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Диагностические центры</span>
+                      <span class="search-filters__item-title">Дерматолог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Диспансеры</span>
+                      <span class="search-filters__item-title">Иммунолог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Женские консультации</span>
+                      <span class="search-filters__item-title">Кардиолог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Косметологические клиники</span>
+                      <span class="search-filters__item-title">Косметолог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Лаборатории</span>
+                      <span class="search-filters__item-title">Логопед</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
@@ -180,109 +194,92 @@
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Медико-санитарные части</span>
+                      <span class="search-filters__item-title">Мануальный терапевт</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Научно исследовательские институты</span>
+                      <span class="search-filters__item-title">Нарколог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Ортопедические салоны</span>
+                      <span class="search-filters__item-title">Невролог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Реабилитационные центры</span>
+                      <span class="search-filters__item-title">Онколог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Родильные дома</span>
+                      <span class="search-filters__item-title">Ортопед-травматолог</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Санатории/профилактории</span>
+                      <span class="search-filters__item-title">Оториноларинголог (ЛОР)</span>
                     </label>
                     <label class="search-filters__item">
                       <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Станции переливания крови</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Станции медицинской помощи</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Стоматологические клиники</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Травмпункты</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Центры борьбы со СПИДом</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Проктолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Психиатр</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Психолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Психотерапевт</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Пульмонолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Ревматолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Репродуктолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Стоматолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Трихолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Травматолог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Терапевт</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Уролог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Флеболог</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Хирург</span>
-                    </label>
-                    <label class="search-filters__item">
-                      <input type="checkbox" class="search-filters__checkbox">
-                      <span class="search-filters__item-title">Эндокринолог</span>
+                      <span class="search-filters__item-title">Офтальмолог (окулист)</span>
                     </label>
                   </div>
+                </div>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_rating">
+                <span class="search-filters__title">Рейтинг</span>
+                <span class="search-filters__value"></span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_rating">
+                <button type="button" class="search-filters__form-cancel">Рейтинг</button>
+                <div class="search-filters__form-inner">
+                  <input type="radio" name="search-filters__rate-radio" value="rating-1" class="search-filters__radio" id="search-filters__rate-radio_1">
+                  <label for="search-filters__rate-radio_1" class="search-filters__rate-item  search-filters__rate-item_1">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">14</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-2" class="search-filters__radio" id="search-filters__rate-radio_2">
+                  <label for="search-filters__rate-radio_2" class="search-filters__rate-item  search-filters__rate-item_2">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">22</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-3" class="search-filters__radio" id="search-filters__rate-radio_3">
+                  <label for="search-filters__rate-radio_3" class="search-filters__rate-item  search-filters__rate-item_3">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">34</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-4" class="search-filters__radio" id="search-filters__rate-radio_4">
+                  <label for="search-filters__rate-radio_4" class="search-filters__rate-item  search-filters__rate-item_4">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">45</span>
+                  </label>
+                  <input type="radio" name="search-filters__rate-radio" value="rating-5" class="search-filters__radio" id="search-filters__rate-radio_5">
+                  <label for="search-filters__rate-radio_5" class="search-filters__rate-item  search-filters__rate-item_5">
+                    <span class="search-filters__rate-stars"></span>
+                    <span class="search-filters__rate-voices">56</span>
+                  </label>
+                </div>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_xp">
+                <span class="search-filters__title">Стаж</span>
+                <span class="search-filters__value"></span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_xp">
+                <button type="button" class="search-filters__form-cancel">Стаж</button>
+                <div class="search-filters__form-inner">
+                  <input type="radio" name="search-filters__xp-radio" value="xp-5" class="search-filters__radio" id="search-filters__xp-radio_5">
+                  <label for="search-filters__xp-radio_5" class="search-filters__xp-item">От 5 лет</label>
+                  <input type="radio" name="search-filters__xp-radio" value="xp-10" class="search-filters__radio" id="search-filters__xp-radio_10">
+                  <label for="search-filters__xp-radio_10" class="search-filters__xp-item">От 10 лет</label>
+                  <input type="radio" name="search-filters__xp-radio" value="xp-15" class="search-filters__radio" id="search-filters__xp-radio_15">
+                  <label for="search-filters__xp-radio_15" class="search-filters__xp-item">От 15 лет</label>
                 </div>
                 <button type="submit" class="search-filters__submit  btn">Сохранить</button>
               </form>
@@ -318,9 +315,27 @@
               </form>
             </div>
 
+            <div class="search-filters__filter-wrapper">
+              <div class="search-filters__filter  search-filters__filter_active  search-filters__filter_gender">
+                <span class="search-filters__title">Пол</span>
+                <span class="search-filters__value">Мужской</span>
+                <a href="#" class="search-filters__clear-filter"></a>
+              </div>
+              <form action="/echo" class="search-filters__form  search-filters__form_gender">
+                <button type="button" class="search-filters__form-cancel">Пол</button>
+                <div class="search-filters__form-inner">
+                  <input type="radio" name="search-filters__gender-radio" value="man" class="search-filters__radio" id="search-filters__gender-radio_m">
+                  <label for="search-filters__gender-radio_m" class="search-filters__gender-item">Мужчина</label>
+                  <input type="radio" name="search-filters__gender-radio" value="woman" class="search-filters__radio" id="search-filters__gender-radio_w">
+                  <label for="search-filters__gender-radio_w" class="search-filters__gender-item">Женщина</label>
+                </div>
+                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+              </form>
+            </div>
+
           </div>
           <a href="#" class="search-filters__save-link btn">Сохранить</a>
-        </div> 
+        </div>
 
         <div class="main-search__switches">
           <div class="main-search__card-sorting  card-sorting">
@@ -330,13 +345,14 @@
             </label>
             <div class="card-sorting__variants">
               <a class="card-sorting__variant  card-sorting__variant_current">По рейтингу</a>
-              <a href="#" class="card-sorting__variant">По количеству отзывов</a>
+              <a href="#" class="card-sorting__variant">По кол-ву отзывов</a>
               <a href="#" class="card-sorting__variant">По возрастанию цены</a>
               <a href="#" class="card-sorting__variant">По убыванию цены</a>
             </div>
           </div>
+          <button type="button" class="main-search__map-btn">Карта</button>
           <div class="main-search__filters-toggle">
-            <svg class="filter-svg  main-search__filter-svg" width="22" height="20">
+            <svg class="filters-svg  main-search__filters-svg" width="22" height="20">
               <use xlink:href="assets/icons/symbols.svg#filter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
             <span class="main-search__filters-value  main-search__filters-value_active">6</span>
@@ -347,65 +363,36 @@
 
           <div class="main-search__card  search-card">
             <div class="search-card__info">
-              <div class="search-card__content  search-card__content_service">
-                <div class="search-card__wrapper">
-                  <h3 class="search-card__title  search-card__title_clinic-name">Он клиник на Улице 1905 года</h3>
-                  <a href="#" class="search-card__like-link  search-card__like-link_liked  search-card__like-link_clinic"></a>
+              <div class="search-card__content  search-card__content_doctor">
+                <div class="search-card__image-wrapper">
+                  <img src="assets\images\card-doctors\doc1.png" class="search-card__doc-image" alt="doc-image">
+                  <a href="#" class="search-card__like-link  search-card__like-link_doctor"></a>
                 </div>
-                <a href="#" class="search-card__clinic-location">
-                  <svg class="search-card__location-svg" width="10" height="12">
-                    <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                  <span class="search-card__clinic-adress">ул. Большая Молчановка, д. 32, стр. 1</span>
-                </a>
+                <h3 class="search-card__title  search-card__title_doc-name">Михайлов Михаил Альбертович</h3>
+                <span class="search-card__doc-speciality">Стоматолог, Стоматолог-хирург</span>
                 <br>
-                <div class="search-card__schedule-block">
-                  <span class="search-card__schedule-title">Режим работы:</span>
-                  <label class="search-card__schedule">
-                    <input type="checkbox" class="search-card__schedule-check">
-                    <span class="search-card__schedule-today">Открыто до 19:00</span>
-                    <span class="search-card__schedule-week">
-                      <span class="search-card__schedule-line">
-                        <span class="search-card__schedule-day">
-                          ПН-ПТ:
-                        </span>
-                        <span class="search-card__schedule-time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="search-card__schedule-line">
-                        <span class="search-card__schedule-day">
-                          СБ:
-                        </span>
-                        <span class="search-card__schedule-time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="search-card__schedule-line">
-                        <span class="search-card__schedule-day">
-                          ВС:
-                        </span>
-                        <span class="search-card__schedule-time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                    </span>
-                  </label>
+                <span class="search-card__doc-exp">Стаж
+                  <span class="search-card__doc-exp-count">19 лет</span>
+                </span>
+                <br>
+                <div class="search-card__doc-clinics">
+                  <div class="search-card__doc-clinic">
+                    <a href="#" class="search-card__clinic-location">
+                      <svg class="search-card__location-svg" width="10" height="12">
+                        <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                      </svg>
+                      <span class="search-card__doc-clinic-name">Томская областная клиническая больница</span>
+                    </a>
+                    <span class="search-card__doc-cost">Приём:&nbsp;
+                      <span class="search-card__doc-cost-value">1000</span>&#8381;</span>
+                  </div>
                 </div>
-                <div class="search-card__phone-block">
-                  <span class="search-card__phone-title">Телефон</span>
-                  <span class="search-card__phone">+7 (3822) 63-00-47</span>
-                </div>
-                <p class="search-card__clinic-offer">Анализ ресниц на демодекс
-                  <b class="search-card__clinic-offer-cost">400</b>
-                  <b> &#8381;</b>
-                </p>
-                <p class="search-card__clinic-description  cutted-text">МедЦентрСервис – это группа из 12 многофункциональных медучреждений, в каждой из которых оказывают качественную помощь по профилактике и лечению аллергических гинекологических, дерматовенерологических заболеваний, патологий мочеполовой и репродуктивной сферы</p>
                 <a class="search-card__single-card-link" href="#"></a>
               </div>
               <div class="search-card__actions">
                 <a href="#" class="btn btn_s search-card__actions-btn">Оставить отзыв</a>
                 <a href="#" class="btn btn_s search-card__actions-btn">Записаться</a>
+                <a href="#" class="btn btn_s search-card__actions-btn">Позвонить</a>
               </div>
             </div>
             <div class="search-card__review-block">
@@ -428,74 +415,45 @@
 
           <div class="main-search__card  search-card">
             <div class="search-card__info">
-              <div class="search-card__content  search-card__content_service">
-                <div class="search-card__wrapper">
-                  <h3 class="search-card__title  search-card__title_clinic-name">Он клиник на Улице 1905 года</h3>
-                  <a href="#" class="search-card__like-link  search-card__like-link_liked  search-card__like-link_clinic"></a>
+              <div class="search-card__content  search-card__content_doctor">
+                <div class="search-card__image-wrapper">
+                  <img src="assets\images\card-doctors\doc2.png" class="search-card__doc-image" alt="doc-image">
+                  <a href="#" class="search-card__like-link  search-card__like-link_liked  search-card__like-link_doctor"></a>
                 </div>
-                <a href="#" class="search-card__clinic-location">
-                  <svg class="search-card__location-svg" width="10" height="12">
-                    <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                  <span class="search-card__clinic-adress">ул. Большая Молчановка, д. 32, стр. 1</span>
-                </a>
+                <h3 class="search-card__title  search-card__title_doc-name">Матвесоян Степан Нарбеевич</h3>
+                <span class="search-card__doc-speciality">Стоматолог, Стоматолог-хирург</span>
                 <br>
-                <div class="search-card__schedule-block">
-                  <span class="search-card__schedule-title">Режим работы:</span>
-                  <label class="search-card__schedule">
-                    <input type="checkbox" class="search-card__schedule-check">
-                    <span class="search-card__schedule-today">Открыто до 19:00</span>
-                    <span class="search-card__schedule-week">
-                      <span class="search-card__schedule-line">
-                        <span class="search-card__schedule-day">
-                          ПН-ПТ:
-                        </span>
-                        <span class="search-card__schedule-time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="search-card__schedule-line">
-                        <span class="search-card__schedule-day">
-                          СБ:
-                        </span>
-                        <span class="search-card__schedule-time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="search-card__schedule-line">
-                        <span class="search-card__schedule-day">
-                          ВС:
-                        </span>
-                        <span class="search-card__schedule-time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                    </span>
-                  </label>
+                <span class="search-card__doc-exp">Стаж
+                  <span class="search-card__doc-exp-count">19 лет</span>
+                </span>
+                <br>
+                <div class="search-card__doc-clinics">
+                  <div class="search-card__doc-clinic">
+                    <a href="#" class="search-card__clinic-location">
+                      <svg class="search-card__location-svg" width="10" height="12">
+                        <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                      </svg>
+                      <span class="search-card__doc-clinic-name">Томская областная клиническая больница</span>
+                    </a>
+                    <span class="search-card__doc-cost">Приём:&nbsp;
+                      <span class="search-card__doc-cost-value">1000</span>&#8381;</span>
+                  </div>
                 </div>
-                <div class="search-card__phone-block">
-                  <span class="search-card__phone-title">Телефон</span>
-                  <span class="search-card__phone">+7 (3822) 63-00-47</span>
-                </div>
-                <p class="search-card__clinic-offer">Анализ ресниц на демодекс
-                  <b class="search-card__clinic-offer-cost">400</b>
-                  <b> &#8381;</b>
-                </p>
-                <p class="search-card__clinic-description  cutted-text">МедЦентрСервис – это группа из 12 многофункциональных медучреждений, в каждой из которых оказывают качественную помощь по профилактике и лечению аллергических гинекологических, дерматовенерологических заболеваний, патологий мочеполовой и репродуктивной сферы</p>
                 <a class="search-card__single-card-link" href="#"></a>
               </div>
               <div class="search-card__actions">
                 <a href="#" class="btn btn_s search-card__actions-btn">Оставить отзыв</a>
                 <a href="#" class="btn btn_s search-card__actions-btn">Записаться</a>
+                <a href="#" class="btn btn_s search-card__actions-btn">Позвонить</a>
               </div>
             </div>
             <div class="search-card__review-block">
               <a class="search-card__review-link" href="#"></a>
               <div class="search-card__rating">
                 <div class="search-card__stars-container">
-                  <div class="search-card__stars" style="width: 90%"></div>
+                  <div class="search-card__stars" style="width: 80%"></div>
                 </div>
-                <div class="search-card__rating-value">4.5</div>
+                <div class="search-card__rating-value">4</div>
               </div>
               <div class="search-card__reviews">
                 <svg class="search-card__reviews-svg" width="20" height="20">
@@ -526,7 +484,9 @@
 
         <div class="map-container">
           <div class="map" id="map"></div>
+          <button type="button" class="map-container__close-btn"></button>
         </div>
+
       </main>
 
       <footer class="page-footer">
@@ -1095,9 +1055,8 @@
   <script src="scripts/jquery.validate-advance.min.js"></script>
   <script src="scripts/nouislider.wNumb.min.js"></script>
   <script src="scripts/jquery.peity.min.js"></script>
-  <script src="scripts/jquery.dotdotdot.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHf8ldsOy9f9D9N-eFUAQbMe0wisVxCrk&callback=initMap"></script>
-  <script src="scripts/main.min.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>

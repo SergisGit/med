@@ -336,6 +336,7 @@
               <a href="#" class="card-sorting__variant">По убыванию цены</a>
             </div>
           </div>
+          <button type="button" class="main-search__map-btn">Карта</button>
           <div class="main-search__filters-toggle">
             <svg class="filters-svg  main-search__filters-svg" width="22" height="20">
               <use xlink:href="assets/icons/symbols.svg#filter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
@@ -384,7 +385,7 @@
               <a class="search-card__review-link" href="#"></a>
               <div class="search-card__rating">
                 <div class="search-card__stars-container">
-                  <div class="search-card__stars"></div>
+                  <div class="search-card__stars" style="width: 90%"></div>
                 </div>
                 <div class="search-card__rating-value">4.5</div>
               </div>
@@ -402,10 +403,10 @@
             <div class="search-card__info">
               <div class="search-card__content  search-card__content_doctor">
                 <div class="search-card__image-wrapper">
-                  <img src="assets\images\card-doctors\doc1.png" class="search-card__doc-image" alt="doc-image">
+                  <img src="assets\images\card-doctors\doc2.png" class="search-card__doc-image" alt="doc-image">
                   <a href="#" class="search-card__like-link  search-card__like-link_liked  search-card__like-link_doctor"></a>
                 </div>
-                <h3 class="search-card__title  search-card__title_doc-name">Михайлов Михаил Альбертович</h3>
+                <h3 class="search-card__title  search-card__title_doc-name">Матвесоян Степан Нарбеевич</h3>
                 <span class="search-card__doc-speciality">Стоматолог, Стоматолог-хирург</span>
                 <br>
                 <span class="search-card__doc-exp">Стаж
@@ -436,9 +437,9 @@
               <a class="search-card__review-link" href="#"></a>
               <div class="search-card__rating">
                 <div class="search-card__stars-container">
-                  <div class="search-card__stars"></div>
+                  <div class="search-card__stars" style="width: 80%"></div>
                 </div>
-                <div class="search-card__rating-value">4.5</div>
+                <div class="search-card__rating-value">4</div>
               </div>
               <div class="search-card__reviews">
                 <svg class="search-card__reviews-svg" width="20" height="20">
@@ -466,8 +467,10 @@
             <a href="#" class="paginator__page-link">24</a>
           </div>
         </div>
+
         <div class="map-container">
           <div class="map" id="map"></div>
+          <button type="button" class="map-container__close-btn"></button>
         </div>
         
       </main>
@@ -1039,7 +1042,7 @@
   <script src="scripts/nouislider.wNumb.min.js"></script>
   <script src="scripts/jquery.peity.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHf8ldsOy9f9D9N-eFUAQbMe0wisVxCrk&callback=initMap"></script>
-  <script src="scripts/main.min.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>

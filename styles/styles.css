@@ -4746,6 +4746,8 @@ label.error {
     font-size: 23px;
   }
   .main-search__section-links {
+    max-width: 930px;
+    margin: 0 auto 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4756,10 +4758,11 @@ label.error {
         -ms-flex-positive: 0;
             flex-grow: 0;
     margin: 0;
+    margin-right: 20px;
   }
   .main-search__section-count {
     min-width: auto;
-    margin: 0 10px;
+    margin: 0 10px 0 -10px;
   }
   .search-card {
     display: -webkit-box;
@@ -5529,7 +5532,7 @@ label.error {
     margin: 22px 0;
   }
   .main-search__section-links {
-    max-width: 930px;
+    margin: 0 0 10px;
     border-bottom: none;
     padding-bottom: 25px;
   }

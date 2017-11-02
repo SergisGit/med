@@ -815,23 +815,17 @@
       max = parseInt(range.dataset.max);
 
     var noLetters = function (input) {
-      var value = input.value;
-      var rep = /[^0-9]/;
-      if (rep.test(value)) {
-        value = value.replace(rep, '');
-        input.value = value;
-        input.style.width = ((inputMin.value.length) * 8) + 'px';
-      }
+      input.value=input.value.replace(/[^\d\.]+/g,'');
     };
 
     inputMin.oninput = function () {
-      inputMin.style.width = ((inputMin.value.length) * 8) + 'px';
       noLetters(inputMin);
+      inputMin.style.width = ((inputMin.value.length) * 8) + 'px';
     };
 
     inputMax.oninput = function () {
-      inputMax.style.width = ((inputMax.value.length) * 8) + 'px';
       noLetters(inputMax);
+      inputMax.style.width = ((inputMax.value.length) * 8) + 'px';
     };
 
     noUiSlider.create(range, {

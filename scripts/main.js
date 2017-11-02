@@ -714,6 +714,33 @@
   $('#scroll-5').customScroll(scrolSet2);
 
   //Поисковые страницы
+  function closeFilters() {
+    searchFilters
+      .classList
+      .remove('visible-45');
+    body
+      .classList
+      .remove('overflow-no-widescreen');
+
+    for (i = 0; i < searchFiltersForms.length; i += 1) {
+      searchFiltersForms[i]
+        .classList
+        .remove('visible-45');
+    }
+    mainNav
+      .classList
+      .remove('zindex');
+  }
+
+  function closeMap() {
+    mapContainer
+      .classList
+      .remove('visible-10');
+    body
+      .classList
+      .remove('overflow-no-widescreen');
+  }
+
   function filtersFunc(event) {
     var i;
 
@@ -732,21 +759,7 @@
     }
     //Закрыть фильтры
     if (filtersClose.contains(event.target)) {
-      searchFilters
-        .classList
-        .remove('visible-45');
-      body
-        .classList
-        .remove('overflow-no-widescreen');
-
-      for (i = 0; i < searchFiltersForms.length; i += 1) {
-        searchFiltersForms[i]
-          .classList
-          .remove('visible-45');
-      }
-      mainNav
-        .classList
-        .remove('zindex');
+      closeFilters();
     }
 
     //Фильтры второго уровня
@@ -783,14 +796,8 @@
     }
 
     if (mapCloseBtn.contains(event.target)) {
-      mapContainer
-        .classList
-        .remove('visible-10');
-      body
-        .classList
-        .remove('overflow-no-widescreen');
+      closeMap();
     }
-
   }
 
   if (mainSearch) {
@@ -807,6 +814,12 @@
       mapCloseBtn = document.querySelector('.map-container__close-btn');
 
     document.addEventListener('click', filtersFunc);
+    window.addEventListener('keydown', function (event) {
+      if (event.keyCode === 27) {
+        closeFilters();
+        closeMap();
+      }
+    });
   }
 
   //nouislider

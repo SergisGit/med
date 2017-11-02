@@ -2843,10 +2843,11 @@ input[type="password"] ~ .password-svg:active {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100%;
+  height: 0;
   padding-bottom: 88px;
   background-color: #ffffff;
   visibility: hidden;
+  overflow: hidden;
   z-index: -1;
 }
 .search-filters__selected-items {
@@ -2916,6 +2917,10 @@ input[type="password"] ~ .password-svg:active {
   background-image: url("../assets/icons/x-circle.svg");
   pointer-events: none;
 }
+.search-filters__item-value {
+  display: inline-block;
+  margin-left: 20px;
+}
 .search-filters__search-input-label {
   position: relative;
   display: inline-block;
@@ -2982,9 +2987,12 @@ input[type="password"] ~ .password-svg:active {
   color: #1ed48b;
 }
 .search-filters__item-title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   display: inline-block;
   padding-left: 20px;
+  margin-right: -20px;
 }
 .search-filters__item-title::before,
 .search-filters__item-title::after {
@@ -3671,6 +3679,8 @@ input[type="password"] ~ .password-svg:active {
   display: none;
 }
 .visible-45 {
+  height: auto;
+  min-height: 100%;
   visibility: visible;
   z-index: 45;
 }

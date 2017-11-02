@@ -815,7 +815,7 @@
       max = parseInt(range.dataset.max);
 
     var noLetters = function (input) {
-      input.value=input.value.replace(/[^\d\.]+/g,'');
+      input.value=input.value.replace(/[^\d]+/g,'');
     };
 
     inputMin.oninput = function () {

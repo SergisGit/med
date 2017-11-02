@@ -2944,6 +2944,24 @@ input[type="password"] ~ .password-svg:active {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 10px 0 15px;
+  width: 100%;
+}
+.search-filters__form-list-letter {
+  display: block;
+  width: 100%;
+  padding-bottom: 2px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ededed;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+.search-filters__alphabet-quantity,
+.search-filters__form-list-quantity {
+  display: inline-block;
+  padding: 0 2px;
+  font-size: 14px;
+  color: #bbbbbb;
 }
 .search-filters__item,
 .search-filters__link-item {
@@ -5221,13 +5239,6 @@ label.error {
   .search-filters__alphabet-link:active .search-filters__alphabet-quantity {
     color: #1ed48b;
   }
-  .search-filters__alphabet-quantity,
-  .search-filters__form-list-quantity {
-    display: inline-block;
-    padding: 0 2px;
-    font-size: 14px;
-    color: #bbbbbb;
-  }
   .search-filters__form-inner {
     width: 100%;
     margin: 0;
@@ -5240,16 +5251,6 @@ label.error {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100%;
-  }
-  .search-filters__form-list-letter {
-    display: block;
-    width: 100%;
-    padding-bottom: 2px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ededed;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
   }
   .search-filters__item,
   .search-filters__link-item {

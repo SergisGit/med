@@ -2850,6 +2850,91 @@ input[type="password"] ~ .password-svg:active {
   overflow: hidden;
   z-index: -1;
 }
+.search-filters__service-block {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  font-size: 16px;
+}
+.search-filters__service-block_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.search-filters__service-block .search-filters__selected-items {
+  border-bottom: 1px solid #ededed;
+}
+.search-filters__service-list {
+  max-width: 930px;
+  padding-bottom: 5px;
+}
+.search-filters__service-list-header,
+.search-filters__service-lists-header {
+  display: inline-block;
+  padding: 7px 0;
+  font-size: 17px;
+}
+.search-filters__service-list-title,
+.search-filters__service-lists-title {
+  font-weight: 700;
+}
+.search-filters__link-title {
+  margin-right: 5px;
+  -webkit-transition: padding-left 0.1s;
+  -o-transition: padding-left 0.1s;
+  transition: padding-left 0.1s;
+}
+.search-filters__service-list-count,
+.search-filters__service-lists-count,
+.search-filters__link-value,
+.search-filters__link-currency {
+  color: #828288;
+}
+.search-filters__service-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.search-filters__service-link {
+  display: inline-block;
+  padding: 6px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.1s, padding-left 0.1s;
+  -o-transition: color 0.1s, padding-left 0.1s;
+  transition: color 0.1s, padding-left 0.1s;
+}
+.search-filters__service-link:hover,
+.search-filters__service-link:active {
+  color: #1ed48b;
+  padding-left: 10px;
+}
+.search-filters__service-link:hover *,
+.search-filters__service-link:active * {
+  color: #1ed48b;
+}
+.search-filters__service-link:hover .search-filters__link-cost::before,
+.search-filters__service-link:active .search-filters__link-cost::before {
+  border-bottom: 1px dotted #1ed48b;
+}
+.search-filters__service-link-all {
+  display: inline-block;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #1ed48b;
+}
+.search-filters__link-cost {
+  display: block;
+}
 .search-filters__selected-items {
   width: 100%;
 }
@@ -2871,8 +2956,7 @@ input[type="password"] ~ .password-svg:active {
 }
 .search-filters__form-inner_specialities,
 .search-filters__form-inner_clinics,
-.search-filters__form-inner_service,
-.search-filters__form-inner_services {
+.search-filters__form-inner_clinic-service {
   border-top: 1px solid #ededed;
 }
 .search-filters__price-block {
@@ -2891,12 +2975,13 @@ input[type="password"] ~ .password-svg:active {
 .search-filters__form-cancel,
 .search-filters__selected-item {
   position: relative;
-  height: 44px;
+  min-height: 44px;
   border-radius: 21px;
-  padding: 0 57px 0 15px;
+  padding: 10px 57px 10px 20px;
   border: 1px solid #e5e5e5;
   outline: none;
   background-color: transparent;
+  text-align: left;
   overflow: hidden;
   cursor: pointer;
 }
@@ -2911,15 +2996,13 @@ input[type="password"] ~ .password-svg:active {
   content: "";
   position: absolute;
   width: 20px;
-  height: 20px;
+  height: 100%;
   right: 14px;
-  top: 11px;
+  top: 0;
   background-image: url("../assets/icons/x-circle.svg");
+  background-repeat: no-repeat;
+  background-position-y: 50%;
   pointer-events: none;
-}
-.search-filters__item-value {
-  display: inline-block;
-  margin-left: 20px;
 }
 .search-filters__search-input-label {
   position: relative;
@@ -2931,7 +3014,7 @@ input[type="password"] ~ .password-svg:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  height: 42px;
+  height: 44px;
   padding: 0 50px 0 20px;
   border: 1px solid  #bbbbbb;
   border-radius: 21px;
@@ -2990,9 +3073,7 @@ input[type="password"] ~ .password-svg:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-  display: inline-block;
   padding-left: 20px;
-  margin-right: -20px;
 }
 .search-filters__item-title::before,
 .search-filters__item-title::after {
@@ -3674,6 +3755,11 @@ input[type="password"] ~ .password-svg:active {
 }
 .show-block {
   display: block;
+}
+.show-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .hide-block {
   display: none;
@@ -5221,6 +5307,59 @@ label.error {
     min-width: 400px;
     padding-top: 20px;
     padding-bottom: 0;
+  }
+  .search-filters__service-block_1 .search-filters__service-links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .search-filters__service-block_1 .search-filters__service-link {
+    margin-right: 20px;
+  }
+  .search-filters__service-block_1 .search-filters__service-link:hover,
+  .search-filters__service-block_1 .search-filters__service-link:active {
+    padding-left: 0;
+  }
+  .search-filters__service-list-header,
+  .search-filters__service-lists-header {
+    font-size: 18px;
+  }
+  .search-filters__service-list {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .search-filters__service-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .search-filters__link-cost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .search-filters__link-cost::before {
+    content: "";
+    display: inline-block;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    min-width: 15px;
+    margin: 0 5px 0 0;
+    line-height: 0;
+    border-bottom: 1px dotted #828288;
   }
   .search-filters__alphabet {
     display: -webkit-box;

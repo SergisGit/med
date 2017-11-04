@@ -530,6 +530,15 @@
       previosEl = previosEl.previousElementSibling;
     }
     previosEl.value = "";
+    
+    if (previosEl.classList.contains('checkIn__2-password-field')) {
+      var pswMsg1 = $(".checkIn__2-password-field ~ .popup__password-strong-message");
+      pswMsg1.text('');
+    }
+    if (previosEl.classList.contains('checkIn__5-password-field')) {
+      var pswMsg2 = $(".checkIn__5-password-field ~ .popup__password-strong-message");
+      pswMsg2.text('');
+    }
   }
 
   var clearInputBtns = document.querySelectorAll('.clear-svg');

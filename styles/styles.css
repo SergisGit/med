@@ -573,6 +573,9 @@ input:focus ~ .clear-svg:active {
 .clear-svg:active ~ .popup__input-svg_error {
   fill: transparent;
 }
+.clear-svg:active ~ .popup__input-svg_ok {
+  stroke: transparent;
+}
 input:focus ~ .password-svg {
   stroke: #97a4b1;
   cursor: pointer;
@@ -599,6 +602,15 @@ input[type="text"] ~ .password-svg:active {
 }
 input[type="password"] ~ .password-svg:active {
   stroke: #3b4256;
+}
+.password-svg:active ~ .popup__input-svg_ok {
+  stroke: transparent;
+}
+.password-svg:active ~ .popup__input-svg_error {
+  fill: transparent;
+}
+.password-svg:active ~ .clear-svg {
+  stroke: #97a4b1;
 }
 .links-block__look-all-svg {
   stroke: #55c9af;
@@ -2079,9 +2091,13 @@ input[type="password"] ~ .password-svg:active {
   margin: 0;
   margin-bottom: 10px;
   padding: 0 15px;
+  padding-right: 135px;
   font-size: 12px;
   font-weight: 600;
   text-align: left;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .popup__input {
   -webkit-box-sizing: border-box;
@@ -2111,6 +2127,16 @@ input[type="password"] ~ .password-svg:active {
   background-color: transparent;
   -webkit-box-shadow: 0 10px 30px #d3d6e1;
           box-shadow: 0 10px 30px #d3d6e1;
+}
+.popup__password-strong-message {
+  position: absolute;
+  right: 0;
+  top: -24px;
+  padding-right: 15px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 600;
+  color: #97a4b1;
 }
 .popup__btn {
   width: 100%;

@@ -717,15 +717,18 @@
   function closeFilters() {
     searchFilters
       .classList
-      .remove('visible-45');
+      .remove('show-filters');
     body
       .classList
       .remove('overflow-no-widescreen');
+    body
+      .classList
+      .remove('overflow');
 
     for (i = 0; i < searchFiltersForms.length; i += 1) {
       searchFiltersForms[i]
         .classList
-        .remove('visible-45');
+        .remove('show-filter-forms');
     }
     mainNav
       .classList
@@ -752,7 +755,7 @@
     if (mainSearchFiltersToggle.contains(event.target)) {
       searchFilters
         .classList
-        .add('visible-45');
+        .add('show-filters');
       body
         .classList
         .add('overflow-no-widescreen');
@@ -765,23 +768,29 @@
     //Фильтры второго уровня
     for (i = 0; i < searchFiltersAll.length; i += 1) {
       if (searchFiltersAll[i].contains(event.target)) {
-        searchFiltersForms[i]
+        searchFiltersFormWrappers[i]
           .classList
-          .add('visible-45');
+          .add('show-filter-forms');
         mainNav
           .classList
           .add('zindex');
+        body
+          .classList
+          .add('overflow');
       }
     }
 
     for (i = 0; i < searchFiltersFormsCancel.length; i += 1) {
       if (searchFiltersFormsCancel[i].contains(event.target)) {
-        searchFiltersForms[i]
+        searchFiltersFormWrappers[i]
           .classList
-          .remove('visible-45');
+          .remove('show-filter-forms');
         mainNav
           .classList
           .remove('zindex');
+        body
+          .classList
+          .remove('overflow');
       }
     }
 
@@ -800,18 +809,42 @@
     }
   }
 
+  function placeFilters() {
+    for (i = 0; i < searchFiltersForms.length; i += 1) {
+      var elementBoundary = searchFiltersWrappers[i].getBoundingClientRect();
+      var left = elementBoundary.left + pageXOffset;
+      var top = elementBoundary.top + pageYOffset;
+
+      if (window.matchMedia("(min-width: 1430px)").matches) {
+        searchFiltersForms[i].style.left = left + 'px';
+        searchFiltersForms[i].style.top = top + 'px';
+      } else {
+        searchFiltersForms[i].style.left = '';
+        searchFiltersForms[i].style.top = '';
+      }
+    }
+  }
+
+
   if (mainSearch) {
     var cardSortingCheck = document.querySelector('.card-sorting__check'),
       cardSorting = document.querySelector('.card-sorting'),
       mainSearchFiltersToggle = document.querySelector('.main-search__filters-toggle'),
       searchFilters = document.querySelector('.search-filters'),
       filtersClose = document.querySelector('.search-filters__close-btn'),
+      searchFiltersWrappers = document.querySelectorAll('.search-filters__filter-wrapper'),
       searchFiltersAll = document.querySelectorAll('.search-filters__filter'),
+      searchFiltersFormWrappers = document.querySelectorAll('.search-filters__form-wrapper'),
       searchFiltersForms = document.querySelectorAll('.search-filters__form'),
       searchFiltersFormsCancel = document.querySelectorAll('.search-filters__form-cancel'),
       mapOpenBtn = document.querySelector('.main-search__map-btn'),
       mapContainer = document.querySelector('.map-container'),
       mapCloseBtn = document.querySelector('.map-container__close-btn');
+
+    placeFilters();
+    window.addEventListener('resize', function () {
+      placeFilters();
+    });
 
     document.addEventListener('click', filtersFunc);
     window.addEventListener('keydown', function (event) {
@@ -862,7 +895,7 @@
         'min': min,
         'max': max
       },
-      format: wNumb({decimals: 0})
+      format: wNumb({ decimals: 0 })
     });
 
     range
@@ -964,9 +997,9 @@
     bar.peity("bar");
 
     $(window).resize(function () {
-      bar.peity("bar", {width: 0});
+      bar.peity("bar", { width: 0 });
       rangeWidth = range.clientWidth;
-      bar.peity("bar", {width: rangeWidth});
+      bar.peity("bar", { width: rangeWidth });
     });
   }
 
@@ -1035,12 +1068,12 @@ $(document).ready(function () {
     map
       .data
       .setStyle(function (feature) {
-        return ({icon: mImage});
+        return ({ icon: mImage });
       });
 
     var infowindow = new google
       .maps
-      .InfoWindow({maxWidth: 280});
+      .InfoWindow({ maxWidth: 280 });
 
     map
       .data
@@ -1050,7 +1083,7 @@ $(document).ready(function () {
           .revertStyle();
         map
           .data
-          .overrideStyle(event.feature, {icon: mImage2});
+          .overrideStyle(event.feature, { icon: mImage2 });
         infowindow.setPosition(event.feature.getGeometry().get());
         infowindow.setOptions({
           pixelOffset: new google
@@ -1059,8 +1092,8 @@ $(document).ready(function () {
         });
 
         var faceImage = event
-            .feature
-            .getProperty('faceImage'),
+          .feature
+          .getProperty('faceImage'),
           alt = event
             .feature
             .getProperty('alt'),
@@ -1078,8 +1111,8 @@ $(document).ready(function () {
             .getProperty('address');
 
         infowindow.setContent('<div class="infowindow"><div class="infowindow__image-wrapper"><img class="infow' +
-            'indow__image" src= "' + faceImage + '" alt="' + alt + '"></div><div class="infowindow__content"><div class="infowindow__title">' + name + '</div><div class="infowindow__description">' + description + '</div><div class="infowindow__stars-container"><div class="infowindow__stars" st' +
-            'yle="width:' + stars + '"></div></div><div class="infowindow__description">' + address + '</div></div></div>');
+          'indow__image" src= "' + faceImage + '" alt="' + alt + '"></div><div class="infowindow__content"><div class="infowindow__title">' + name + '</div><div class="infowindow__description">' + description + '</div><div class="infowindow__stars-container"><div class="infowindow__stars" st' +
+          'yle="width:' + stars + '"></div></div><div class="infowindow__description">' + address + '</div></div></div>');
         infowindow.open(map);
       });
 

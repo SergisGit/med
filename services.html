@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
   <title>Для Пациента</title>
-  <link rel="stylesheet" href="styles/styles.min.css?ver=18">
+  <link rel="stylesheet" href="styles/styles.min.css?ver=23">
   <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="assets/icons/favicon.ico">
   <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-touch-icon-152x152.png">
   <link rel="icon" type="image/png" href="assets/icons/favicon-48x48.png" sizes="48x48">
@@ -127,7 +127,7 @@
         <div class="main-search__filters  search-filters">
           <a href="#" class="search-filters__clear-all">Очистить все</a>
           <button type="button" class="search-filters__close-btn"></button>
-          <div class="search-filters__wrapper">
+          <div class="search-filters__inner">
 
             <div class="search-filters__filter-wrapper">
               <div class="search-filters__filter  search-filters__filter_active">
@@ -135,205 +135,212 @@
                 <span class="search-filters__value">5</span>
                 <a href="#" class="search-filters__clear-filter"></a>
               </div>
-              <div class="search-filters__form  search-filters__form_services">
-                <button type="button" class="search-filters__form-cancel">Специализации</button>
-                <div class="search-filters__service-block  search-filters__service-block_1">
-                  <div class="search-filters__selected-items"></div>
-                  <label class="search-filters__search-input-label">
-                    <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
-                  </label>
-                  <div class="search-filters__service-list">
-                    <span class="search-filters__service-list-header">
-                      <span class="search-filters__service-list-title">Акушерство</span>
-                      <span class="search-filters__service-list-count">(1056)</span>
-                    </span>
-                    <div class="search-filters__service-links">
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультации беременных</span>
-                        <span class="search-filters__link-value">(279)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Перинатальная диагностика</span>
-                        <span class="search-filters__link-value">(964)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Анализы при беременности</span>
-                        <span class="search-filters__link-value">(433)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Подготовка к родам</span>
-                        <span class="search-filters__link-value">(36)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Профилактика осложнений беременности</span>
-                        <span class="search-filters__link-value">(54)</span>
-                      </a>
+              <div class="search-filters__form-wrapper">
+                <div class="search-filters__form  search-filters__form_services">
+                  <button type="button" class="search-filters__form-cancel">Специализации</button>
+                  <div class="search-filters__service-block  search-filters__service-block_1">
+                    <div class="search-filters__selected-items"></div>
+                    <label class="search-filters__search-input-label">
+                      <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
+                    </label>
+                    <div class="search-filters__service-list">
+                      <span class="search-filters__service-list-header">
+                        <span class="search-filters__service-list-title">Акушерство</span>
+                        <span class="search-filters__service-list-count">(1056)</span>
+                      </span>
+                      <div class="search-filters__service-links">
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультации беременных</span>
+                          <span class="search-filters__link-value">(279)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Перинатальная диагностика</span>
+                          <span class="search-filters__link-value">(964)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Анализы при беременности</span>
+                          <span class="search-filters__link-value">(433)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Подготовка к родам</span>
+                          <span class="search-filters__link-value">(36)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Профилактика осложнений беременности</span>
+                          <span class="search-filters__link-value">(54)</span>
+                        </a>
+                      </div>
+                      <a href="#" class="search-filters__service-link-all">показать все</a>
                     </div>
-                    <a href="#" class="search-filters__service-link-all">показать все</a>
-                  </div>
 
-                  <div class="search-filters__service-list">
-                    <span class="search-filters__service-list-header">
-                      <span class="search-filters__service-list-title">Акушерство</span>
-                      <span class="search-filters__service-list-count">(1056)</span>
-                    </span>
-                    <div class="search-filters__service-links">
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультации беременных</span>
-                        <span class="search-filters__link-value">(279)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Перинатальная диагностика</span>
-                        <span class="search-filters__link-value">(964)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Анализы при беременности</span>
-                        <span class="search-filters__link-value">(433)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Подготовка к родам</span>
-                        <span class="search-filters__link-value">(36)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Профилактика осложнений беременности</span>
-                        <span class="search-filters__link-value">(54)</span>
-                      </a>
+                    <div class="search-filters__service-list">
+                      <span class="search-filters__service-list-header">
+                        <span class="search-filters__service-list-title">Акушерство</span>
+                        <span class="search-filters__service-list-count">(1056)</span>
+                      </span>
+                      <div class="search-filters__service-links">
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультации беременных</span>
+                          <span class="search-filters__link-value">(279)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Перинатальная диагностика</span>
+                          <span class="search-filters__link-value">(964)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Анализы при беременности</span>
+                          <span class="search-filters__link-value">(433)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Подготовка к родам</span>
+                          <span class="search-filters__link-value">(36)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Профилактика осложнений беременности</span>
+                          <span class="search-filters__link-value">(54)</span>
+                        </a>
+                      </div>
+                      <a href="#" class="search-filters__service-link-all">показать все</a>
                     </div>
-                    <a href="#" class="search-filters__service-link-all">показать все</a>
-                  </div>
 
+                  </div>
+                  <div class="search-filters__service-block  search-filters__service-block_2">
+                    <div class="search-filters__selected-items">
+                      <button type="button" class="search-filters__selected-item">Акушерство</button>
+                      <button type="button" class="search-filters__selected-item">Консультации беременных</button>
+                    </div>
+                    <label class="search-filters__search-input-label">
+                      <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
+                    </label>
+                    <span class="search-filters__service-lists-header">
+                      <span class="search-filters__service-lists-title">Консультации беременных</span>
+                      <span class="search-filters__service-lists-count">(1056)</span>
+                    </span>
+                    <div class="search-filters__service-list">
+                      <span class="search-filters__service-list-header">
+                        <span class="search-filters__service-list-title">Ведение беременности</span>
+                        <span class="search-filters__service-list-count">(1056)</span>
+                      </span>
+                      <div class="search-filters__service-links">
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности</span>
+                          <span class="search-filters__link-value">(279)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности повторная</span>
+                          <span class="search-filters__link-value">(279)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация акушера-гинеколога по невынашиванию беременности</span>
+                          <span class="search-filters__link-value">(279)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">консультация перинатального психолога</span>
+                          <span class="search-filters__link-value">(36)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация по вопросам грудного вскармливания</span>
+                          <span class="search-filters__link-value">(54)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Постановка на учет по беременности</span>
+                          <span class="search-filters__link-value">(54)</span>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="search-filters__service-list">
+                      <span class="search-filters__service-list-header">
+                        <span class="search-filters__service-list-title">Перинатальная диагностика</span>
+                        <span class="search-filters__service-list-count">(1056)</span>
+                      </span>
+                      <div class="search-filters__service-links">
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">УЗИ при беременности</span>
+                          <span class="search-filters__link-value">(279)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">МРТ при беременности</span>
+                          <span class="search-filters__link-value">(385)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Инвазивная перинатальня диагностика</span>
+                          <span class="search-filters__link-value">(433)</span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Тесты при беременности</span>
+                          <span class="search-filters__link-value">(36)</span>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="search-filters__service-block  search-filters__service-block_3">
+                    <div class="search-filters__selected-items">
+                      <button type="button" class="search-filters__selected-item">Акушерство</button>
+                      <button type="button" class="search-filters__selected-item">Консультации беременных</button>
+                      <button type="button" class="search-filters__selected-item">Консультация акушера-гинеколога по беременности</button>
+                    </div>
+                    <label class="search-filters__search-input-label">
+                      <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
+                    </label>
+
+                    <div class="search-filters__service-list">
+                      <span class="search-filters__service-list-header">
+                        <span class="search-filters__service-list-title">Консультации беременных</span>
+                        <span class="search-filters__service-list-count">(1056)</span>
+                      </span>
+                      <div class="search-filters__service-links">
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности</span>
+                          <span class="search-filters__link-cost">
+                            <span class="search-filters__link-value">1000</span>
+                            <span class="search-filters__link-currency">&#8381;</span>
+                          </span>
+
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности повторная</span>
+                          <span class="search-filters__link-cost">
+                            <span class="search-filters__link-value">1000</span>
+                            <span class="search-filters__link-currency">&#8381;</span>
+                          </span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация акушера-гинеколога по невынашиванию беременности</span>
+                          <span class="search-filters__link-cost">
+                            <span class="search-filters__link-value">1000</span>
+                            <span class="search-filters__link-currency">&#8381;</span>
+                          </span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультации перинатального психолога</span>
+                          <span class="search-filters__link-cost">
+                            <span class="search-filters__link-value">1000</span>
+                            <span class="search-filters__link-currency">&#8381;</span>
+                          </span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Консультация по вопросам грудного вскармливания</span>
+                          <span class="search-filters__link-cost">
+                            <span class="search-filters__link-value">1000</span>
+                            <span class="search-filters__link-currency">&#8381;</span>
+                          </span>
+                        </a>
+                        <a href="#" class="search-filters__service-link">
+                          <span class="search-filters__link-title">Постановка на учет по беременности</span>
+                          <span class="search-filters__link-cost">
+                            <span class="search-filters__link-value">1000</span>
+                            <span class="search-filters__link-currency">&#8381;</span>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <button type="button" class="search-filters__submit  btn">Сохранить</button>
                 </div>
-                <div class="search-filters__service-block  search-filters__service-block_2">
-                  <div class="search-filters__selected-items">
-                    <button type="button" class="search-filters__selected-item">Акушерство</button>
-                    <button type="button" class="search-filters__selected-item">Консультации беременных</button>
-                  </div>
-                  <label class="search-filters__search-input-label">
-                    <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
-                  </label>
-                  <span class="search-filters__service-lists-header">
-                    <span class="search-filters__service-lists-title">Консультации беременных</span>
-                    <span class="search-filters__service-lists-count">(1056)</span>
-                  </span>
-                  <div class="search-filters__service-list">
-                    <span class="search-filters__service-list-header">
-                      <span class="search-filters__service-list-title">Ведение беременности</span>
-                      <span class="search-filters__service-list-count">(1056)</span>
-                    </span>
-                    <div class="search-filters__service-links">
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности</span>
-                        <span class="search-filters__link-value">(279)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности повторная</span>
-                        <span class="search-filters__link-value">(279)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация акушера-гинеколога по невынашиванию беременности</span>
-                        <span class="search-filters__link-value">(279)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">консультация перинатального психолога</span>
-                        <span class="search-filters__link-value">(36)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация по вопросам грудного вскармливания</span>
-                        <span class="search-filters__link-value">(54)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Постановка на учет по беременности</span>
-                        <span class="search-filters__link-value">(54)</span>
-                      </a>
-                    </div>
-                  </div>
-
-                  <div class="search-filters__service-list">
-                    <span class="search-filters__service-list-header">
-                      <span class="search-filters__service-list-title">Перинатальная диагностика</span>
-                      <span class="search-filters__service-list-count">(1056)</span>
-                    </span>
-                    <div class="search-filters__service-links">
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">УЗИ при беременности</span>
-                        <span class="search-filters__link-value">(279)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">МРТ при беременности</span>
-                        <span class="search-filters__link-value">(385)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Инвазивная перинатальня диагностика</span>
-                        <span class="search-filters__link-value">(433)</span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Тесты при беременности</span>
-                        <span class="search-filters__link-value">(36)</span>
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
-                <div class="search-filters__service-block  search-filters__service-block_3">
-                  <div class="search-filters__selected-items">
-                    <button type="button" class="search-filters__selected-item">Акушерство</button>
-                    <button type="button" class="search-filters__selected-item">Консультации беременных</button>
-                    <button type="button" class="search-filters__selected-item">Консультация акушера-гинеколога по беременности</button>
-                  </div>
-                  <label class="search-filters__search-input-label">
-                    <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
-                  </label>
-
-                  <div class="search-filters__service-list">
-                    <span class="search-filters__service-list-header">
-                      <span class="search-filters__service-list-title">Консультации беременных</span>
-                      <span class="search-filters__service-list-count">(1056)</span>
-                    </span>
-                    <div class="search-filters__service-links">
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности</span>
-                        <span class="search-filters__link-cost">
-                            <span class="search-filters__link-value">1000</span><span class="search-filters__link-currency">&#8381;</span>
-                        </span>
-                        
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация акушера-гинеколога по беременности повторная</span>
-                        <span class="search-filters__link-cost">
-                            <span class="search-filters__link-value">1000</span><span class="search-filters__link-currency">&#8381;</span>
-                        </span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация акушера-гинеколога по невынашиванию беременности</span>
-                        <span class="search-filters__link-cost">
-                            <span class="search-filters__link-value">1000</span><span class="search-filters__link-currency">&#8381;</span>
-                        </span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультации перинатального психолога</span>
-                        <span class="search-filters__link-cost">
-                            <span class="search-filters__link-value">1000</span><span class="search-filters__link-currency">&#8381;</span>
-                        </span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Консультация по вопросам грудного вскармливания</span>
-                        <span class="search-filters__link-cost">
-                            <span class="search-filters__link-value">1000</span><span class="search-filters__link-currency">&#8381;</span>
-                        </span>
-                      </a>
-                      <a href="#" class="search-filters__service-link">
-                        <span class="search-filters__link-title">Постановка на учет по беременности</span>
-                        <span class="search-filters__link-cost">
-                            <span class="search-filters__link-value">1000</span><span class="search-filters__link-currency">&#8381;</span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
-                <button type="button" class="search-filters__submit  btn">Сохранить</button>
               </div>
-
             </div>
 
             <div class="search-filters__filter-wrapper">
@@ -343,27 +350,29 @@
                   <span class="search-filters__min-value">3500</span>&#8381; -
                   <span class="search-filters__max-value">8000</span>&#8381;
                 </span>
-                <a href="#" class="search-filters__clear-filter"></a>
+                <a href="###" class="search-filters__clear-filter"></a>
               </div>
-              <form action="/echo" class="search-filters__form  search-filters__form_cost">
-                <button type="button" class="search-filters__form-cancel">Цена</button>
-                <div class="search-filters__form-inner">
-                  <div class="search-filters__price-block price-block">
+              <div class="search-filters__form-wrapper">
+                <form action="/echo" class="search-filters__form  search-filters__form_cost">
+                  <button type="button" class="search-filters__form-cancel">Цена</button>
+                  <div class="search-filters__form-inner">
+                    <div class="search-filters__price-block price-block">
 
-                    <div class="price-block__range-wrapper">
-                      <span class="price-block__bar  bar">5,3,9,5,3,9,3,9,5,3,9,3,9,5,3,9,3,9,5,3,9,3,9,5,3,9</span>
-                      <div class="price-block__filter-range" id="filter-range" data-min="0" data-max="100000" data-left="10000" data-right="90000"></div>
+                      <div class="price-block__range-wrapper">
+                        <span class="price-block__bar  bar">5,3,9,5,3,9,3,9,5,3,9,3,9,5,3,9,3,9,5,3,9,3,9,5,3,9</span>
+                        <div class="price-block__filter-range" id="filter-range" data-min="0" data-max="100000" data-left="10000" data-right="90000"></div>
+                      </div>
+
+                      <div class="price-block__inputs-wrapper">
+                        <input type="text" class="price-block__input" id="filter-price-min" name="price-min" pattern="^([0-9]+)$" value="2126">&#8381; -
+                        <input type="text" class="price-block__input" id="filter-price-max" name="price-max" pattern="^([0-9]+)$" value="49999">&#8381;
+                      </div>
+
                     </div>
-
-                    <div class="price-block__inputs-wrapper">
-                      <input type="text" class="price-block__input" id="filter-price-min" name="price-min" pattern="^([0-9]+)$" value="2126">&#8381; -
-                      <input type="text" class="price-block__input" id="filter-price-max" name="price-max" pattern="^([0-9]+)$" value="49999">&#8381;
-                    </div>
-
                   </div>
-                </div>
-                <button type="submit" class="search-filters__submit  btn">Сохранить</button>
-              </form>
+                  <button type="submit" class="search-filters__submit  btn">Сохранить</button>
+                </form>
+              </div>
             </div>
 
           </div>
@@ -467,7 +476,7 @@
               </div>
               <div class="search-card__reviews">
                 <svg class="search-card__reviews-svg" width="20" height="20">
-                  <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                  <use xlink:href="assets/icons/symbols.svg#message" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                 </svg>
                 <span class="search-card__reviews-count">23</span>
                 <span class="search-card__reviews-count-title">ОТЗЫВА</span>
@@ -548,7 +557,7 @@
               </div>
               <div class="search-card__reviews">
                 <svg class="search-card__reviews-svg" width="20" height="20">
-                  <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                  <use xlink:href="assets/icons/symbols.svg#message" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                 </svg>
                 <span class="search-card__reviews-count">23</span>
                 <span class="search-card__reviews-count-title">ОТЗЫВА</span>

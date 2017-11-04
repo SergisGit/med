@@ -720,7 +720,7 @@ input[type="password"] ~ .password-svg:active {
   background-color: #ffffff;
   -webkit-box-shadow: 0 5px 40px rgba(59, 66, 86, 0.3);
           box-shadow: 0 5px 40px rgba(59, 66, 86, 0.3);
-  z-index: 20;
+  z-index: 35;
 }
 .main-nav_avt .main-nav__regitems {
   padding-top: 0;
@@ -1617,9 +1617,14 @@ input[type="password"] ~ .password-svg:active {
 }
 .search-card__title_doc-name {
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 .search-card__title_clinic-name {
   padding-right: 50px;
+}
+.search-card__doc-speciality {
+  display: block;
+  margin: 0 0 5px;
 }
 .search-card__clinic-location {
   position: relative;
@@ -2677,11 +2682,11 @@ input[type="password"] ~ .password-svg:active {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  height: 100vh;
+  height: 0;
   top: 0;
   left: 0;
-  padding-top: 5px;
-  padding-bottom: 88px;
+  padding-top: 78px;
+  padding-bottom: 50px;
   padding-left: 6.25%;
   padding-right: 6.25%;
   background-color: #ffffff;
@@ -2703,24 +2708,26 @@ input[type="password"] ~ .password-svg:active {
 }
 .search-filters::before {
   top: 0;
-  -webkit-transform: translateY(-20vh);
-      -ms-transform: translateY(-20vh);
-          transform: translateY(-20vh);
+  -webkit-transform: translateY(-20vh) scale(2);
+      -ms-transform: translateY(-20vh) scale(2);
+          transform: translateY(-20vh) scale(2);
 }
 .search-filters::after {
   bottom: 0;
-  -webkit-transform: translateY(20vh);
-      -ms-transform: translateY(20vh);
-          transform: translateY(20vh);
+  -webkit-transform: translateY(20vh) scale(2);
+      -ms-transform: translateY(20vh) scale(2);
+          transform: translateY(20vh) scale(2);
 }
 .search-filters__clear-all {
+  position: relative;
+  z-index: 5;
   display: inline-block;
   padding: 15px 0;
   text-decoration: none;
 }
 .search-filters__close-btn {
   position: absolute;
-  top: 22px;
+  top: 94px;
   right: 6.25%;
   width: 16px;
   height: 15px;
@@ -2732,6 +2739,7 @@ input[type="password"] ~ .password-svg:active {
   border: none;
   padding: 0;
   background-color: transparent;
+  z-index: 5;
 }
 .search-filters__close-btn::before,
 .search-filters__close-btn::after {
@@ -2758,8 +2766,7 @@ input[type="password"] ~ .password-svg:active {
       -ms-transform: scale(1.4);
           transform: scale(1.4);
 }
-.search-filters__wrapper {
-  position: relative;
+.search-filters__inner {
   padding: 15px 0;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
@@ -2851,8 +2858,22 @@ input[type="password"] ~ .password-svg:active {
 .search-filters__submit {
   margin-top: 15px;
 }
-.search-filters__form {
+.search-filters__form-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  padding: 127px 6.25% 50px;
+  background-color: #ffffff;
+  visibility: hidden;
+  z-index: -1;
+  overflow-x: hidden;
+}
+.search-filters__form {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2863,15 +2884,8 @@ input[type="password"] ~ .password-svg:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 0;
-  padding-bottom: 88px;
-  background-color: #ffffff;
-  visibility: hidden;
-  overflow: hidden;
-  z-index: -1;
+  border-top: 1px solid #ededed;
 }
 .search-filters__service-block {
   display: none;
@@ -3000,7 +3014,7 @@ input[type="password"] ~ .password-svg:active {
   position: relative;
   min-height: 44px;
   border-radius: 21px;
-  padding: 10px 57px 10px 20px;
+  padding: 10px 57px 10px 15px;
   border: 1px solid #e5e5e5;
   outline: none;
   background-color: transparent;
@@ -3787,11 +3801,19 @@ input[type="password"] ~ .password-svg:active {
 .hide-block {
   display: none;
 }
-.visible-45 {
+.no-desktop {
+  display: none;
+}
+.show-filters {
+  height: 100vh;
+  visibility: visible;
+  z-index: 30;
+}
+.show-filter-forms {
   height: auto;
   min-height: 100%;
   visibility: visible;
-  z-index: 45;
+  z-index: 1;
 }
 .visible-10 {
   visibility: visible;
@@ -4478,6 +4500,7 @@ label.error {
   .main-nav {
     position: absolute;
     height: 58px;
+    z-index: 25;
   }
   .main-nav_avt .main-nav__user-block {
     position: relative;
@@ -5299,7 +5322,11 @@ label.error {
   .search-filters {
     padding: 5px 3.25% 0;
   }
-  .search-filters__wrapper {
+  .search-filters__close-btn {
+    top: 20px;
+    right: 3.25%;
+  }
+  .search-filters__inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5312,8 +5339,10 @@ label.error {
     margin-top: 5px;
     margin-bottom: 5px;
   }
+  .search-filters__form-wrapper {
+    padding: 54px 3.25% 50px;
+  }
   .search-filters__form {
-    position: absolute;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -5325,11 +5354,8 @@ label.error {
             align-items: flex-start;
     -ms-flex-line-pack: start;
         align-content: flex-start;
-    top: 0;
-    left: 0;
     min-width: 400px;
     padding-top: 20px;
-    padding-bottom: 0;
   }
   .search-filters__service-block_1 .search-filters__service-links {
     -webkit-box-orient: horizontal;
@@ -5834,34 +5860,28 @@ label.error {
     z-index: 25;
     overflow: visible;
   }
+  .search-filters::before,
+  .search-filters::after {
+    display: none;
+  }
   .search-filters__clear-all,
   .search-filters__close-btn,
   .search-filters__save-link {
     display: none;
   }
   .search-filters__filter-wrapper {
-    position: relative;
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  .search-filters__form-wrapper {
+    position: fixed;
+    padding: 0;
+  }
   .search-filters__form {
-    padding: 5px 0 0;
     width: 930px;
     height: auto;
-    min-height: 0;
-  }
-  .search-filters__form::before {
-    content: "";
-    position: fixed;
-    left: -100vw;
-    right: -100vw;
-    top: -100vh;
-    bottom: -100vh;
-    -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
-    background-color: rgba(255, 255, 255, 0.99);
-    z-index: -1;
+    padding: 5px 0 50px;
+    border-top: none;
   }
   .search-filters__alphabet {
     position: absolute;
@@ -5887,6 +5907,10 @@ label.error {
   }
   .map-container__close-btn {
     display: none;
+  }
+  .show-filter-forms {
+    min-height: auto;
+    height: 100vh;
   }
   .overflow-no-widescreen {
     overflow: visible;

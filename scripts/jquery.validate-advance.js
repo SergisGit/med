@@ -180,12 +180,12 @@
 
 $(document).ready(function () {
 
-	$(".checkIn__2-password-field").on('input',function () {
+	$(".checkIn__2-password-field").on('input', function () {
 		var pass = $(".checkIn__2-password-field").val();
 		$(".checkIn__2-password-field ~ .popup__password-strong-message").text(check(pass));
 	});
 
-	$(".checkIn__5-password-field").on('input',function () {
+	$(".checkIn__5-password-field").on('input', function () {
 		var pass = $(".checkIn__5-password-field").val();
 		$(".checkIn__5-password-field ~ .popup__password-strong-message").text(check(pass));
 	});
@@ -202,47 +202,45 @@ $(document).ready(function () {
 			return "НЕВЕРНЫЙ ПАРОЛЬ";
 		}
 
-		if (pass.length > 11 && !pass.match(/^(.)\1{11,}$/)) {
+		if (pass.length > 11 && !pass.match(/^(.)\1{11,12}$/)) {
 			protect++;
 		}
 
-		if (pass.length > 14 && !pass.match(/^(.)\1{14,}$/)) {
+		if (pass.length > 14 && !pass.match(/^(.)\1{13,}$/)) {
 			protect++;
 		}
 
 		//a,s,d,f
-		var small = "([a-z]+)";
-
-		if (pass.match(small)) {
-			protect++;
-		}
+		var small = pass.match("([a-z]+)");
 
 		//A,B,C,D
-		var big = "([A-Z]+)";
-
-		if (pass.match(big)) {
-			protect++;
-		}
+		var big = pass.match("([A-Z]+)");
 
 		//1,2,3,4,5 ... 0
-		var numb = "([0-9]+)";
-
-		if (pass.match(numb)) {
-			protect++;
-		}
+		var numb = pass.match("([0-9]+)");
 
 		//!@#$
-		var vv = "([!#$%^&*()]+)";
+		var vv = pass.match("([!#$%^&*()]+)");
 
-		if (pass.match(vv)) {
+		if (small) {
 			protect++;
 		}
+		if (big) {
+			protect++;
+		}
+		if (numb) {
+			protect++;
+		}
+		if (vv) {
+			protect++;
+		}
+
 
 		if (protect == 1) {
 			return "СЛАБЫЙ ПАРОЛЬ";
 		}
 
-		if (protect == 2) {
+		if (protect == 3) {
 			return "СРЕДНИЙ ПАРОЛЬ";
 		}
 

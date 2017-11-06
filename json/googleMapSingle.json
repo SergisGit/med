@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+		"address": "ул. Александра Солженицына, д.5, стр.1"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.99841511249541,
+          56.49987457635921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"address": "ул. Александра Солженицына, д.5, стр.1"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          84.99601721763611,
+          56.49919654011172
+        ]
+      }
+    }
+  ]
+}

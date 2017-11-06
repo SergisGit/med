@@ -530,7 +530,7 @@
       previosEl = previosEl.previousElementSibling;
     }
     previosEl.value = "";
-    
+
     if (previosEl.classList.contains('checkIn__2-password-field')) {
       var pswMsg1 = $(".checkIn__2-password-field ~ .popup__password-strong-message");
       pswMsg1.text('');
@@ -1012,6 +1012,35 @@
     });
   }
 
+
+  if (document.querySelector('.circle-rating')) {
+    var donut = $('.circle-rating');
+
+    $.fn.peity.defaults.donut = {
+      delimiter: null,
+      fill: ["#2ccd8c", "#f3f3f3"],
+      height: null,
+      width: null
+    };
+
+    var createDonut = function () {
+      if (window.matchMedia("(min-width: 1300px)").matches) {
+        donut.peity("donut", { innerRadius: 62, radius: 70 });
+      } else
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        donut.peity("donut", { innerRadius: 50, radius: 56 });
+      } else {
+        donut.peity("donut", { innerRadius: 35, radius: 40 });
+      }
+    };
+
+    createDonut();
+
+    $(window).resize(function () {
+      createDonut();
+    });
+  }
+
 })();
 
 // dotdotdot - обрезание многострочного текста
@@ -1119,9 +1148,7 @@ $(document).ready(function () {
             .feature
             .getProperty('address');
 
-        infowindow.setContent('<div class="infowindow"><div class="infowindow__image-wrapper"><img class="infow' +
-          'indow__image" src= "' + faceImage + '" alt="' + alt + '"></div><div class="infowindow__content"><div class="infowindow__title">' + name + '</div><div class="infowindow__description">' + description + '</div><div class="infowindow__stars-container"><div class="infowindow__stars" st' +
-          'yle="width:' + stars + '"></div></div><div class="infowindow__description">' + address + '</div></div></div>');
+        infowindow.setContent('<div class="infowindow"><img class="infowindow__image" src= "' + faceImage + '" alt="' + alt + '"><div class="infowindow__content"><div class="infowindow__title">' + name + '</div><div class="infowindow__description">' + description + '</div><div class="infowindow__stars-container"><div class="infowindow__stars" style="width:' + stars + '"></div></div><div class="infowindow__description">' + address + '</div></div></div>');
         infowindow.open(map);
       });
 
@@ -1155,5 +1182,100 @@ $(document).ready(function () {
       .maps
       .event
       .addDomListener(window, 'load', gMap);
+  }
+})();
+
+(function () {
+  function gMapSingle() {
+    var markLatLng = new google
+      .maps
+      .LatLng(56.499883782746224, 84.99850023423404);
+    var mapOptions = {
+      zoom: 16,
+      center: markLatLng,
+      disableDefaultUI: true,
+      draggable: true, // false - запрет перемещения. По умолчанию true.
+      scrollwheel: false, // скролл отключен.
+      zoomControl: true,
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.RIGHT_BOTTOM
+      }
+    };
+    var map = new google
+      .maps
+      .Map(document.getElementById('card-map'), mapOptions);
+
+    map
+      .data
+      .loadGeoJson('json/googleMap.json');
+
+    var mImage = new google
+      .maps
+      .MarkerImage('./assets/icons/mappin.svg', new google.maps.Size(44, 36));
+
+    var mImage2 = new google
+      .maps
+      .MarkerImage('./assets/icons/mappin-h.svg', new google.maps.Size(44, 36));
+
+    map
+      .data
+      .setStyle(function (feature) {
+        return ({ icon: mImage });
+      });
+
+    var infowindow = new google
+      .maps
+      .InfoWindow({ maxWidth: 240 });
+
+    map
+      .data
+      .addListener('mouseover', function (event) {
+        map
+          .data
+          .revertStyle();
+        map
+          .data
+          .overrideStyle(event.feature, { icon: mImage2 });
+        infowindow.setPosition(event.feature.getGeometry().get());
+        infowindow.setOptions({
+          pixelOffset: new google
+            .maps
+            .Size(0, -30)
+        });
+
+        var address = event
+          .feature
+          .getProperty('address');
+
+        infowindow.setContent('<div class="infowindow  infowindow_single"><div class="infowindow__description">' + address + '</div></div>');
+        infowindow.open(map);
+      });
+
+    google
+      .maps
+      .event
+      .addListener(map, 'click', function (event) {
+        if (infowindow) {
+          infowindow.close();
+          map
+            .data
+            .revertStyle();
+        }
+      });
+
+    google
+      .maps
+      .event
+      .addDomListener(window, 'resize', function () {
+        map.setCenter(markLatLng);
+      });
+  }
+
+  var cardMap = document.getElementById('card-map');
+  if (cardMap) {
+    google
+      .maps
+      .event
+      .addDomListener(window, 'load', gMapSingle);
   }
 })();

@@ -107,662 +107,229 @@
         </nav>
       </header>
 
-      <main class="main  main-search">
-        <h1 class="main-search__title">Найдено клиник:
-          <span class="main-search__count">628</span>
-        </h1>
+      <main class="main  main-card">
 
-        <div class="main-search__section-links">
-          <div class="main-search__section-link-wrapper">
-            <a href="#" class="main-search__section-link">Все</a>
-            <span class="main-search__section-count">110</span>
+        <div class="main-card__wrapper">
+          <div class="main-card__wrapper2">
+
+            <div class="single-card  single-card_doctor">
+              <header class="single-card__header">
+                <img src="assets\images\card-doctors\doc1.png" class="single-card__image" alt="image">
+                <div class="single-card__title-wrapper">
+                  <h3 class="single-card__title">Михайлов Михаил Альбертович</h3>
+                  <a href="#" class="single-card__like-link"></a>
+                </div>
+                <div class="single-card__doc-exp">
+                  <span class="single-card__doc-exp-title">Стаж</span>
+                  <span class="single-card__doc-exp-count">19 лет</span>
+                </div>
+              </header>
+              <div class="single-card__doc-clinics">
+                <span class="single-card__doc-clinics-title">Место работы</span>
+                <div class="single-card__clinics">
+                  <span class="single-card__doc-speciality">Стоматолог, Стоматолог-хирург</span>
+                  <div class="single-card__doc-clinic">
+                    <a href="#" class="single-card__clinic-location">
+                      <svg class="single-card__location-svg" width="10" height="12">
+                        <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                      </svg>
+                      <span class="single-card__doc-clinic-name">Томская областная клиническая больница</span>
+                    </a>
+                    <b class="single-card__doc-cost">
+                      <span class="single-card__doc-cost-value">1000</span>&#8381;</b>
+                  </div>
+                  <div class="single-card__doc-clinic">
+                    <a href="#" class="single-card__clinic-location">
+                      <svg class="single-card__location-svg" width="10" height="12">
+                        <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                      </svg>
+                      <span class="single-card__doc-clinic-name">Центр дентальной имплантации</span>
+                    </a>
+                    <b class="single-card__doc-cost">
+                      <span class="single-card__doc-cost-value">1000</span>&#8381;</b>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single-card__phones">
+                <span class="single-card__phones-title">Телефоны</span>
+                <a href="tel:+73822644644" class="single-card__tel">+7 (3822) 644-644</a>
+              </div>
+            </div>
+
+            <ul class="main-card__nav">
+              <li class="main-card__nav-item">
+                <a href="#map" class="main-card__nav-link">Карта</a>
+              </li>
+              <li class="main-card__nav-item  no-mobile">
+                <a href="#map" class="main-card__nav-link">Информация</a>
+              </li>
+              <li class="main-card__nav-item">
+                <span class="main-card__nav-title">Записаться</span>
+                <ul class="main-card__subnav">
+                  <li class="main-card__subnav-item">
+                    <a href="#" target="_blank" class="main-card__subnav-link">Томская областная клиническая больница</a>
+                  </li>
+                  <li class="main-card__subnav-item">
+                    <a href="#" target="_blank" class="main-card__subnav-link">Центр дентальной имплантации</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-card__nav-item">
+                <a href="#" class="main-card__nav-link">Отзывы</a>
+                <span class="main-card__nav-reviews-count">147</span>
+              </li>
+            </ul>
+
           </div>
-          <div class="main-search__section-link-wrapper">
-            <a href="#" class="main-search__section-link">Частные</a>
-            <span class="main-search__section-count">14347</span>
+
+          <div class="main-card__review-info">
+            <div class="main-card__rating  main-card__rating_circle">
+              <div class=" main-card__circle-rating-container">
+                <span class="circle-rating  main-card__circle-rating">9/10</span>
+                <span class="main-card__rating-value  main-card__rating-value_circle">4.5</span>
+              </div>
+              <div class="main-card__review-counts  main-card__review-counts_circle">
+                <span class="main-card__reviews-count">
+                  <span class="main-card__reviews-count-value">147</span> отзывов</span>
+                <span class="main-card__views-count">
+                  <span class="main-card__views-count-value">486</span> просмотров</span>
+              </div>
+            </div>
+            <a href="#" class="main-card__review-link">Оставить отзыв</a>
           </div>
-          <div class="main-search__section-link-wrapper">
-            <a href="#" class="main-search__section-link">Государственные</a>
-            <span class="main-search__section-count">748</span>
-          </div>
+
+
         </div>
 
-        <div class="main-search__filters  search-filters">
-          <a href="#" class="search-filters__clear-all">Очистить все</a>
-          <button type="button" class="search-filters__close-btn"></button>
-          <div class="search-filters__inner">
-
-            <div class="search-filters__filter-wrapper">
-              <div class="search-filters__filter  search-filters__filter_active">
-                <span class="search-filters__title">Тип учреждения</span>
-                <span class="search-filters__value">5</span>
-                <a href="#" class="search-filters__clear-filter"></a>
-              </div>
-              <div class="search-filters__form-wrapper">
-                <form action="/echo" class="search-filters__form  search-filters__form_clinics">
-                  <div class="search-filters__alphabet">
-                    <a href="#" class="search-filters__alphabet-link">A
-                      <span class="search-filters__alphabet-quantity">6</span>
-                    </a>
-                    <a href="#" class="search-filters__alphabet-link">Б
-                      <span class="search-filters__alphabet-quantity">6</span>
-                    </a>
-                    <a href="#" class="search-filters__alphabet-link">В
-                      <span class="search-filters__alphabet-quantity">6</span>
-                    </a>
-                    <a href="#" class="search-filters__alphabet-link">Г
-                      <span class="search-filters__alphabet-quantity">6</span>
-                    </a>
-                    <a href="#" class="search-filters__alphabet-link">Д
-                      <span class="search-filters__alphabet-quantity">6</span>
-                    </a>
-                    <a href="#" class="search-filters__alphabet-link">Е
-                      <span class="search-filters__alphabet-quantity">6</span>
-                    </a>
-                    <a href="#" class="search-filters__alphabet-link">Ж
-                      <span class="search-filters__alphabet-quantity">6</span>
-                    </a>
-                  </div>
-                  <button type="button" class="search-filters__form-cancel">Тип учреждения</button>
-                  <div class="search-filters__form-inner  search-filters__form-inner_clinics">
-                    <label class="search-filters__search-input-label">
-                      <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
-                    </label>
-                    <div class="search-filters__form-list">
-                      <span class="search-filters__form-list-letter">А
-                        <span class="search-filters__form-list-quantity">6</span>
-                      </span>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Аптеки</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Больницы</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Бюро медико-социальной экспертизы</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Венероглогвзрослые поликлиники</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Госпитали</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Детские поликлиники</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Диагностические центры</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Диспансеры</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Женские консультации</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Косметологические клиники</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Лаборатории</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Маммолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                    </div>
-                    <div class="search-filters__form-list">
-                      <span class="search-filters__form-list-letter">Б
-                        <span class="search-filters__form-list-quantity">6</span>
-                      </span>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Медико-санитарные части</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Научно исследовательские институты</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Ортопедические салоны</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Реабилитационные центры</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Родильные дома</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Санатории/профилактории</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Станции переливания крови</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Станции медицинской помощи</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Стоматологические клиники</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Травмпункты</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Центры борьбы со СПИДом</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Проктолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Психиатр</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Психолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Психотерапевт</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Пульмонолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Ревматолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Репродуктолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Стоматолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Трихолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Травматолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Терапевт</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Уролог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Флеболог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Хирург</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                      <label class="search-filters__item">
-                        <input type="checkbox" class="search-filters__checkbox">
-                        <span class="search-filters__item-title">Эндокринолог</span>
-                        <span class="search-filters__item-value">(78)</span>
-                      </label>
-                    </div>
-                  </div>
-                  <a class="search-filters__show-all-link  btn">Все лечебные учреждения</a>
-                  <button type="submit" class="search-filters__submit  btn">Сохранить</button>
-                </form>
-              </div>
-            </div>
-
-            <div class="search-filters__filter-wrapper">
-              <div class="search-filters__filter  search-filters__filter_active">
-                <span class="search-filters__title">Услуга</span>
-                <span class="search-filters__value">5</span>
-                <a href="#" class="search-filters__clear-filter"></a>
-              </div>
-              <div class="search-filters__form-wrapper">
-                <form action="/echo" class="search-filters__form  search-filters__form_clinic-service">
-                  <button type="button" class="search-filters__form-cancel">Услуга</button>
-                  <div class="search-filters__selected-items">
-                    <button type="button" class="search-filters__selected-item">Дерматология</button>
-                  </div>
-                  <div class="search-filters__form-inner  search-filters__form-inner_clinic-service">
-                    <label class="search-filters__search-input-label">
-                      <input type="text" class="search-filters__search-input" placeholder="Например Аптека">
-                    </label>
-                    <div class="search-filters__form-list">
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Акушерство</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Аллергология</span>
-                        <span class="search-filters__item-value">(793)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Андрология</span>
-                        <span class="search-filters__item-value">(1207)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Венерология</span>
-                        <span class="search-filters__item-value">(1025)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Гастроэнтерология</span>
-                        <span class="search-filters__item-value">(1223)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Гинекология</span>
-                        <span class="search-filters__item-value">(1285)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Андрология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Дерматология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Косметология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Кардиология</span>
-                        <span class="search-filters__item-value">(1158)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Логопедия</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">ЛОР</span>
-                        <span class="search-filters__item-value">(686)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Маммология</span>
-                        <span class="search-filters__item-value">(859)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Наркология</span>
-                        <span class="search-filters__item-value">(802)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Неврология</span>
-                        <span class="search-filters__item-value">(784)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Пластическая хирургия</span>
-                        <span class="search-filters__item-value">(1158)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Педиатрия</span>
-                        <span class="search-filters__item-value">(1471)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Проктология</span>
-                        <span class="search-filters__item-value">(1324)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Психиатрия</span>
-                        <span class="search-filters__item-value">(1427)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Пульмонология</span>
-                        <span class="search-filters__item-value">(2157)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Ревматология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Смоматология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Травматология-ортопедия</span>
-                        <span class="search-filters__item-value">(1158)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Трихология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Урология</span>
-                        <span class="search-filters__item-value">(1158)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Логопедия</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Флебология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Эндокринология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Физиотерапия</span>
-                        <span class="search-filters__item-value">(1158)</span>
-                      </a>
-                      <a href="#" class="search-filters__link-item">
-                        <span class="search-filters__link-title">Офтальмология</span>
-                        <span class="search-filters__item-value">(1056)</span>
-                      </a>
-                    </div>
-                  </div>
-                  <button type="submit" class="search-filters__submit  btn">Сохранить</button>
-                </form>
-              </div>
-            </div>
-
-            <div class="search-filters__filter-wrapper">
-              <div class="search-filters__filter  search-filters__filter_rating">
-                <span class="search-filters__title">Рейтинг</span>
-                <span class="search-filters__value"></span>
-                <a href="#" class="search-filters__clear-filter"></a>
-              </div>
-              <div class="search-filters__form-wrapper">
-                <form action="/echo" class="search-filters__form  search-filters__form_rating">
-                  <button type="button" class="search-filters__form-cancel">Рейтинг</button>
-                  <div class="search-filters__form-inner">
-                    <input type="radio" name="search-filters__rate-radio" value="rating-1" class="search-filters__radio" id="search-filters__rate-radio_1">
-                    <label for="search-filters__rate-radio_1" class="search-filters__rate-item  search-filters__rate-item_1">
-                      <span class="search-filters__rate-stars"></span>
-                      <span class="search-filters__rate-voices">14</span>
-                    </label>
-                    <input type="radio" name="search-filters__rate-radio" value="rating-2" class="search-filters__radio" id="search-filters__rate-radio_2">
-                    <label for="search-filters__rate-radio_2" class="search-filters__rate-item  search-filters__rate-item_2">
-                      <span class="search-filters__rate-stars"></span>
-                      <span class="search-filters__rate-voices">22</span>
-                    </label>
-                    <input type="radio" name="search-filters__rate-radio" value="rating-3" class="search-filters__radio" id="search-filters__rate-radio_3">
-                    <label for="search-filters__rate-radio_3" class="search-filters__rate-item  search-filters__rate-item_3">
-                      <span class="search-filters__rate-stars"></span>
-                      <span class="search-filters__rate-voices">34</span>
-                    </label>
-                    <input type="radio" name="search-filters__rate-radio" value="rating-4" class="search-filters__radio" id="search-filters__rate-radio_4">
-                    <label for="search-filters__rate-radio_4" class="search-filters__rate-item  search-filters__rate-item_4">
-                      <span class="search-filters__rate-stars"></span>
-                      <span class="search-filters__rate-voices">45</span>
-                    </label>
-                    <input type="radio" name="search-filters__rate-radio" value="rating-5" class="search-filters__radio" id="search-filters__rate-radio_5">
-                    <label for="search-filters__rate-radio_5" class="search-filters__rate-item  search-filters__rate-item_5">
-                      <span class="search-filters__rate-stars"></span>
-                      <span class="search-filters__rate-voices">56</span>
-                    </label>
-                  </div>
-                  <button type="submit" class="search-filters__submit  btn">Сохранить</button>
-                </form>
-              </div>
-            </div>
-
-          </div>
-          <a href="#" class="search-filters__save-link btn">Сохранить</a>
+        <div class="main-card__map">
+          <h2 class="main-card__title">Карта</h2>
+          <div class="main-card__map-canvas" id="card-map"></div>
         </div>
 
-        <div class="main-search__switches">
-          <div class="main-search__card-sorting  card-sorting">
-            <input type="checkbox" id="sorting-check" class="card-sorting__check">
-            <label for="sorting-check" class="card-sorting__label">Сортировка:
-              <span class="card-sorting__current">по рейтингу</span>
-            </label>
-            <div class="card-sorting__variants">
-              <a class="card-sorting__variant  card-sorting__variant_current">По рейтингу</a>
-              <a href="#" class="card-sorting__variant">По дате</a>
-              <a href="#" class="card-sorting__variant">По возрастанию цены</a>
-              <a href="#" class="card-sorting__variant">По убыванию цены</a>
-            </div>
-          </div>
-          <button type="button" class="main-search__map-btn">Карта</button>
-          <div class="main-search__filters-toggle">
-            <svg class="filter-svg  main-search__filter-svg" width="22" height="20">
-              <use xlink:href="assets/icons/symbols.svg#filter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-            </svg>
-            <span class="main-search__filters-value  main-search__filters-value_active">6</span>
-          </div>
+        <div class="main-card__info">
+          <h2 class="main-card__title">Информация</h2>
+          <p class="main-card__desciption">
+            Холдинг «СМ-клиника» – это сеть многофункциональных клиник семейного типа, в которой работают лучшие специалисты столицы, в том числе 20 докторов наук, 12 профессоров и 6 академиков медицинских наук. В каждой «СМ-клинике» можно записаться на прием к специалистам, получить помощь в стационарных условиях или на дому, а также неотложную помощь, пройти МРТ, КТ, УЗ-исследования, ЭКГ, сдать больше 3000 лабораторных анализов, оформить мед. справки, карты, больничные листы. Для постоянных клиентов действует гибкая система дисконта, постоянные акции и спецпредложения.
+          </p>
         </div>
 
-        <div class="main-search__list">
+        <div class="main-card__reviews  card-reviews">
+          <h2 class="main-card__title  card-reviews__title">Отзывы
+            <span class="card-reviews__count">147</span>
+          </h2>
+          <div class="card-reviews__actions">
+            <a href="#" class="card-reviews__feedback-link btn btn_s">Оставить отзыв</a>
 
-          <div class="main-search__card  search-card">
-            <div class="search-card__info">
-              <div class="search-card__content  search-card__content_service">
-                <div class="search-card__wrapper">
-                  <h3 class="search-card__title  search-card__title_clinic-name">Он клиник на Улице 1905 года</h3>
-                  <a href="#" class="search-card__like-link  search-card__like-link_clinic"></a>
-                </div>
-                <a href="#" class="search-card__clinic-location">
-                  <svg class="search-card__location-svg" width="10" height="12">
-                    <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                  <span class="search-card__clinic-adress">ул. Большая Молчановка, д. 32, стр. 1</span>
-                </a>
-                <br>
-                <div class="search-card__schedule  schedule">
-                  <span class="search-card__schedule-title  schedule__title">Режим работы:</span>
-                  <label class="schedule__label">
-                    <input type="checkbox" class="schedule__check">
-                    <span class="schedule__today">Открыто до 19:00</span>
-                    <span class="schedule__week">
-                      <span class="schedule__line">
-                        <span class="schedule__day">
-                          ПН-ПТ:
-                        </span>
-                        <span class="schedule__time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="schedule__line">
-                        <span class="schedule__day">
-                          СБ:
-                        </span>
-                        <span class="schedule__time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="schedule__line">
-                        <span class="schedule__day">
-                          ВС:
-                        </span>
-                        <span class="schedule__time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                    </span>
-                  </label>
-                </div>
-                <div class="search-card__phone-block">
-                  <span class="search-card__phone-title">Телефон:</span>
-                  <span class="search-card__phone">+7 (3822) 63-00-47</span>
-                </div>
-                <p class="search-card__clinic-description  cutted-text">МедЦентрСервис – это группа из 12 многофункциональных медучреждений, в каждой из которых оказывают качественную помощь по профилактике и лечению аллергических гинекологических, дерматовенерологических заболеваний, патологий мочеполовой и репродуктивной сферы</p>
-                <a class="search-card__single-card-link" href="#"></a>
-              </div>
-              <div class="search-card__actions">
-                <a href="#" class="btn btn_s search-card__actions-btn">Оставить отзыв</a>
-                <a href="#" class="btn btn_s search-card__actions-btn">Записаться</a>
+            <div class="card-reviews__sorting  card-sorting  card-sorting_single">
+              <input type="checkbox" id="sorting-check" class="card-sorting__check">
+              <label for="sorting-check" class="card-sorting__label  card-sorting__label_single">Сортировка:
+                <span class="card-sorting__current  card-sorting__current_single">по рейтингу</span>
+              </label>
+              <div class="card-sorting__variants  card-sorting__variants_single">
+                <a class="card-sorting__variant  card-sorting__variant_current">По рейтингу</a>
+                <a href="#" class="card-sorting__variant">По кол-ву отзывов</a>
+                <a href="#" class="card-sorting__variant">По возрастанию цены</a>
+                <a href="#" class="card-sorting__variant">По убыванию цены</a>
               </div>
             </div>
-            <div class="search-card__review-block">
-              <a class="search-card__review-link" href="#"></a>
-              <div class="search-card__rating">
-                <div class="search-card__stars-container">
-                  <div class="search-card__stars" style="width: 90%"></div>
+          </div>
+
+          <div class="card-reviews__items">
+            <div class="card-reviews__item">
+              <header class="card-reviews__item-header">
+                <img src="../assets/images/card-reviews/reviewer1.png" alt="reviewer1" width="54" class="card-reviews__item-image">
+                <h3 class="card-reviews__item-name">София</h3>
+                <div class="main-card__stars-container  card-reviews__stars-container">
+                  <div class="main-card__stars" style="width: 80%"></div>
                 </div>
-                <div class="search-card__rating-value">4.5</div>
+                <time datetime="2016-07-24T23:55" class="card-reviews__time">год назад</time>
+              </header>
+              <div class="card-reviews__info">
+                <h4 class="card-reviews__text-title">Достоинства</h4>
+                <p class="card-reviews__text  card-reviews__text_advantages">
+                  Отличный врач, очень подробно и понятно все объясняет.
+                </p>
+                <h4 class="card-reviews__text-title">Недостатки</h4>
+                <p class="card-reviews__text  card-reviews__text_disadvantages">
+                  Немного больно ставит уколы. Это едиснтвенный минус.
+                </p>
+                <h4 class="card-reviews__waiting-title">Время ожидания специалиста</h4>
+                <span class="card-reviews__waiting-time">&lt;15мин</span>
               </div>
-              <div class="search-card__reviews">
-                <svg class="search-card__reviews-svg" width="20" height="20">
-                  <use xlink:href="assets/icons/symbols.svg#message" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <a href="#" class="card-reviews__like-link">
+                <svg class="card-reviews__like-svg" width="16" height="16">
+                  <use xlink:href="assets/icons/symbols.svg#like" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                 </svg>
-                <span class="search-card__reviews-count">23</span>
-                <span class="search-card__reviews-count-title">ОТЗЫВА</span>
-              </div>
+              </a>
+              <span class="card-reviews__like-count">0</span>
             </div>
-          </div>
 
-          <div class="main-search__card  search-card">
-            <div class="search-card__info">
-              <div class="search-card__content  search-card__content_service">
-                <div class="search-card__wrapper">
-                  <h3 class="search-card__title  search-card__title_clinic-name">Он клиник на Улице 1905 года</h3>
-                  <a href="#" class="search-card__like-link  search-card__like-link_liked  search-card__like-link_clinic"></a>
+            <div class="card-reviews__item">
+              <header class="card-reviews__item-header">
+                <img src="../assets/images/card-reviews/reviewer1.png" alt="reviewer1" width="54" class="card-reviews__item-image">
+                <h3 class="card-reviews__item-name">София</h3>
+                <div class="main-card__stars-container  card-reviews__stars-container">
+                  <div class="main-card__stars" style="width: 80%"></div>
                 </div>
-                <a href="#" class="search-card__clinic-location">
-                  <svg class="search-card__location-svg" width="10" height="12">
-                    <use xlink:href="assets/icons/symbols.svg#location" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
-                  </svg>
-                  <span class="search-card__clinic-adress">ул. Большая Молчановка, д. 32, стр. 1</span>
-                </a>
-                <br>
-                <div class="search-card__schedule  schedule">
-                  <span class="search-card__schedule-title  schedule__title">Режим работы:</span>
-                  <label class="schedule__label">
-                    <input type="checkbox" class="schedule__check">
-                    <span class="schedule__today">Открыто до 19:00</span>
-                    <span class="schedule__week">
-                      <span class="schedule__line">
-                        <span class="schedule__day">
-                          ПН-ПТ:
-                        </span>
-                        <span class="schedule__time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="schedule__line">
-                        <span class="schedule__day">
-                          СБ:
-                        </span>
-                        <span class="schedule__time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                      <span class="schedule__line">
-                        <span class="schedule__day">
-                          ВС:
-                        </span>
-                        <span class="schedule__time">
-                          09:00 - 21:00
-                        </span>
-                      </span>
-                    </span>
-                  </label>
-                </div>
-                <div class="search-card__phone-block">
-                  <span class="search-card__phone-title">Телефон:</span>
-                  <span class="search-card__phone">+7 (3822) 63-00-47</span>
-                </div>
-                <p class="search-card__clinic-description  cutted-text">МедЦентрСервис – это группа из 12 многофункциональных медучреждений, в каждой из которых оказывают качественную помощь по профилактике и лечению аллергических гинекологических, дерматовенерологических заболеваний, патологий мочеполовой и репродуктивной сферы</p>
-                <a class="search-card__single-card-link" href="#"></a>
+                <time datetime="2016-07-24T23:55" class="card-reviews__time">год назад</time>
+              </header>
+              <div class="card-reviews__info">
+                <h4 class="card-reviews__text-title">Достоинства</h4>
+                <p class="card-reviews__text  card-reviews__text_advantages">
+                  Отличный врач, очень подробно и понятно все объясняет.
+                </p>
+                <h4 class="card-reviews__text-title">Недостатки</h4>
+                <p class="card-reviews__text  card-reviews__text_disadvantages">
+                  Немного больно ставит уколы. Это едиснтвенный минус.
+                </p>
+                <h4 class="card-reviews__waiting-title">Время ожидания специалиста</h4>
+                <span class="card-reviews__waiting-time">&lt;15мин</span>
               </div>
-              <div class="search-card__actions">
-                <a href="#" class="btn btn_s search-card__actions-btn">Оставить отзыв</a>
-                <a href="#" class="btn btn_s search-card__actions-btn">Записаться</a>
-              </div>
-            </div>
-            <div class="search-card__review-block">
-              <a class="search-card__review-link" href="#"></a>
-              <div class="search-card__rating">
-                <div class="search-card__stars-container">
-                  <div class="search-card__stars" style="width: 90%"></div>
-                </div>
-                <div class="search-card__rating-value">4.5</div>
-              </div>
-              <div class="search-card__reviews">
-                <svg class="search-card__reviews-svg" width="20" height="20">
-                  <use xlink:href="assets/icons/symbols.svg#message" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              <a href="#" class="card-reviews__like-link">
+                <svg class="card-reviews__like-svg" width="16" height="16">
+                  <use xlink:href="assets/icons/symbols.svg#like" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                 </svg>
-                <span class="search-card__reviews-count">23</span>
-                <span class="search-card__reviews-count-title">ОТЗЫВА</span>
-              </div>
+              </a>
+              <span class="card-reviews__like-count">0</span>
+            </div>
+          </div>
+
+          <div class="card-reviews__paginator  paginator">
+            <a class="paginator__btn  paginator__btn_prev  paginator__btn_disabled btn">Назад</a>
+            <a href="#" class="paginator__btn  paginator__btn_next  btn">Далее</a>
+            <div class="paginator__page-links">
+              <a class="paginator__page-link  paginator__page-link_current">1</a>
+              <a href="#" class="paginator__page-link">2</a>
+              <a href="#" class="paginator__page-link">3</a>
+              <a href="#" class="paginator__page-link">4</a>
+              <a href="#" class="paginator__page-link">5</a>
+              <span class="paginator__dots">...</span>
+              <a href="#" class="paginator__page-link">23</a>
+              <a href="#" class="paginator__page-link">24</a>
             </div>
           </div>
 
         </div>
 
-        <div class="main-search__paginator  paginator">
-          <a class="paginator__btn  paginator__btn_prev  paginator__btn_disabled btn">Назад</a>
-          <a href="#" class="paginator__btn  paginator__btn_next  btn">Далее</a>
-          <div class="paginator__page-links">
-            <a class="paginator__page-link  paginator__page-link_current">1</a>
-            <a href="#" class="paginator__page-link">2</a>
-            <a href="#" class="paginator__page-link">3</a>
-            <a href="#" class="paginator__page-link">4</a>
-            <a href="#" class="paginator__page-link">5</a>
-            <span class="paginator__dots">...</span>
-            <a href="#" class="paginator__page-link">23</a>
-            <a href="#" class="paginator__page-link">24</a>
+        <div class="main-card__mini-cards  mini-cards">
+          <h2 class="main-card__title   mini-cards__title">Похожие врачи</h2>
+          <div class=" mini-cards__wrapper">
+            <div class="mini-card">
+              <img class="mini-card__image" src="assets/images/card-doctors/doc2.png" alt="photo">
+              <div class="mini-card__content">
+                <h3 class="mini-card__title">Матвесоян Степан Нарбеевич</h3>
+                <div class="mini-card__description">Стоматолог</div>
+                <div class="mini-card__stars-container">
+                  <div class="mini-card__stars" style="width: 90%">
+                  </div>
+                </div>
+                <div class="mini-card__address">ул. Александра Солженицына, д.5, стр.1</div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="map-container">
-          <div class="map" id="map"></div>
-          <button type="button" class="map-container__close-btn"></button>
-        </div>
       </main>
 
       <footer class="page-footer">
@@ -1329,9 +896,9 @@
   <script src="scripts/jquery.custom-scroll.min.js"></script>
   <script src="scripts/jquery.validate.min.js"></script>
   <script src="scripts/jquery.validate-advance.min.js"></script>
-  <script src="scripts/jquery.dotdotdot.min.js"></script>
+  <script src="scripts/jquery.peity.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHf8ldsOy9f9D9N-eFUAQbMe0wisVxCrk"></script>
-  <script src="scripts/main.js"></script>
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>
